@@ -29,7 +29,7 @@ static string[] Integrantes() {
     return new string[] {
         "🧑‍💻Quiroz Zambrano, Fabrizio Javier - u202213406"",
         "👩‍💻 Angulo Abud, Juan Carlos - u202317692,
-        "👩‍💻 ,
+        "👩‍💻 Trillo Hernandez, Anghel Melanie - u201912401,
         "👩‍💻 ,
         "👩‍💻 , 
     };
@@ -172,12 +172,15 @@ responsable, comprometido y con ganas de siempre aprender más.
 
 ---
 
-**> [Nombre del integrante 3] (Código)**  
+**> Anghel Melanie Trillo Hernandez (U201912401)**  
 <div align="center">
-  <img src="resources/Cap-1/Members/Integrante3.jpg" alt="imagen Integrante 3" width="120" align="right">
+  <img src="Images/anghel-trillo.jpg" alt="imagen Anghel Melanie Trillo Hernandez" width="120" align="right">
   
 ~~~txt
-XXXXXX
+Estudiante de la carrera de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas (UPC),
+lo que me gusta de la carrera es desarrollar soluciones innovadoras que contribuyen a la sociedad.
+Me considero una persona responsable y orientada a resultados. Asimismo, me comprometo a colaborar
+en el equipo de forma continua y puntual.
 ~~~
 </div>
 

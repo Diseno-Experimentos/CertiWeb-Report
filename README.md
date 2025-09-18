@@ -1015,94 +1015,586 @@ Comprador que valida autenticidad del sello, consulta el informe técnico y comp
 </div>
 
 #### 4.2.3. SEO Tags and Meta Tags
+
+<div style="background:#F0F9F4;border-radius:8px;padding:16px;margin:12px 0;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+  <h4 style="color:#002D18;margin-top:0;margin-bottom:8px;">Landing Page</h4>
+  <pre style="background:#F8ECD6;padding:12px;border-radius:6px;overflow-x:auto;border-left:3px solid #FBB901;"><code>&lt;title&gt;Certiweb - Tu Taller de Inspección y Certificación Vehicular&lt;/title&gt;
+&lt;meta name="description" content="Certiweb te ayuda a vender tu auto con confianza, respaldado por inspecciones técnicas profesionales y certificados verificables."&gt;
+&lt;meta name="keywords" content="Certificación de autos, inspección vehicular, vender auto usado, informe técnico"&gt;
+&lt;meta name="author" content="Selling Cars Quickly (SCQ)"&gt;</code></pre>
+
+  <h4 style="color:#002D18;margin-top:16px;margin-bottom:8px;">Web Application</h4>
+  <pre style="background:#F8ECD6;padding:12px;border-radius:6px;overflow-x:auto;border-left:3px solid #FBB901;"><code>&lt;title&gt;Panel Certiweb - Gestión de Autos&lt;/title&gt;
+&lt;meta name="description" content="Administra tus vehículos, consulta informes técnicos y comparte certificados desde un solo lugar."&gt;
+&lt;meta name="keywords" content="panel de autos, historial de inspección, certificado vehicular, venta segura"&gt;
+&lt;meta name="author" content="Selling Cars Quickly (SCQ)"&gt;</code></pre>
+</div>
+
 #### 4.2.4. Searching Systems
+
+<div style="background:#F8ECD6;border-radius:8px;padding:16px;margin:12px 0;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+  <ul style="color:#002D18;padding-left:20px;list-style-type:none;">
+    <li style="margin-bottom:8px;">• <strong>Filtros por:</strong>
+      <ul style="padding-left:20px;list-style-type:square;color:#333;">
+        <li style="margin:4px 0;">Estado del vehículo: Inspeccionado, En revisión, Aprobado.</li>
+        <li style="margin:4px 0;">Tipo de usuario: vendedor individual, revendedor.</li>
+        <li style="margin:4px 0;">Fecha de inspección.</li>
+      </ul>
+    </li>
+    <li style="margin:12px 0 8px 0;">• <strong>Búsqueda por texto:</strong>
+      <ul style="padding-left:20px;list-style-type:square;color:#333;">
+        <li style="margin:4px 0;">Buscar por placa, nombre del modelo o número de informe.</li>
+      </ul>
+    </li>
+    <li style="margin:12px 0 8px 0;">• <strong>Resultados con vista resumida:</strong>
+      <ul style="padding-left:20px;list-style-type:square;color:#333;">
+        <li style="margin:4px 0;">Tarjetas con datos clave: marca, modelo, fecha inspección, estado.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
 #### 4.2.5. Navigation Systems
+
+<div style="background:#F0F9F4;border-radius:8px;padding:16px;margin:12px 0;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+  <h4 style="color:#002D18;margin-top:0;margin-bottom:8px;">Landing Page:</h4>
+  <ul style="color:#002D18;padding-left:20px;list-style-type:none;">
+    <li style="margin-bottom:8px;">
+      • <strong>Menú de navegación fijo (sticky) en la parte superior con anclas internas:</strong>
+      <ul style="padding-left:20px;list-style-type:square;color:#333;">
+        <li style="margin:4px 0;">Inicio | Sobre Nosotros | Reseñas | ¡Por qué elegirnos? | Contáctanos</li>
+      </ul>
+    </li>
+    <li style="margin:12px 0 8px 0;">• <strong>Scroll vertical guiado con bloques visuales claramente diferenciados.</strong></li>
+    <li style="margin:12px 0 8px 0;">
+      • <strong>Botones CTA recurrentes:</strong>
+      <ul style="padding-left:20px;list-style-type:square;color:#333;">
+        <li style="margin:4px 0;">"Solicitar inspección" y "Certifica tu auto ahora" en secciones clave.</li>
+      </ul>
+    </li>
+    <li style="margin:12px 0 8px 0;">• <strong>Sección de FAQ y contacto al final, accesibles desde el menú.</strong></li>
+  </ul>
+
+  <h4 style="color:#002D18;margin-top:16px;margin-bottom:8px;">Web App:</h4>
+  <ul style="color:#002D18;padding-left:20px;list-style-type:none;">
+    <li style="margin-bottom:8px;">
+      • <strong>Sidebar lateral con acceso rápido a:</strong>
+      <ul style="padding-left:20px;list-style-type:square;color:#333;">
+        <li style="margin:4px 0;">Dashboard</li>
+        <li style="margin:4px 0;">Mis vehículos</li>
+        <li style="margin:4px 0;">Certificados</li>
+        <li style="margin:4px 0;">Historial</li>
+        <li style="margin:4px 0;">Perfil</li>
+      </ul>
+    </li>
+    <li style="margin:12px 0 8px 0;">• <strong>Menús desplegables y tabs para cambiar entre vistas</strong> (por ejemplo: Detalles del auto | Certificado | Fotos).</li>
+    <li style="margin:12px 0 8px 0;">• <strong>Indicadores de progreso</strong> en flujos como "Solicitar inspección" o "Subir documentos".</li>
+  </ul>
+
+  <h4 style="color:#002D18;margin-top:16px;margin-bottom:8px;">Accesibilidad y usabilidad:</h4>
+  <ul style="color:#002D18;padding-left:20px;list-style-type:none;">
+    <li style="margin-bottom:8px;">• Navegación accesible con teclado y lectores de pantalla.</li>
+    <li style="margin-bottom:8px;">• Íconos y etiquetas claras para facilitar navegación intuitiva.</li>
+    <li style="margin-bottom:8px;">• Diseño coherente entre móvil y escritorio, con menús tipo hamburguesa en mobile.</li>
+  </ul>
+</div>
 
 ### 4.3. Landing Page UI Design
 #### 4.3.1. Landing Page Wireframe
+
+<img src="Images/LandingWire1.png">
+<img src="Images/LandingWire2.png">
+
+### Mobile version
+<img src="Images/LandingWireMobile1.png">
+<img src="Images/LandingWireMobile2.png">
+
 #### 4.3.2. Landing Page Mock-up
+
+<img src="Images/LandingMock1.png">
+<img src="Images/LandingMock2.png">
+
+### Mobile version
+<img src="Images/LandingMockMobile1.png">
+<img src="Images/LandingMockMobile2.png">
+<img src="Images/LandingMockMobile3.png">
 
 ### 4.4. Web Applications UX/UI Design
 #### 4.4.1. Web Applications Wireframes
+
+<!--Register y login-->
+
+
+<!--Dashboard-->
+<img src="Images/webappWireframedashboard1.png">
+<img src="Images/webappWireframedashboard8.png">
+<img src="Images/webappWireframedashboard9.png">
+<img src="Images/webappWireframedashboard10.png">
+<img src="Images/webappWireframedashboard2.png">
+
+<!--Settings-->
+<img src="Images/webappWireframedashboard3.png">
+<img src="Images/webappWireframedashboard4.png">
+<img src="Images/webappWireframedashboard5.png">
+<img src="Images/webappWireframedashboard7.png">
+
+<!--reserva-->
+<img src="Images/webappWireframedashboard11.png">
+
+<!--Aprovacion de reserva vista admin-->
+<img src="Images/webappWireframedashboard12.png">
+
+<!--Visualizacion Anuncio-->
+<img src="Images/webappWireframedashboard13.png">
+
 #### 4.4.2. Web Applications Wireflow Diagrams
+
+User Goal: Reservar una Inspección Vehicular
+<img src="Images/UserGoal1.png">
+
+User Goal: Acceder a Informes Técnicos
+<img src="Images/UserGoal2.png">
+
+User Goal: Visualizar Anuncios de Venta
+<img src="Images/UserGoal3.png">
+
+[Link del los Wireflow Diagrams](https://lucid.app/lucidchart/47dee77f-6e40-411c-b9d1-04c7cc3d1791/edit?viewport_loc=9304%2C-764%2C7516%2C3284%2C0_0&invitationId=inv_c790acfc-5ce8-419f-88cc-f9084b6312ff)
+
 #### 4.4.3. Web Applications Mock-ups
+
+<!--Dashboard-->
+<img src="Images/webappMockUpdashboard1.png">
+<img src="Images/webappMockUpdashboard9.png">
+<img src="Images/webappMockUpdashboard2.png">
+<img src="Images/webappMockUpdashboard3.png">
+<img src="Images/webappMockUpdashboard4.png">
+
+<!--Settings-->
+<img src="Images/webappMockUpdashboard5.png">
+<img src="Images/webappMockUpdashboard6.png">
+<img src="Images/webappMockUpdashboard7.png">
+<img src="Images/webappMockUpdashboard8.png">
+
+<!--reserva-->
+<img src="Images/webappMockUpdashboard10.png">
+
+<!--Aprovacion de reserva vista admin-->
+<img src="Images/webappMockUpdashboard11.png">
+
+<!--Visualizacion Anuncio-->
+<img src="Images/webappMockUpdashboard12.png">
+
 #### 4.4.4. Web Applications User Flow Diagrams
+
+User Goal: Reservar una Inspección Vehicular
+Explicación: Este flujo ideal muestra cómo un usuario puede reservar su inspeccion de forma sencilla en CertiWeb. Todo funciona como se espera, sin ningún obstáculo o error que interrumpa el proceso.
+<br>
+<img src="Images/userflowdia1.png">
+<br>
+User Goal: Acceder a Informes Técnicos
+Explicación: Este flujo ideal muestra cómo un usuario puede acceder a su informe técnico de forma sencilla en CertiWeb. Como comprador puede elegir cualquier vehiculo que le guste porque todos cuentan con un certificado activo.
+<br>
+<img src="Images/userflowdia2.png">
+<br>
+User Goal: Visualizar Anuncios de Venta
+Explicación: Este flujo ideal muestra cómo un usuario puede visualizar los anuncios de venta de forma sencilla en CertiWeb. Como vendedor despues de su inspeccion, nosotros nos encargaremos de crearle su anuncio personalizado con su informe dentro.
+<img src="Images/userflowdia3.png">
+
+[Link de los diagramas](https://lucid.app/lucidchart/e0c3e4ad-42b3-4dde-8537-cb132eab3446/edit?viewport_loc=9785%2C-26%2C6959%2C3041%2C0_0&invitationId=inv_2ca42dc4-1653-4214-ba0e-d37422b7b6bb)
 
 ### 4.5. Web Applications Prototyping
 
+[Link del video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EcpvFFaPvixHvoSImaD2qdkBZEo8nurqLuuR8TRQ32EXuA?e=ft4y4P&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+<img src="Images/protro2.png">
+<img src="Images/webappMockUpdashboard10.png">
+<img src="Images/protro1.png">
+<img src="Images/webappMockUpdashboard11.png">
+<img src="Images/webappMockUpdashboard12.png">
+
 ### 4.6. Domain-Driven Software Architecture
 #### 4.6.1. Software Architecture Context Diagram
+
+<img src="Images/SystemContext.png">
+
+```html
+buyer -> certiwebSystem "Searches and views certified listings, contacts seller (via platform or directly)" "HTTPS"
+```
+
 #### 4.6.2. Software Architecture Container Diagrams
+
+<img src="Images/ContainersDiagram.png">
+
 #### 4.6.3. Software Architecture Components Diagrams
+
+<img src="Images/ComponentDiagram.png">
 
 ### 4.7. Software Object-Oriented Design
 #### 4.7.1. Class Diagrams
+<img alt="Diagrama de clases" src="Images/class-diagram.png" />
+
 #### 4.7.2. Class Dictionary
+
+##### 1. User
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| id              | UUID             | Identificador único del usuario.                 |
+| name            | String           | Nombre del usuario.                              |
+| email           | Email            | Correo electrónico del usuario.                  |
+| userType        | UserType         | Tipo de usuario (vendedor, revendedor, comprador). |
+
+##### 2. Vehicle
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| id              | UUID             | Identificador único del vehículo.                |
+| brand           | String           | Marca del vehículo.                              |
+| model           | String           | Modelo del vehículo.                             |
+| year            | Integer          | Año de fabricación del vehículo.                 |
+| licensePlate    | LicensePlate     | Placa del vehículo.                              |
+| inspectionStatus| InspectionStatus | Estado actual de la inspección del vehículo.     |
+
+##### 3. Inspection
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| id              | UUID             | Identificador único de la inspección.            |
+| requestDate     | Date             | Fecha en que se solicitó la inspección.          |
+| inspectionDate  | Date             | Fecha en que se realizó la inspección.           |
+| inspectionResult| InspectionResult | Resultado de la inspección.                      |
+
+##### 4. TechnicalReport
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| id              | UUID             | Identificador único del informe técnico.         |
+| validationCode  | String           | Código único para validar la autenticidad del informe. |
+| details         | String           | Detalles del estado técnico del vehículo.        |
+
+##### 5. Certification
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| id              | UUID             | Identificador único de la certificación.         |
+| seal            | String           | Sello único de certificación.                    |
+| issueDate       | Date             | Fecha en que se emitió la certificación.         |
+
+##### 6. Subscription
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| id              | UUID             | Identificador único de la suscripción.           |
+| type            | SubscriptionType | Tipo de suscripción (mensual o trimestral).      |
+| startDate       | Date             | Fecha de inicio de la suscripción.               |
+| endDate         | Date             | Fecha de fin de la suscripción.                  |
+
+##### 7. Payment
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| id              | UUID             | Identificador único del pago.                    |
+| amount          | Money            | Monto del pago.                                  |
+| paymentDate     | Date             | Fecha en que se realizó el pago.                 |
+| paymentMethod   | PaymentMethod    | Método de pago (tarjeta, transferencia, etc.).   |
+| status          | PaymentStatus    | Estado del pago (Pendiente, Completado, Fallido).|
+
+##### 8. Email
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| address         | String           | Dirección de correo electrónico.                 |
+
+##### 9. UserType
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| type            | String           | Tipo de usuario (Seller, Reseller, Buyer).       |
+
+##### 10. LicensePlate
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| plateNumber     | String           | Número de placa del vehículo.                    |
+
+##### 11. InspectionStatus
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| status          | String           | Estado de la inspección (Pendiente, En Inspección, Certificado). |
+
+##### 12. InspectionResult
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| result          | String           | Resultado de la inspección (Aprobado, Rechazado). |
+| comments        | String           | Comentarios adicionales sobre el vehículo.       |
+
+##### 13. PaymentMethod
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| method          | String           | Método de pago (tarjeta, transferencia, etc.).   |
+
+##### 14. PaymentStatus
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| status          | String           | Estado del pago (Pendiente, Completado, Fallido). |
+
+##### 15. Money
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| currency        | String           | Moneda utilizada (USD, PEN, etc.).               |
+| amount          | Decimal          | Cantidad de dinero asociada al pago o suscripción.|
+
+##### 16. SubscriptionType
+
+| Atributo        | Tipo de Variable | Descripción                                       |
+|-----------------|------------------|---------------------------------------------------|
+| type            | String           | Tipo de suscripción (Mensual, Trimestral).        |
+
+
 
 ### 4.8. Database Design
 #### 4.8.1. Database Diagram
+<img alt="Database diagram" src="Images/DATABASESELLING.png" />
 
----
 
-## Capítulo V: Product Implementation, Validation & Deployment
-
+[↑ Volver al índice](#índice)
+# Capítulo V: Product Implementation, Validation & Deployment
 ### 5.1. Software Configuration Management
 #### 5.1.1. Software Development Environment Configuration
+En esta sección, se describen las herramientas utilizadas por el equipo para colaborar en el desarrollo del proyecto, así como sus propósitos específicos y las rutas de referencia.
+
+#### 1. Product UX/UI Design
+- **Figma**: Utilizado para el diseño y prototipado de la aplicación, tanto en su versión de escritorio como en navegadores móviles.
+
+#### 2. Software Development
+- **WebStorm**: Entorno de desarrollo integrado (IDE) utilizado para la creación y edición del código fuente del proyecto. Su elección se debe a su excelente soporte para frameworks web como Vue.js.
+- **Rider**: Entorno de desarrollo integrado (IDE) utilizado para la creación y edición del código fuente del proyecto. Su elección se debe a su excelente soporte para C# y .NET.
+- **HTML5**: Lenguaje de marcado utilizado para la estructura del contenido web de la aplicación.
+- **CSS**: Utilizado para el diseño y la presentación visual de las páginas web, complementando el contenido estructurado por HTML.
+- **JavaScript**: Lenguaje de programación empleado para crear interactividad y manejar la lógica del frontend de la aplicación.
+- **Vertabelo**: Herramienta utilizada para la creación y gestión de diagramas entidad-relación (ERD), empleada para diseñar la base de datos del proyecto.
+- **Structurizr**: Utilizado para el diseño del diagrama C4, representando la arquitectura del sistema y sus componentes.
+
+#### 3. Software Testing
+- **Gherkin**: Lenguaje de etiquetado utilizado para definir los criterios de aceptación de las historias de usuario. Facilita la escritura de pruebas de comportamiento y asegura que los criterios sean entendibles tanto para el equipo técnico como no técnico.
+
+#### 4. Software Deployment
+- **GitHub Pages**: Utilizado para el despliegue de la landing page, permitiendo que el sitio web esté disponible públicamente. La plataforma ofrece una solución de hosting gratuita y fácil de usar directamente desde el repositorio de GitHub, lo que facilita la actualización continua del sitio.  
+  - **Ruta de referencia**: [https://pages.github.com](https://pages.github.com)
+- **Azure Static Web Apps**: Utilizado para el despliegue y hosting de aplicaciones web estáticas, facilitando la integración continua y la entrega continua (CI/CD) directamente desde los repositorios de código.
+  - **Ruta de referencia**: [https://learn.microsoft.com/es-mx/azure/static-web-apps/](https://learn.microsoft.com/es-mx/azure/static-web-apps/)
+
+#### 5. Software Documentation
+- **GitHub**: Utilizado como plataforma de documentación para mantener la información técnica del proyecto organizada y accesible.
+
+
 #### 5.1.2. Source Code Management
+En nuestro proyecto, utilizamos **GitHub** como plataforma para gestionar el código fuente, manteniendo los siguientes repositorios:
+
+- Report: https://github.com/Selling-Cars-Quickly-SCQ/Certiweb-Report
+- Landing page: https://github.com/Selling-Cars-Quickly-SCQ/Landing-Page
+- Frontend: https://github.com/Selling-Cars-Quickly-SCQ/frontend
+- Backend: https://github.com/Selling-Cars-Quickly-SCQ/backend
+
+#### GitFlow Workflow
+Se implementa el modelo de **GitFlow** para gestionar las ramas en nuestros repositorios. A continuación, se detallan las ramas principales:
+
+##### Para el Reporte:
+
+- **master**: Contiene las versiones estables del reporte.
+- **develop**: Se utiliza para integrar las nuevas características antes de publicarlas en la rama master.
+- **feature-\<número de capítulo>**: Rama creada para el desarrollo de funcionalidades del capítulo.
+
+##### Para el Landing, Frontend y Backend:
+
+- **main**: Contiene las versiones estables del reporte.
+- **develop**: Se utiliza para integrar las nuevas características antes de publicarlas en la rama release/\<versión>.
+- **hotfix**: Se utiliza para integrar caracteristicas urgentes que afectan el funcionamiento de la aplicación.
+- **realease/\<Versión>**: Se utiliza para integrar las nuevas características antes de publicarlas en la rama main.
+- **feature/\<nombre de funcionalidad>**: Rama creada para el desarrollo de funcionalidades específicas según el nombre. Las ramas se nombran en minúsculas siguiendo un esquema uniforme para mayor consistencia.
+
+<img src="Images/gitflow.png" />
+
+#### Conventional Commits
+Se emplea para los mensajes de commmits el estándar de **Conventional Commits** con las siguientes etiquetas:
+
+- **feat**: Nuevas características.
+- **fix**: Corrección de errores.
+- **docs**: Documentación.
+- **style**: Modificaciones de estilos.
+- **refactor**: Cambio de código que no corrige un error ni añade una característica.
+- **perf**: Modificaciones que mejoran el rendimiento.
+- **test**: Modificacciones en testing.
+- **build**: Cambios que afectan al sistema de compilación o a dependencias externas.
+- **ci**: Cambios en nuestros archivos y scripts de configuración CI.
+- **chore**: Otros cambios que no modifican ficheros src o test
+- **revert**: Revierte un commit anterior
+
+
 #### 5.1.3. Source Code Style Guide & Conventions
+Utilizaremos buenas prácticas y convenciones para mantener un código limpio, consistente y fácil de mantener en todos los lenguajes utilizados.
+
+## HTML:
+
+1. **Estructura Semántica**:
+  - Se utilizan etiquetas semánticas para estructurar el contenido, como `<header>`, `<section>`, `<nav>`, `<footer>`, y `<h1>`, lo que mejora la accesibilidad y optimización SEO.
+
+2. **Nombres de Clases**:
+  - Las clases siguen la convención **camelCase** (primera palabra en minúscula y las subsecuentes con capitalización), como `containerH`, `boxH`, `membership-banner-price`, y `membership-card`.
+
+3. **Atributos en Elementos**:
+  - Elementos como `<a>` utilizan `style="--i:0;"`, lo que indica el uso de variables CSS personalizadas, combinadas con animaciones que dependen de `--i`.
+
+4. **Imágenes y Recursos**:
+  - Las imágenes se optimizan con el formato `webp`, mejorando la velocidad de carga (`assets/images/logo/logoWhite.webp`).
+
+## CSS:
+
+1. **Resets de CSS**:
+  - Se aplica un reset de márgenes y padding para asegurar consistencia entre navegadores:
+    ```css
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ```
+
+2. **Convención de Nombres de Clases**:
+  - Los nombres de clases son **descriptivos** y reflejan el propósito de cada elemento, como `.header`, `.navbar`, `.banner`, `.about-box`.
+
+3. **Uso de Pseudo-clases**:
+  - Se utilizan pseudo-clases como `:hover` y `:checked` para manejar interacciones:
+    ```css
+    #check:checked~.navbar {
+        height: 20.5rem;
+    }
+    ```
+
+4. **Grid Layouts**:
+  - Se usa `display: grid` para la disposición de elementos, junto con `grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));`, lo que hace el diseño adaptable a pantallas de diferentes tamaños.
+
+5. **Media Queries**:
+  - Se incluyen **media queries** para dispositivos pequeños, asegurando una buena experiencia en móviles:
+    ```css
+    @media (max-width: 768px) {
+        .icons {
+            display: inline-flex;
+        }
+    }
+    ```
+
+6. **Variables CSS Personalizadas**:
+  - Se utilizan variables como `--i` en las animaciones para crear **retrasos** controlados por CSS, haciendo que los elementos de la barra de navegación aparezcan secuencialmente.
+
+7. **Transiciones**:
+  - Se implementan transiciones suaves en varios elementos para mejorar la interacción con el usuario:
+    ```css
+    .img-logo:hover {
+        transform: scale(1.25);
+        transition: transform 0.5s ease-in-out;
+    }
+    ```
+
+
 #### 5.1.4. Software Deployment Configuration
+Se inicio con la creación de la organización en github. 
+
+<img src="Images/github-organization.png" />
+
+Posteriormente, se asocio a los integrantes del equipo para poder colaborar en los repositorios de la organización.
+
+<img src="Images/InsightsGrupo.png" />
+
+Luego, se crearon los repositorios del reporte, Landing Page, Frontend y Backend para organizar los productos entregables.
+
+<img src="Images/github-repositories.png" />
+
+Finalmente, se configuro y desplegó la versión inicial del Landing Page en **GitHub Pages** desde la sección "Pages" seleccionando la rama **main**.
+
+<img src="Images/github-landing-deployment.png" />
 
 ### 5.2. Landing Page, Services & Applications Implementation
+##### 5.2.1. Sprint Backlogs
+##### 5.2.2. Implemented Landing Page Evidence
+##### 5.2.3. Implemented Frontend-Web Application Evidence
+##### 5.2.4. Implemented Native-Mobile Application Evidence
+##### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
+##### 5.2.6. RESTful API documentation
+##### 5.2.7. Team Collaboration Insights
 
-#### 5.2.1. Sprint 1
-##### 5.2.1.1. Sprint Planning 1
-##### 5.2.1.2. Aspect Leaders and Collaborators
-##### 5.2.1.3. Sprint Backlog 1
-##### 5.2.1.4. Development Evidence for Sprint Review
-##### 5.2.1.5. Execution Evidence for Sprint Review
-##### 5.2.1.6. Services Documentation Evidence for Sprint Review
-##### 5.2.1.7. Software Deployment Evidence for Sprint Review
-##### 5.2.1.8. Team Collaboration Insights during Sprint
+### 5.3 Video About-the-Product
+En esta sección se presenta un video explicativo sobre el producto desarrollado. El objetivo del video es resaltar las principales características, funcionalidades y beneficios del producto, permitiendo a los usuarios tener una mejor comprensión de su propósito y usabilidad.
 
-#### 5.2.2. Sprint 2
-##### 5.2.2.1. Sprint Planning 2
-##### 5.2.2.2. Aspect Leaders and Collaborators
-##### 5.2.2.3. Sprint Backlog 2
-##### 5.2.2.4. Development Evidence for Sprint Review
-##### 5.2.2.5. Execution Evidence for Sprint Review
-##### 5.2.2.6. Services Documentation Evidence for Sprint Review
-##### 5.2.2.7. Software Deployment Evidence for Sprint Review
-##### 5.2.2.8. Team Collaboration Insights during Sprint
+<img src="Images/product.jpg"/>
 
-#### 5.2.3. Sprint 3
-##### 5.2.3.1. Sprint Planning 3
-##### 5.2.3.2. Aspect Leaders and Collaborators
-##### 5.2.3.3. Sprint Backlog 3
-##### 5.2.3.4. Development Evidence for Sprint Review
-##### 5.2.3.5. Execution Evidence for Sprint Review
-##### 5.2.3.6. Services Documentation Evidence for Sprint Review
-##### 5.2.3.7. Software Deployment Evidence for Sprint Review
-##### 5.2.3.8. Team Collaboration Insights during Sprint
+A continuación, se proporcionan enlaces a las plataformas donde el video ha sido subido, junto con una captura de pantalla del mismo:
 
-#### 5.2.4. Sprint 4
-##### 5.2.4.1. Sprint Planning 4
-##### 5.2.4.2. Aspect Leaders and Collaborators
-##### 5.2.4.3. Sprint Backlog 4
-##### 5.2.4.4. Development Evidence for Sprint Review
-##### 5.2.4.5. Execution Evidence for Sprint Review
-##### 5.2.4.6. Services Documentation Evidence for Sprint Review
-##### 5.2.4.7. Software Deployment Evidence for Sprint Review
-##### 5.2.4.8. Team Collaboration Insights during Sprint
+[About the Product]()
 
-### 5.3. Validation Interviews
-#### 5.3.1. Diseño de Entrevistas
-#### 5.3.2. Registro de Entrevistas
-#### 5.3.3. Evaluaciones según heurísticas
 
----
+[↑ Volver al índice](#índice)
 
-## Conclusiones
+# Conclusiones
+- **Visión y propósito claros**: Certiweb tiene una misión bien definida de ofrecer un servicio confiable de inspección técnica para autos usados, respondiendo a una necesidad real del mercado.
 
-## Bibliografía
+- **Planificación inicial sólida**: El equipo completó con éxito la fase de planificación inicial, definiendo un Product Backlog estructurado y una arquitectura preliminar, estableciendo una base sólida para los próximos sprints.
 
-## Anexos
+- **Áreas de mejora**: Se identificaron oportunidades para estructurar mejor las reuniones diarias y refinar el **Definition of Ready**, mostrando el compromiso del equipo con la mejora continua.
+
+- **Alineación con los objetivos de negocio**: Los entregables de la fase inicial están alineados con el objetivo de Certiweb de generar confianza y promover la participación de vendedores y compradores.
+
+- **Consolidación técnica del backend y frontend**: Durante esta etapa se logró una integración funcional entre el frontend desarrollado en Vue.js y el backend en .NET 9. Se completó el flujo de autenticación con JWT, la conexión con la base de datos en Railway y el despliegue estable mediante Docker en Render. Esto permitió que el equipo trabaje con una arquitectura real, escalable y segura, lista para pruebas con usuarios.
+
+- **Avance hacia un producto usable**: Se completaron funcionalidades clave como el registro y login de usuarios, la visualización de sesiones de inspección, y los formularios interactivos, lo que permitió contar con una versión preliminar funcional. Estas implementaciones fueron validadas a través de entrevistas de seguimiento, permitiendo ajustar la experiencia de usuario.
+
+- **Preparación para la entrega final**: Con una base sólida a nivel técnico y de experiencia de usuario, el proyecto se encuentra listo para ser refinado, validado y presentado como una solución viable. Se han sentado las bases para la construcción del MVP final de Certiweb, orientado a generar confianza en el proceso de compraventa de autos usados en Perú.
+
+### Video About-the-Team
+
+En este video, el equipo de desarrollo de CertiWeb se presenta y comparte su experiencia trabajando en el proyecto. Los miembros del equipo explican sus roles, las tecnologías utilizadas, los desafíos enfrentados durante el desarrollo y cómo lograron implementar una plataforma completa de inspección técnica vehicular con funcionalidades de backend seguro, autenticación con WebTokens y una interfaz de usuario intuitiva.
+
+<img src="Images/Sprint4AboutTeam.png"/>
+
+[About the Team]()
+
+# Bibliografía
+- Asociación Automotriz del Perú. (2023). *Estadísticas del parque automotor peruano*. https://www.aap.org.pe/
+
+- Conventional Commits. (s.f.). *Conventional Commits 1.0.0*. https://www.conventionalcommits.org/en/v1.0.0/
+
+- Fowler, M. (s.f.). *Ubiquitous language*. https://martinfowler.com/bliki/UbiquitousLanguage.html
+
+- GitHub. (s.f.). *GitHub Pages*. https://pages.github.com/
+
+- GitHub. (2025). *GitHub Pages Documentation*. https://docs.github.com/en/pages
+
+- Gothelf, J., & Seiden, J. (2016). *Lean UX: Applying lean principles to improve user experience* (2ª ed.). O'Reilly Media.
+
+- IBM. (s.f.-a). *As-is scenario map*. https://www.ibm.com/design/thinking/page/toolkit/activity/as-is-scenario-map
+
+- IBM. (s.f.-b). *To-be scenario map*. https://www.ibm.com/design/thinking/page/toolkit/activity/to-be-scenario-map
+
+- Pressman, R. S., & Maxim, B. R. (2020). *Software Engineering: A practitioner's approach* (9ª ed.). McGraw-Hill Education.
+
+# Anexos
+
+- Video TB1: [Video]()
+
+- Video Trabajo Parcial: [Video]()
+
+- Video TB2: [Video]()
+
+- Video TF: [Video]()
+
+- Video Entrevistas de Validación: [Video]()
+
+- Video About the Product: [Video]()
+
+- Video About the Team: [Video]()
+
+[↑ Volver al índice](#índice)

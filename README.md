@@ -37,7 +37,7 @@ static string[] Integrantes() {
 ~~~
 
 
-## Contenido del Informe
+
 # Contenido del Informe
 
 - [Capítulo I: Introducción](#capítulo-i-introducción)
@@ -125,9 +125,7 @@ static string[] Integrantes() {
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
 
-# Informe Trabajo Final 📙
-
-# Informe Trabajo Final 📙
+# Informe Trabajo Final
 
 ## Capítulo I: Introducción
 

@@ -110,15 +110,16 @@ static string[] Integrantes() {
     - [5.1.2. Source Code Management](#512-source-code-management)
     - [5.1.3. Source Code Style Guide & Conventions](#513-source-code-style-guide--conventions)
     - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
-  - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
-    - [5.2.1. Sprint 1](#521-sprint-1)
-    - [5.2.2. Sprint 2](#522-sprint-2)
-    - [5.2.3. Sprint 3](#523-sprint-3)
-    - [5.2.4. Sprint 4](#524-sprint-4)
-  - [5.3. Validation Interviews](#53-validation-interviews)
-    - [5.3.1. Diseño de Entrevistas](#531-diseño-de-entrevistas)
-    - [5.3.2. Registro de Entrevistas](#532-registro-de-entrevistas)
-    - [5.3.3. Evaluaciones según heurísticas](#533-evaluaciones-según-heurísticas)
+- [5.2. Product Implementation & Deployment](#52-product-implementation--deployment)
+  - [5.2.1. Sprint Backlogs](#521-sprint-backlogs)
+  - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
+  - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
+  - [5.2.4. Implemented Native-Mobile Application Evidence](#524-implemented-native-mobile-application-evidence)
+  - [5.2.5. Implemented RESTful API and/or Serverless Backend Evidence](#525-implemented-restful-api-andor-serverless-backend-evidence)
+  - [5.2.6. RESTful API Documentation](#526-restful-api-documentation)
+  - [5.2.7. Team Collaboration Insights](#527-team-collaboration-insights)
+- [5.3. Video About-the-Product](#53-video-about-the-product)
+
 
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
@@ -147,7 +148,7 @@ En conjunto, CertiWeb se proyecta como un referente digital en certificación au
 
 **> Fabrizio Javier Quiroz Zambrano (U202213406)**  
 <div align="center">
-  <img src="resources/Cap-1/Members/Fabrizio1.jpg" alt="imagen Fabrizio" width="120" align="right">
+  <img src="Images/Fabrizio1.jpg" alt="imagen Fabrizio" width="120" align="right">
   
 ~~~txt
 Estudiante de 6to ciclo de Ingeniería de Software en la UPC.
@@ -1518,7 +1519,7 @@ Finalmente, se configuro y desplegó la versión inicial del Landing Page en **G
 
 <img src="Images/github-landing-deployment.png" />
 
-### 5.2. Landing Page, Services & Applications Implementation
+### 5.2. Product Implementation & Deployment
 ##### 5.2.1. Sprint Backlogs
 ##### 5.2.2. Implemented Landing Page Evidence
 ##### 5.2.3. Implemented Frontend-Web Application Evidence

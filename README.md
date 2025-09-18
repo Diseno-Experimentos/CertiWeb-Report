@@ -30,7 +30,7 @@ static string[] Integrantes() {
         "🧑‍💻Quiroz Zambrano, Fabrizio Javier - u202213406"",
         "👩‍💻 Angulo Abud, Juan Carlos - u202317692,
         "👩‍💻 Trillo Hernandez, Anghel Melanie - u201912401,
-        "👩‍💻 ,
+        "👩‍💻 , Zúñiga Murillo, Diego Sebastián - U202310636
         "👩‍💻 , 
     };
 }
@@ -186,12 +186,12 @@ en el equipo de forma continua y puntual.
 
 ---
 
-**> [Nombre del integrante 4] (Código)**  
+**> Diego Sebastián Zuñiga Murillo (U202310636)**  
 <div align="center">
-  <img src="resources/Cap-1/Members/Integrante4.jpg" alt="imagen Integrante 4" width="120" align="right">
+  <img src="Images/diego-z.png" alt="imagen Integrante 4" width="120" align="right">
   
 ~~~txt
-XXXXXX
+Mi nombre es Diego, soy estudiante de la carrera de ingenieria de software y tengo 20 años, actualmente me encuentro cursando el sexto ciclo en la universidad. Algo a saber de mi es que siempre estoy constantemente aprendiendo las nuevas teconologias que salen al mercado para asi poder adaptarme facilmente a los cambios en la sociedad. Busco expandir mas mis conocimientos desarrollando proyectos en conjunto con mi grupo de trabajo
 ~~~
 </div>
 

@@ -867,15 +867,153 @@ Comprador que valida autenticidad del sello, consulta el informe técnico y comp
 
 ---
 
-## Capítulo IV: Product Design
+# Capítulo IV: Product Design
 
 ### 4.1. Style Guidelines
+
 #### 4.1.1. General Style Guidelines
+
+<div style="background:#F0F9F4;border-radius:8px;padding:20px;margin-bottom:20px;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+
+  <div style="display:flex;align-items:center;margin-bottom:16px;">
+    <div style="flex:1;padding-right:20px;">
+      <h3 style="color:#002D18;margin-top:0;font-size:1.1em;">Branding</h3>
+      <img src="Images/certiweb.png" alt="Certiweb logo" width="180" style="border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+    </div>
+    <div style="flex:1;">
+      <h3 style="color:#002D18;margin-top:0;font-size:1.1em;">Tipografía</h3>
+      <p style="margin-bottom:8px;">Fuente principal: <code style="background:#F8ECD6;padding:2px 6px;border-radius:4px;font-family:monospace;">Roboto</code></p>
+      <p style="color:#333;font-size:0.95em;">Se utiliza para mantener un estilo moderno, limpio y profesional, asegurando legibilidad tanto en pantallas pequeñas como grandes.</p>
+    </div>
+  </div>
+
+  <h3 style="color:#002D18;margin-top:20px;font-size:1.1em;">Colores principales</h3>
+
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;margin:12px 0;background:white;border-radius:6px;overflow:hidden;">
+      <thead style="background:#002D18;color:white;">
+        <tr>
+          <th style="padding:12px;text-align:left;">Nombre</th>
+          <th style="padding:12px;text-align:left;">Color</th>
+          <th style="padding:12px;text-align:left;">Código HEX</th>
+          <th style="padding:12px;text-align:left;">Uso recomendado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:12px;">Verde oscuro</td>
+          <td style="padding:12px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#002D18;border:1px solid #ddd;"></span></td>
+          <td style="padding:12px;"><code>#002D18</code></td>
+          <td style="padding:12px;">Encabezados, botones principales, identidad de marca</td>
+        </tr>
+        <tr>
+          <td style="padding:12px;">Arena suave</td>
+          <td style="padding:12px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#D8CCB8;border:1px solid #ddd;"></span></td>
+          <td style="padding:12px;"><code>#D8CCB8</code></td>
+          <td style="padding:12px;">Fondos y secciones de información</td>
+        </tr>
+        <tr>
+          <td style="padding:12px;">Verde claro</td>
+          <td style="padding:12px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#F0F9F4;border:1px solid #ddd;"></span></td>
+          <td style="padding:12px;"><code>#F0F9F4</code></td>
+          <td style="padding:12px;">Áreas de soporte visual, bloques secundarios</td>
+        </tr>
+        <tr>
+          <td style="padding:12px;">Amarillo vivo</td>
+          <td style="padding:12px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#FBB901;border:1px solid #ddd;"></span></td>
+          <td style="padding:12px;"><code>#FBB901</code></td>
+          <td style="padding:12px;">Indicadores, alertas y CTA destacados</td>
+        </tr>
+        <tr>
+          <td style="padding:12px;">Gris claro</td>
+          <td style="padding:12px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#C3CCC7;border:1px solid #ddd;"></span></td>
+          <td style="padding:12px;"><code>#C3CCC7</code></td>
+          <td style="padding:12px;">Bordes, divisores y elementos secundarios</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="color:#002D18;margin-top:20px;font-size:1.1em;">Espaciado</h3>
+  <p style="color:#333;">El diseño aplica un sistema de espaciado basado en múltiplos de 8px para mantener consistencia y ritmo visual.</p>
+
+  <h3 style="color:#002D18;margin-top:20px;font-size:1.1em;">Tono de comunicación</h3>
+  <p style="color:#333;">El tono debe transmitir:</p>
+  <ul style="color:#333;list-style-type:square;padding-left:20px;">
+    <li>Profesionalismo y confianza</li>
+    <li>Claridad y objetividad en la información</li>
+    <li>Cercanía al usuario, evitando tecnicismos innecesarios</li>
+  </ul>
+</div>
+
+---
+
 #### 4.1.2. Web Style Guidelines
 
+<div style="display:flex;gap:20px;margin-bottom:30px;">
+  <div style="flex:1;background:#F8ECD6;border-radius:8px;padding:16px;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+    <h3 style="color:#002D18;margin-top:0;font-size:1.1em;">Diseño Responsivo</h3>
+    <ul style="color:#333;padding-left:20px;list-style-type:disc;">
+      <li>Estrategia <em>mobile-first</em>, priorizando experiencia en dispositivos móviles</li>
+      <li>Diseño modular mediante tarjetas (cards) para autos, informes y certificaciones</li>
+      <li>Tipografía flexible de 14px a 24px, garantizando legibilidad en todos los tamaños de pantalla</li>
+    </ul>
+  </div>
+
+  <div style="flex:1;background:#F8ECD6;border-radius:8px;padding:16px;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+    <h3 style="color:#002D18;margin-top:0;font-size:1.1em;">Componentes UI</h3>
+    <ul style="color:#333;padding-left:20px;list-style-type:disc;">
+      <li>Botones con bordes redondeados y micro-interacciones (hover, focus, active)</li>
+      <li>Animaciones suaves en transiciones y cargas para mejorar la percepción de fluidez</li>
+      <li>Uso consistente de iconografía simple y reconocible</li>
+    </ul>
+  </div>
+</div>
+
+---
+
 ### 4.2. Information Architecture
+
 #### 4.2.1. Organization Systems
+
+<div style="display:flex;gap:20px;">
+  <div style="flex:1;background:#F0F9F4;border-radius:8px;padding:16px;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+    <h3 style="color:#002D18;margin-top:0;font-size:1.1em;">Landing Page</h3>
+    <ul style="color:#333;padding-left:20px;list-style-type:disc;">
+      <li>Orden jerárquico: beneficios principales → explicación del servicio → CTA final</li>
+      <li>Presentación visual clara de testimonios, sellos y reportes</li>
+    </ul>
+  </div>
+
+  <div style="flex:1;background:#F0F9F4;border-radius:8px;padding:16px;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+    <h3 style="color:#002D18;margin-top:0;font-size:1.1em;">Aplicación Web</h3>
+    <ul style="color:#333;padding-left:20px;list-style-type:disc;">
+      <li>Panel de control organizado por secciones: 
+        <ul style="padding-left:20px;list-style-type:circle;">
+          <li>Mis vehículos</li>
+          <li>Historial de inspecciones</li>
+          <li>Certificados vigentes</li>
+        </ul>
+      </li>
+      <li>Adaptación de funcionalidades según el perfil del usuario (vendedor, revendedor, comprador)</li>
+    </ul>
+  </div>
+</div>
+
+---
+
 #### 4.2.2. Labeling Systems
+
+<div style="background:#F8F8B7;border-radius:8px;padding:16px;margin:12px 0;box-shadow:0 2px 4px rgba(0,0,0,0.05);">
+  <h3 style="color:#002D18;margin-top:0;font-size:1.1em;">Ejemplos de etiquetas</h3>
+  <ul style="color:#333;list-style-type:square;padding-left:20px;">
+    <li>"Solicitar inspección"</li>
+    <li>"Ver informe"</li>
+    <li>"Certificado vigente"</li>
+    <li>"Agregar vehículo"</li>
+  </ul>
+</div>
+
 #### 4.2.3. SEO Tags and Meta Tags
 #### 4.2.4. Searching Systems
 #### 4.2.5. Navigation Systems

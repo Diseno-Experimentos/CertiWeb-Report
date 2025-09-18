@@ -28,7 +28,7 @@ width=50%"/>
 static string[] Integrantes() {
     return new string[] {
         "🧑‍💻Quiroz Zambrano, Fabrizio Javier - u202213406"",
-        "👩‍💻 ,
+        "👩‍💻 Angulo Abud, Juan Carlos - u202317692,
         "👩‍💻 ,
         "👩‍💻 ,
         "👩‍💻 , 
@@ -158,12 +158,15 @@ Expectativa: fortalecer habilidades fullstack y crear software útil, escalable 
 
 ---
 
-**> [Nombre del integrante 2] (Código)**  
+**> Juan Carlos Angulo Abud (U202317692)**  
 <div align="center">
-  <img src="resources/Cap-1/Members/Integrante2.jpg" alt="imagen Integrante 2" width="120" align="right">
+  <img src="Images/JuanCarlosAnguloPortrait.jpg" alt="imagen Juan Carlos Angulo" width="120" align="right">
   
 ~~~txt
-XXXXXX
+Soy un estudiante de 5to ciclo de la carrera de ingeniería de software en la UPC.
+Tengo experiencia creando aplicaciones web usando react y consumiendo APIs externas.
+Me gusta el ámbito front end más que el back end. Soy una persona orientada a objetivos,
+responsable, comprometido y con ganas de siempre aprender más.
 ~~~
 </div>
 

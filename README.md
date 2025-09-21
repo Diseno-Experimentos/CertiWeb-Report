@@ -30,12 +30,51 @@ static string[] Integrantes() {
         "🧑‍💻Quiroz Zambrano, Fabrizio Javier - u202213406"",
         "👩‍💻 Angulo Abud, Juan Carlos - u202317692,
         "👩‍💻 Trillo Hernandez, Anghel Melanie - u201912401,
-        "👩‍💻 , Zúñiga Murillo, Diego Sebastián - U202310636
-        "👩‍💻 , 
+        "👩‍💻 Zúñiga Murillo, Diego Sebastián - U202310636,
     };
 }
 ~~~
 
+<!-- Registro de versiones -->
+<h1 align="left">Registro de versiones del Informe</h1>
+<br>
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size: 14px;">
+  <thead>
+    <tr style="background:#f7f7f7;">
+      <td align="center" style="border: 1px solid #ddd; padding: 8px; width: 10%;">Versión</td>
+      <td align="center" style="border: 1px solid #ddd; padding: 8px; width: 12%;">Fecha</td>
+      <td align="center" style="border: 1px solid #ddd; padding: 8px; width: 33%;">Autores</td>
+      <td align="center" style="border: 1px solid #ddd; padding: 8px;">Descripción</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ccbebeff; padding: 8px; font-weight: 600;">TB1</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">21/09/2025</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">
+        <ul style="margin:0 0 0 18px;">
+          <li>Angulo Abud, Juan Carlos - u202317692</li>
+          <li>Trillo Hernandez, Anghel Melanie - u201912401</li>
+          <li>Zúñiga Murillo, Diego Sebastián - U202310636</li>
+          <li>Fabrizio Javier Quiroz Zambrano – U202213406</li>
+        </ul>
+      </td>
+      <td style="border: 1px solid #ddd; padding: 8px;">
+        <strong>Proyecto:</strong> RepLink – CertiWeb
+        <ul style="margin:6px 0 0 18px;">
+          <li>Capítulo I: Introducción</li>
+          <li>Capítulo II: Requirements Elicitation & Analysis</li>
+          <li>Capítulo III: Requirements Specification</li>
+          <li>Capítulo IV: Product Design</li>
+          <li>Capítulo V: Product Implementation, Validation & Deployment (hasta el primer sprint)</li>
+          <li>Avance de Conclusiones, Bibliografía y Anexos</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
 
 
 # Contenido del Informe
@@ -125,6 +164,14 @@ static string[] Integrantes() {
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
 
+  ## Student Outcome  ABET–EAC-Student Outcome 5 (RepLink – CertiWeb)
+
+| Criterio específico | Acciones realizadas (TB1) | Conclusiones (TB1) |
+|---|---|---|
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Fabrizio Quiroz :** Participé de forma transversal en la mayoría de los apartados del proyecto, apoyando tanto en la redacción del informe como en la validación técnica. Colaboré en los apartados de **Student Outcome** y en la preparación de evidencias para la **Landing Page**. Mi participación fue clave para conectar los distintos entregables y garantizar coherencia global en el TB1. | El equipo demostró **liderazgo distribuido por especialidad**, permitiendo decisiones más rápidas y alineadas con el dominio. La coordinación cruzada entre UX, arquitectura y especificación redujo reprocesos y generó un TB1 **coherente y consistente**. |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos** | **Fabrizio Quiroz :** Apoyé activamente en la **planificación global del informe** y en la coordinación entre apartados, revisando entregables intermedios y ajustando contenidos según retroalimentación del equipo y docente. Aporté también en la construcción de la **Landing Page inicial**, fortaleciendo la integración entre documentación y desarrollo. | Se cumplieron los objetivos de **TB1** con entregables completos y trazables. La **planificación** y metas claras facilitaron el cumplimiento a tiempo; la **revisión por pares** elevó la calidad del informe. El entorno **colaborativo e inclusivo** favoreció la participación activa y el logro del **SO5**. |
+
+
 # Informe Trabajo Final
 
 ## Capítulo I: Introducción
@@ -200,16 +247,6 @@ desarrollando proyectos en conjunto con mi grupo de trabajo
 </div>
 
 ---
-
-**> [Nombre del integrante 5] (Código)**  
-<div align="center">
-  <img src="resources/Cap-1/Members/Integrante5.jpg" alt="imagen Integrante 5" width="120" align="right">
-  
-~~~txt
-XXXXXX
-~~~
-</div>
-
 
 
 ### 1.2. Solution Profile
@@ -1541,7 +1578,7 @@ Finalmente, se configuro y desplegó la versión inicial del Landing Page en **G
 | Time                           | 9:00pm                                                                  |
 | Location                       | Reunión virtual en Google Meet                                          |
 | Prepared By                    | Fabrizio Quiroz                                                         |
-| Attendees (to planning meeting)| Quiroz Zambrano, Fabrizio Javier; Angulo Abud, Juan Carlos; Trillo Hernandez, Anghel Melanie; Zúñiga Murillo, Diego Sebastián;  |
+| Attendees (to planning meeting)| Angulo Abud, Juan Carlos; Trillo Hernandez, Anghel Melanie; Zúñiga Murillo, Diego Sebastián;  |
 | Sprint n - 1 Review Summary    | Se planificó el desarrollo completo de la Landing Page, Frontend, Backend y documentación inicial. |
 | Sprint n - 1 Retrospective Summary | El equipo acordó trabajar en paralelo en los distintos módulos del producto para asegurar la entrega de un prototipo funcional al cierre del Sprint. |
 | **Sprint Goal & User Stories** |                                                                         |
@@ -1554,10 +1591,10 @@ Finalmente, se configuro y desplegó la versión inicial del Landing Page en **G
 
 | Team Member (Last Name, First Name) | GitHub Username | UI/UX Design <br> Leader (L) / Collaborator (C) | Landing Design <br> Leader (L) / Collaborator (C) | Frontend <br> Leader (L) / Collaborator (C) | Backend <br> Leader (L) / Collaborator (C) |
 | :---------------------------------- | :-------------- | :---------------------------------------------: | :----------------------------------------------: | :-----------------------------------------: | :----------------------------------------: |
-| Quiroz Zambrano, Fabrizio Javier    | DekayDeCanela   | C                                               | C                                                | L                                           | C                                          |
+| Quiroz Zambrano, Fabrizio Javier    | Relycloud    | C                                               | C                                                | L                                           | C                                          |
 | Angulo Abud, Juan Carlos            | Sve-nnN         | C                                               | L                                                | C                                           | C                                          |
-| Trillo Hernandez, Anghel Melanie    | AM27TH          | L                                               | C                                                | C                                           | C                                          |
-| Zúñiga Murillo, Diego Sebastián     | Relycloud       | C                                               | C                                                | C                                           | L                                          |
+| Trillo Hernandez, Anghel Melanie    |  AM27TH        | L                                               | C                                                | C                                           | C                                          |
+| Zúñiga Murillo, Diego Sebastián     |  DekayDeCanela      | C                                               | C                                                | C                                           | L                                          |
 |                       |  | C                                               | C                                                | C                                           | C                                          |
 
 ###### 5.2.1.3. Sprint Backlog 1
@@ -1724,10 +1761,7 @@ En esta sección se presenta un video explicativo sobre el producto desarrollado
 
 A continuación, se proporcionan enlaces a las plataformas donde el video ha sido subido, junto con una captura de pantalla del mismo:
 
-[About the Product]()
-
-
-[↑ Volver al índice](#índice)
+[About the Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EcRe5QWCUYlPhyd9P4OesvgBfz8M09CvQaB5hUQ7ZO49zQ?e=MdFhdT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 # Conclusiones
 - **Visión y propósito claros**: Certiweb tiene una misión bien definida de ofrecer un servicio confiable de inspección técnica para autos usados, respondiendo a una necesidad real del mercado.
@@ -1775,16 +1809,8 @@ En este video, el equipo de desarrollo de CertiWeb se presenta y comparte su exp
 
 - Video TB1: [Video]()
 
-- Video Trabajo Parcial: [Video]()
-
-- Video TB2: [Video]()
-
-- Video TF: [Video]()
-
 - Video Entrevistas de Validación: [Video]()
 
 - Video About the Product: [Video]()
 
 - Video About the Team: [Video]()
-
-[↑ Volver al índice](#índice)

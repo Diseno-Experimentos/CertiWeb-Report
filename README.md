@@ -1528,12 +1528,193 @@ Finalmente, se configuro y desplegó la versión inicial del Landing Page en **G
 <img src="Images/github-landing-deployment.png" />
 
 ### 5.2. Product Implementation & Deployment
+
 ##### 5.2.1. Sprint Backlogs
+
+###### 5.2.1.1. Sprint Planning 1
+
+| Criterio                       | Detalle                                                                 |
+| :----------------------------- | :---------------------------------------------------------------------- |
+| **Sprint #**                   | Sprint 1                                                               |
+| **Sprint Planning Background** |                                                                         |
+| Date                           | 02/09/2025                                                              |
+| Time                           | 9:00pm                                                                  |
+| Location                       | Reunión virtual en Google Meet                                          |
+| Prepared By                    | Fabrizio Quiroz                                                         |
+| Attendees (to planning meeting)| Quiroz Zambrano, Fabrizio Javier; Angulo Abud, Juan Carlos; Trillo Hernandez, Anghel Melanie; Zúñiga Murillo, Diego Sebastián;  |
+| Sprint n - 1 Review Summary    | Se planificó el desarrollo completo de la Landing Page, Frontend, Backend y documentación inicial. |
+| Sprint n - 1 Retrospective Summary | El equipo acordó trabajar en paralelo en los distintos módulos del producto para asegurar la entrega de un prototipo funcional al cierre del Sprint. |
+| **Sprint Goal & User Stories** |                                                                         |
+| Sprint 1 Goal                  | Desarrollar la primera versión implementada de la Landing Page, el Frontend Web, el Backend con API REST, una API simulada para pruebas y la base de la documentación del sistema. |
+| Sprint 1 Velocity              | 34                                                                      |
+| **Sum of Story Points**        | 34                                                                      |
+
+
+###### 5.2.1.2. Aspect Leaders and Collaborators
+
+| Team Member (Last Name, First Name) | GitHub Username | UI/UX Design <br> Leader (L) / Collaborator (C) | Landing Design <br> Leader (L) / Collaborator (C) | Frontend <br> Leader (L) / Collaborator (C) | Backend <br> Leader (L) / Collaborator (C) |
+| :---------------------------------- | :-------------- | :---------------------------------------------: | :----------------------------------------------: | :-----------------------------------------: | :----------------------------------------: |
+| Quiroz Zambrano, Fabrizio Javier    | DekayDeCanela   | C                                               | C                                                | L                                           | C                                          |
+| Angulo Abud, Juan Carlos            | Sve-nnN         | C                                               | L                                                | C                                           | C                                          |
+| Trillo Hernandez, Anghel Melanie    | AM27TH          | L                                               | C                                                | C                                           | C                                          |
+| Zúñiga Murillo, Diego Sebastián     | Relycloud       | C                                               | C                                                | C                                           | L                                          |
+|                       |  | C                                               | C                                                | C                                           | C                                          |
+
+###### 5.2.1.3. Sprint Backlog 1
+
+| **User Story** | **Title**                          | **Work-Item / Task** | **Title**                                | **Description**                                                                 | **Estimation (Hours)** | **Assigned To**            | **Status** |
+|----------------|------------------------------------|-----------------------|------------------------------------------|---------------------------------------------------------------------------------|------------------------|----------------------------|------------|
+| US01           | Landing Page informativa           | T01                  | Crear estructura base en HTML/CSS        | Implementar la página inicial con estructura básica y estilos responsivos.       | 6                      | Juan Carlos Angulo          | Done       |
+|                |                                    | T02                  | Agregar secciones de beneficios          | Incorporar secciones de propuesta de valor y beneficios diferenciadores.        | 5                      | Anghel Melanie Trillo       | Done       |
+|                |                                    | T03                  | Implementar testimonios                  | Añadir reseñas de usuarios con estructura accesible y validación visual.         | 4                      | Diego Zúñiga                | Done       |
+| US02           | Frontend web inicial               | T04                  | Configuración de Vue + Vite              | Crear proyecto base en Vue con Vite y estructura de componentes inicial.         | 6                      | Fabrizio Quiroz             | Done       |
+|                |                                    | T05                  | Implementar dashboard de usuario         | Diseñar e implementar un panel básico para mostrar estado de certificaciones.   | 5                      | Fabrizio Quiroz             | Done       |
+| US03           | Backend con API REST               | T06                  | Crear API REST en .NET                   | Implementar servicios iniciales en .NET con endpoints para autos y usuarios.     | 6                      | Diego Zúñiga                | Done       |
+|                |                                    | T07                  | Conectar a base de datos simulada        | Integrar persistencia inicial con una base de datos simulada.                   | 4                      | Diego Zúñiga                | Done       |
+| US04           | API simulada para pruebas          | T08                  | Configurar fake API en JSON Server       | Montar una fake API para pruebas rápidas de frontend.                           | 4                      |               | Done       |
+| US05           | Documentación técnica inicial      | T09                  | Redacción del informe README             | Documentar el proyecto en Markdown, incluyendo perfiles y procesos.             | 5                      | Anghel Melanie Trillo        | Done       |
+|                |                                    | T10                  | Configuración de repositorios            | Crear y vincular repos en GitHub para Landing, Frontend, Backend y Reportes.    | 4                      | Fabrizio Quiroz              | Done       |
+
+###### 5.2.1.4. Development Evidence for Sprint Review
+
+| Repository                                                                 | Branch   | Commit Id | Commit Message                                    | Commit Message Body                                | Commit on (Date) |
+|----------------------------------------------------------------------------|----------|-----------|---------------------------------------------------|----------------------------------------------------|------------------|
+| [Landing Page](https://github.com/Diseno-Experimentos/landing-page)        | main     | 2d3f1a9   | feat(landing): implement hero and benefits section | Implementación de secciones principales del landing | 05/09/2025       |
+| [CertiWeb-Front](https://github.com/Diseno-Experimentos/CertiWeb-Front)    | main     | 7a4b2c3   | feat(frontend): add dashboard and navigation       | Configuración de Vue + Vite y dashboard inicial     | 06/09/2025       |
+| [CertiWeb-Back](https://github.com/Diseno-Experimentos/certiweb-back)      | main     | 4f9e1b7   | feat(api): create REST endpoints for cars & users  | Implementación de controladores y servicios iniciales| 07/09/2025       |
+| [Fake API](https://github.com/Diseno-Experimentos/fake-api)                | main     | 1c8e2d4   | feat(fake-api): configure JSON server with schema  | Fake API para pruebas de frontend                   | 07/09/2025       |
+| [CertiWeb-Report](https://github.com/Diseno-Experimentos/CertiWeb-Report)  | main     | 6b7a9f2   | docs(report): add TB1 documentation structure      | Creación de la documentación inicial del proyecto   | 08/09/2025       |
+
+
 ##### 5.2.2. Implemented Landing Page Evidence
+
+Durante el Sprint 1 se implementaron las siguientes evidencias funcionales:
+
+- **Landing Page** desplegada en GitHub Pages: [https://diseno-experimentos.github.io/landing-page](https://diseno-experimentos.github.io/landing-page)  
+  - Sección Home con hero principal y CTA.  
+  - Sección About Us con descripción del servicio.  
+  - Sección Reviews con testimonios de clientes.  
+  - Sección Contact con formulario de contacto.  
+
+- **Frontend Web App** inicial en Vue.js.  
+  - Dashboard de usuario con acceso a certificaciones.  
+  - Navegación básica entre módulos.  
+
+- **Backend en .NET** con API REST.  
+  - Endpoints iniciales para usuarios y autos.  
+  - Conexión a base de datos simulada.  
+
+- **Fake API** con JSON Server para pruebas rápidas de frontend.
+
+###### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+Para el Sprint 1 se implementaron endpoints iniciales del backend. Se tiene previsto ampliar la documentación con Swagger en los próximos sprints.  
+
+Repositorio de Backend: [https://github.com/Diseno-Experimentos/certiweb-back](https://github.com/Diseno-Experimentos/certiweb-back)
+
+Repositorio de Fake API: [https://github.com/Diseno-Experimentos/fake-api](https://github.com/Diseno-Experimentos/fake-api)
+
+
+###### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+Se desplegaron los distintos módulos en GitHub y Render:  
+
+- Organización en GitHub: creación de repositorios para Landing, Frontend, Backend, Fake API y Reportes.  
+- Landing Page desplegada en GitHub Pages.  
+- Fake API desplegada en entorno local para pruebas.  
+- Backend preparado para despliegue en Render (pendiente en siguientes sprints).  
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+El equipo trabajó de manera colaborativa en GitHub, distribuyendo responsabilidades entre Landing Page, Frontend, Backend y Documentación.  
+
+Se evidencian múltiples commits distribuidos en los distintos repositorios, reflejando la participación activa de todos los miembros.  
+
 ##### 5.2.3. Implemented Frontend-Web Application Evidence
+
+Durante el Sprint 1 se desarrolló la primera versión del **Frontend Web Application** utilizando **Vue.js con Vite**.  
+El frontend permite a los usuarios registrarse, iniciar sesión, acceder a su panel de certificaciones y realizar reservas de inspecciones.  
+
+A continuación, se presentan las secciones principales implementadas en el Frontend:
+
+Sección Búsqueda:  
+<img src="Images/searchFil.png"/>
+
+Sección Bienvenida:  
+<img src="Images/welcome.png"/>
+
+Sección Certificado:  
+<img src="Images/certifi.png"/>
+
+Sección Marcas:  
+<img src="Images/brand.png"/>
+
+Sección Reserva:  
+<img src="Images/reserva1.png"/>  
+<img src="Images/reserva2.png"/>
+
+Sección Historial:  
+<img src="Images/pruebareserva.png"/>
+
+Sección Perfil de Usuario:  
+<img src="Images/seccperfil.png"/>
+
+Repositorio del Frontend: [CertiWeb-Front](https://github.com/Diseno-Experimentos/CertiWeb-Front)
+
 ##### 5.2.4. Implemented Native-Mobile Application Evidence
 ##### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
+
+Durante el Sprint 1 se implementó el **Backend de CertiWeb** en **.NET 8** con arquitectura RESTful.  
+El backend provee servicios para la gestión de usuarios, vehículos, certificaciones y reservas.  
+
+Principales módulos implementados:  
+- Autenticación y autorización de usuarios.  
+- Gestión de vehículos y marcas.  
+- Certificaciones técnicas con generación de informes en PDF.  
+- Reservas de inspecciones vehiculares.  
+
+Evidencias de arquitectura y despliegue:
+
+Diagrama de Contenedores:  
+<img src="Images/ContainersDiagram.png"/>
+
+Diagrama de Componentes:  
+<img src="Images/ComponentDiagram.png"/>
+
+Diagrama de Base de Datos:  
+<img src="Images/DatabaseDiagram.png"/>
+
+Despliegue en entornos de prueba:  
+<img src="Images/Sprint3deploy1.png"/>  
+<img src="Images/Sprint3deploy2.png"/>  
+<img src="Images/Sprint3deploy3.png"/>  
+<img src="Images/Sprint3deploy4.png"/>  
+<img src="Images/Sprint3deploy5.png"/>  
+<img src="Images/Sprint3deploy6.png"/>
+
+Repositorio del Backend: [CertiWeb-Back](https://github.com/Diseno-Experimentos/certiweb-back)
+
+Repositorio de la Fake API (para pruebas rápidas de integración): [Fake API](https://github.com/Diseno-Experimentos/fake-api)
+
 ##### 5.2.6. RESTful API documentation
+
+
+La documentación de la API se estructuró siguiendo el estándar **OpenAPI 3.0** y se integró con **Swagger**.  
+Esto permite a los desarrolladores consultar y probar de forma interactiva los endpoints implementados en el backend.  
+
+Evidencia de la documentación generada:
+
+<img src="Images/APIdoc1.png"/>  
+<img src="Images/APIdoc2.png"/>  
+<img src="Images/APIdoc3.png"/>  
+
+Actualización de la documentación en Sprint 4:  
+<img src="Images/Sprint4swagger1.png"/>  
+<img src="Images/Sprint4swagger2.png"/>  
+<img src="Images/Sprint4swagger3.png"/>  
+
+Repositorio con documentación actualizada: [CertiWeb-Back](https://github.com/Diseno-Experimentos/certiweb-back)
+
 ##### 5.2.7. Team Collaboration Insights
 
 ### 5.3 Video About-the-Product

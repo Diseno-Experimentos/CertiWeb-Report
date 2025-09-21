@@ -172,6 +172,12 @@ static string[] Integrantes() {
 | **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos** | **Fabrizio Quiroz :** Apoyé activamente en la **planificación global del informe** y en la coordinación entre apartados, revisando entregables intermedios y ajustando contenidos según retroalimentación del equipo y docente. Aporté también en la construcción del proyecto completo, fortaleciendo la integración entre documentación y desarrollo. | Se cumplieron los objetivos de **TB1** con entregables completos y trazables. La **planificación** y metas claras facilitaron el cumplimiento a tiempo; la **revisión por pares** elevó la calidad del informe. El entorno **colaborativo e inclusivo** favoreció la participación activa y el logro del **SO5**. |
 
 
+| Criterio específico | Acciones realizadas (TB1) | Conclusiones (TB1) |
+|---|---|---|
+| **4.c.1 Reconoce responsabilidad ética y profesional en situaciones de ingeniería de software** | Me encargué del despliegue del frontend y backend del proyecto CertiWeb en GitHub Pages y Render, verificando su integración y correcto funcionamiento. Asumí la responsabilidad de garantizar que el producto estuviera disponible y operativo, cumpliendo con los estándares de calidad y confiabilidad esperados. | El despliegue exitoso evidenció la importancia de la responsabilidad profesional y ética, ya que asegurar la disponibilidad del sistema impacta directamente en la confianza de los usuarios y en la seriedad del trabajo en equipo. |
+| **4.c.2 Emite juicios informados considerando el impacto de las soluciones de ingeniería de software en contextos globales, económicos, ambientales y sociales** | Analicé las decisiones de despliegue priorizando la estabilidad y accesibilidad del sistema, evaluando su impacto en los usuarios finales y en el entorno de uso real. | La implementación permitió reflexionar sobre el impacto económico y social del proyecto, mostrando que una solución accesible y funcional aporta valor más allá del ámbito académico, favoreciendo la confianza en los procesos de compraventa vehicular. |
+
+
 # Informe Trabajo Final
 
 ## Capítulo I: Introducción

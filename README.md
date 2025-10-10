@@ -149,16 +149,33 @@ static string[] Integrantes() {
     - [5.1.2. Source Code Management](#512-source-code-management)
     - [5.1.3. Source Code Style Guide & Conventions](#513-source-code-style-guide--conventions)
     - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
-- [5.2. Product Implementation & Deployment](#52-product-implementation--deployment)
-  - [5.2.1. Sprint Backlogs](#521-sprint-backlogs)
-  - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
-  - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
-  - [5.2.4. Implemented Native-Mobile Application Evidence](#524-implemented-native-mobile-application-evidence)
-  - [5.2.5. Implemented RESTful API and/or Serverless Backend Evidence](#525-implemented-restful-api-andor-serverless-backend-evidence)
-  - [5.2.6. RESTful API Documentation](#526-restful-api-documentation)
-  - [5.2.7. Team Collaboration Insights](#527-team-collaboration-insights)
-- [5.3. Video About-the-Product](#53-video-about-the-product)
+  - [5.2. Product Implementation & Deployment](#52-product-implementation--deployment)
+    - [5.2.1. Sprint Backlogs](#521-sprint-backlogs)
+    - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
+    - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
+    - [5.2.4. Implemented Native-Mobile Application Evidence](#524-implemented-native-mobile-application-evidence)
+    - [5.2.5. Implemented RESTful API and/or Serverless Backend Evidence](#525-implemented-restful-api-andor-serverless-backend-evidence)
+    - [5.2.6. RESTful API Documentation](#526-restful-api-documentation)
+    - [5.2.7. Team Collaboration Insights](#527-team-collaboration-insights)
+  - [5.3. Video About-the-Product](#53-video-about-the-product)
 
+- [Capítulo VI: Product Verification & Validation](#capitulo-vi-product-verification-validation)
+   - [6.1. Testing Suites & Validation](#6-1-testing-suites-validation)
+     - [6.1.1. Core Entities Unit Tests.](#6-1-1-core-entities-unit-tests)
+     - [6.1.2. Core Integration Tests.](#6-1-2-core-integration-tests)
+     - [6.1.3. Core Behavior-Driven Development](#6-1-3-core-behavior-driven-development)
+     - [6.1.4. Core System Tests.](#6-1-4-core-system-tests)
+
+- [Capítulo VII: DevOps Practices](#capitulo-vii-devops-practices)
+     - [7.1. Continuous Integration](#7-1-continuous-integration)
+       - [7.1.1. Tools and Practices.](#7-1-1-tools-and-practices)
+       - [7.1.2. Build & Test Suite Pipeline Components.](#7-1-2-build-test-suite-pipeline-components)
+     - [7.2. Continuous Delivery](#7-2-continuous-delivery)
+       - [7.2.1. Tools and Practices.](#7-2-1-tools-and-practices)
+       - [7.2.2. Stages Deployment Pipeline Components.](#7-2-2-stages-deployment-pipeline-components)
+     - [7.3. Continuous deployment](#7-3-continuous-deployment)
+       - [7.3.1. Tools and Practices.](#7-3-1-tools-and-practices)
+       - [7.3.2. Production Deployment Pipeline Components.](#7-3-2-production-deployment-pipeline-components)
 
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
@@ -1794,6 +1811,116 @@ En esta sección se presenta un video explicativo sobre el producto desarrollado
 A continuación, se proporcionan enlaces a las plataformas donde el video ha sido subido, junto con una captura de pantalla del mismo:
 
 [About the Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EcRe5QWCUYlPhyd9P4OesvgBfz8M09CvQaB5hUQ7ZO49zQ?e=MdFhdT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+
+<a id="capitulo-vii-devops-practices"></a>
+# Capítulo VII: DevOps Practices
+
+<a id="7-1-continuous-integration"></a>
+## 7.1. Continuous Integration
+<a id="7-1-1-tools-and-practices"></a>
+### 7.1.1. Tools and Practices.
+
+Para CertiWeb, utilizamos herramientas como Jenkins y GitHub Actions para implementar Integración Continua (CI). Estas herramientas permiten automatizar la integración de cambios al repositorio de código de forma continua, ejecutando pruebas automáticamente y asegurando que el código siempre esté en un estado funcional antes de ser integrado.
+Herramientas:
+- Jenkins: Utilizado para configurar pipelines de CI que se ejecutan cada vez que un desarrollador sube un cambio al repositorio. Jenkins ejecuta pruebas automáticas y valida la compilación del proyecto.
+
+
+- GitHub Actions: Integra GitHub con pipelines de CI/CD para garantizar que las pruebas y el despliegue se gestionen de manera continua.
+
+
+Prácticas de CI:
+- Automatización de pruebas: Cada vez que un desarrollador sube código nuevo, se ejecutan pruebas unitarias y de integración para garantizar que las nuevas modificaciones no rompan las funcionalidades existentes.
+
+
+- Revisión continua de código: Utilizamos Pull Requests para revisar el código antes de ser integrado a la rama principal, asegurando calidad y consistencia.
+
+
+<a id="7-1-2-build-test-suite-pipeline-components"></a>
+### 7.1.2. Build & Test Suite Pipeline Components.
+
+El pipeline de construcción y pruebas de CertiWeb se divide en varios componentes que garantizan que el código esté libre de errores antes de su integración al entorno de producción:
+1. Componente de Construcción (Build Component):
+  - El código fuente se compila y empaqueta automáticamente cada vez que se integra un nuevo cambio al repositorio.
+
+
+2. Componente de Pruebas Unitarias (Unit Test Component):
+  - Se ejecutan pruebas unitariaso para asegurar que cada módulo del software funcione de manera independiente.
+
+3. Componente de Pruebas de Integración (Integration Test Component):
+  - Se realizan pruebas de integración para verificar que las diferentes partes del sistema interactúan correctamente.
+
+4. Componente de Despliegue (Deployment Component):
+  - Después de pasar todas las pruebas, el código es desplegado automáticamente en un entorno de pruebas (staging) usando Docker y Kubernetes.
+
+
+<a id="7-2-continuous-delivery"></a>
+## 7.2. Continuous Delivery
+<a id="7-2-1-tools-and-practices"></a>
+### 7.2.1. Tools and Practices.
+
+Para CertiWeb, implementamos Entrega Continua (CD) utilizando Jenkins como herramienta clave para automatizar el proceso de despliegue. Esta herramienta permiten que cualquier cambio aprobado se despliegue automáticamente en los entornos de staging y producción sin intervención manual.
+
+<br>
+
+Herramientas:
+- Jenkins: Se configura para hacer despliegues automáticos cada vez que un cambio pasa todas las pruebas.
+
+
+- Docker: Utilizamos Docker para empaquetar la aplicación en contenedores, lo que facilita el despliegue en diferentes entornos.
+
+
+- Kubernetes: Nos permite gestionar el ciclo de vida de las aplicaciones y realizar despliegues de manera escalable.
+
+
+Prácticas de CD:
+- Despliegue Automatizado: Cada vez que un cambio pasa las pruebas, se despliega automáticamente en el entorno de staging y producción.
+
+
+- Despliegue Gradual: Los cambios se despliegan en etapas para asegurar que no afecten a toda la base de usuarios. Utilizamos canary releases y blue-green deployments para minimizar riesgos.
+
+
+<a id="7-2-2-stages-deployment-pipeline-components"></a>
+### 7.2.2. Stages Deployment Pipeline Components.
+
+El pipeline de despliegue de CertiWeb está dividido en múltiples etapas para asegurar que cada componente se despliegue correctamente sin afectar el servicio. Estas etapas son:
+1. Desarrollo: En esta etapa, los desarrolladores realizan cambios en el código. Los cambios son verificados y probados localmente antes de ser integrados al repositorio.
+
+
+2. Integración Continua: Aquí se realiza la integración de todos los cambios a través del pipeline de CI, donde se ejecutan las pruebas unitarias y de integración.
+
+
+3. Pruebas en Staging: En esta etapa, el código es desplegado automáticamente en un entorno de staging para realizar pruebas de aceptación de usuario (UAT) y validación del sistema.
+
+
+4. Despliegue en Producción: Después de pasar las pruebas de staging, el código es desplegado automáticamente en el entorno de producción. Utilizamos Kubernetes para orquestar el despliegue y escalar las aplicaciones según sea necesario.
+
+<a id="7-3-continuous-deployment"></a>
+## 7.3. Continuous deployment
+<a id="7-3-1-tools-and-practices"></a>
+### 7.3.1. Tools and Practices.
+
+En CertiWeb, aplicamos Despliegue Continuo (CD) para garantizar que los cambios sean desplegados automáticamente en producción sin intervención manual. Esto asegura una entrega más rápida y frecuente de nuevas funcionalidades.
+Herramientas:
+- Docker: Para asegurar que todos los entornos de desarrollo, staging y producción sean consistentes.
+
+- Kubernetes: Se utiliza para gestionar el despliegue en producción, automatizando el escalado y la gestión de contenedores.
+
+Prácticas de CD:
+- Despliegue 24/7: Cada vez que un cambio es validado y aprobado, se despliega automáticamente en producción, garantizando que los usuarios siempre tengan la última versión del producto.
+
+<a id="7-3-2-production-deployment-pipeline-components"></a>
+### 7.3.2. Production Deployment Pipeline Components.
+
+El pipeline de despliegue en producción se compone de varias fases críticas:
+1. Despliegue en Entorno de Staging: Después de pasar las pruebas automatizadas, el código es desplegado primero en el entorno de staging, que replica la infraestructura de producción.
+
+
+2. Validación de UAT (User Acceptance Testing): Los usuarios clave validan el funcionamiento del sistema en staging antes de que el código sea liberado a producción.
+
+
+3. Despliegue Automático a Producción: Después de la validación, el código se despliega automáticamente en producción. Utilizamos blue-green deployments para reducir el tiempo de inactividad y minimizar los riesgos.
+
 
 # Conclusiones
 - **Visión y propósito claros**: Certiweb tiene una misión bien definida de ofrecer un servicio confiable de inspección técnica para autos usados, respondiendo a una necesidad real del mercado.

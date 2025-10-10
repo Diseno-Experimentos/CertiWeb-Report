@@ -1803,6 +1803,164 @@ Repositorio con documentación actualizada: [CertiWeb-Back](https://github.com/D
 
 ##### 5.2.7. Team Collaboration Insights
 
+##### 5.2.8. Sprint 2
+
+### 5.2.8.1 Sprint Planning 2
+
+<p>Se planeó el segundo sprint a través de una reunión dentro de la plataforma Discord. Para esto, se realizó una tabla que permitió registrar toda la información discutida.</p>
+
+
+| **Sprint #**                       | Sprint 2                                                                                                                                                                                                                                                                                                                                                                                                      |
+|:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint Planning Background**     |                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Date                               | 2024-09-16                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Time                               | 5:00 PM                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Location                           | Virtual                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Prepared by                        | Fabrizio Javier Quiroz Zambrano                                                                                                                                                                                                                                                                                                                                                                            |
+| Attendees (to planning meeting)    | <pZúñiga Murillo, Diego Sebastián</p><p>Trillo Hernandez, Anghel Melanie</p><p>Angulo Abud, Juan Carlos</p></p>                                                                                                                                                                                                   |
+| Sprint n - 2 Review Summary        | Durante este segundo sprint se logro hacer el punto 6 y 7 que consisten en testeos a nuestra app, se lograron con exito                                                      |
+| Sprint n - 2 Retrospective Summary | El equipo identificó como aciertos la comunicación efectiva y la colaboración en la resolución de problemas. No obstante, se señaló la necesidad de una mejor planificación inicial, especialmente en cuanto a la estimación del tiempo necesario para ciertas tareas, y se identificó la posibilidad de optimizar el proceso de revisión de código para garantizar una mayor calidad del producto entregado. |
+| **Sprint Goal & User Stories**     |                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Sprint 2 Goal                      | El objetivo principal que tiene este sprint 2 es elaborar de manera exitosa los testeos de nuestra app.                                                                                                                                                                                                                                                                     |
+| Sprint 2 Velocity                  | 19                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Sum of Story Points                | 19                                                                                                                                                                                                                                                                                                                                                                                                            |
+
+
+### 5.2.2.2 Sprint Backlog 2
+
+<p>El principal objetivo de este segundo sprint fue completar la implementación de las vistas principales del <strong>Frontend Web de CertiWeb</strong>, integrando las funcionalidades de autenticación, gestión de vehículos, inspecciones y certificados. Este sprint se desarrolló en paralelo mediante Trello y GitHub Projects dentro de la organización <strong>RepLink – CertiWeb</strong>.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>User Story ID</strong></td>
+      <td><strong>User Story Title</strong></td>
+      <td><strong>Task ID</strong></td>
+      <td><strong>Task Title</strong></td>
+      <td><strong>Description</strong></td>
+      <td><strong>Estimation (hours)</strong></td>
+      <td><strong>Assigned to</strong></td>
+      <td><strong>Status</strong></td>
+    </tr>
+<tr>
+  <td rowspan="2">US01</td>
+  <td rowspan="2">Autenticación y acceso seguro</td>
+  <td>T01</td>
+  <td>Implementar formulario de inicio de sesión</td>
+  <td>Diseñar e implementar el formulario de Login conectado al endpoint <code>/auth/login</code>, con validación de credenciales y mensajes de error.</td>
+  <td>4</td>
+  <td>Quiroz Zambrano, Fabrizio</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>T02</td>
+  <td>Configurar persistencia de sesión</td>
+  <td>Implementar almacenamiento del token JWT en <code>localStorage</code> y verificación de expiración automática de sesión.</td>
+  <td>3</td>
+  <td>Quiroz Zambrano, Fabrizio</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td rowspan="2">US02</td>
+  <td rowspan="2">Gestión de vehículos registrados</td>
+  <td>T03</td>
+  <td>Crear vista "Mis Vehículos"</td>
+  <td>Desarrollar tabla dinámica que muestre todos los vehículos del usuario autenticado obtenidos desde el endpoint <code>/vehicles</code>.</td>
+  <td>5</td>
+  <td>Angulo Alarcón, Juan Carlos</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>T04</td>
+  <td>Agregar nuevo vehículo</td>
+  <td>Implementar formulario modal para registrar un nuevo vehículo con validaciones y envío de datos al backend.</td>
+  <td>4</td>
+  <td>Angulo Alarcón, Juan Carlos</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td rowspan="2">US03</td>
+  <td rowspan="2">Visualización de certificados técnicos</td>
+  <td>T05</td>
+  <td>Implementar listado de certificados</td>
+  <td>Crear un componente que muestre los certificados emitidos con su fecha y estado, obtenidos desde el endpoint <code>/certificates</code>.</td>
+  <td>5</td>
+  <td>Zúñiga Murillo, Diego</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>T06</td>
+  <td>Visor de certificados PDF</td>
+  <td>Integrar visor PDF embebido para la visualización directa del certificado técnico desde la aplicación.</td>
+  <td>3</td>
+  <td>Zúñiga Murillo, Diego</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td rowspan="2">US04</td>
+  <td rowspan="2">Historial de inspecciones</td>
+  <td>T07</td>
+  <td>Construir tabla de inspecciones</td>
+  <td>Implementar tabla dinámica para listar inspecciones con información del vehículo, fecha y resultado técnico.</td>
+  <td>5</td>
+  <td>Trillo Hernández, Melanie</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>T08</td>
+  <td>Filtro por estado y fecha</td>
+  <td>Agregar filtros por estado (aprobado/rechazado) y rango de fechas para mejorar la búsqueda del historial.</td>
+  <td>3</td>
+  <td>Trillo Hernández, Melanie</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td rowspan="2">US05</td>
+  <td rowspan="2">Panel de control del usuario</td>
+  <td>T09</td>
+  <td>Diseñar Dashboard</td>
+  <td>Implementar panel principal que muestre métricas clave: cantidad de vehículos, inspecciones pendientes y certificados emitidos.</td>
+  <td>6</td>
+  <td>Quiroz Zambrano, Fabrizio</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>T10</td>
+  <td>Configurar rutas y navegación</td>
+  <td>Definir estructura de rutas con <code>vue-router</code> y proteger las vistas mediante guardas de autenticación.</td>
+  <td>4</td>
+  <td>Quiroz Zambrano, Fabrizio</td>
+  <td>Done</td>
+</tr>
+
+<tr>
+  <td rowspan="2">US06</td>
+  <td rowspan="2">Optimización visual y SEO</td>
+  <td>T11</td>
+  <td>Mejorar diseño responsive</td>
+  <td>Ajustar el layout del frontend para pantallas móviles y tabletas siguiendo la guía de estilo de CertiWeb.</td>
+  <td>4</td>
+  <td>Trillo Hernández, Melanie</td>
+  <td>Done</td>
+</tr>
+<tr>
+  <td>T12</td>
+  <td>Aplicar meta tags y SEO básico</td>
+  <td>Configurar meta tags de título, descripción y palabras clave para mejorar la indexación del sitio.</td>
+  <td>2</td>
+  <td>Zúñiga Murillo, Diego</td>
+  <td>Done</td>
+</tr>
+
+  </tbody>
+</table>
+
+<p><strong>Resultado esperado:</strong> Al finalizar el Sprint 2, se logró completar todas las vistas funcionales del Frontend Web, con autenticación, panel de usuario, gestión de vehículos, historial de inspecciones y certificados técnicos, cumpliendo con los estándares de usabilidad y conectividad establecidos por el backend de <strong>CertiWeb</strong>.</p>
+
 ### 5.3 Video About-the-Product
 En esta sección se presenta un video explicativo sobre el producto desarrollado. El objetivo del video es resaltar las principales características, funcionalidades y beneficios del producto, permitiendo a los usuarios tener una mejor comprensión de su propósito y usabilidad.
 

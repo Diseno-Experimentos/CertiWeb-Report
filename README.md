@@ -1699,6 +1699,38 @@ Sección Perfil de Usuario:
 Repositorio del Frontend: [CertiWeb-Front](https://github.com/Diseno-Experimentos/CertiWeb-Front)
 
 ##### 5.2.4. Implemented Native-Mobile Application Evidence
+##### 5.2.4.1 Acuerdo de Servicio - SaaS (SaaS Agreement)
+El **Acuerdo de Servicio SaaS** define los derechos, responsabilidades y limitaciones aplicables a todos los usuarios de la plataforma **CertiWeb**, garantizando transparencia, protección de datos personales y uso ético del servicio. Este documento forma parte de la política de gobernanza tecnológica del proyecto y será publicado de forma visible en la sección **“Términos y Condiciones”** del sitio web oficial.
+
+#### a) Objetivo del acuerdo
+Establecer las condiciones bajo las cuales los usuarios pueden acceder y utilizar la plataforma **CertiWeb**, asegurando un marco de operación confiable y conforme a la legislación vigente sobre servicios digitales, protección de datos personales y propiedad intelectual.
+
+#### b) Alcance
+El acuerdo aplica a todos los módulos del ecosistema **CertiWeb**:
+
+- **Landing Page**: Orientada a la difusión del servicio y captación de clientes.  
+- **Web Application**: Destinada a la gestión de inspecciones y emisión de certificados.  
+- **Backend/API**: Encargada del procesamiento seguro de información y comunicación entre módulos.
+
+#### c) Principales disposiciones
+
+1. **Licencia de uso:** El usuario obtiene una licencia limitada, no exclusiva y revocable para acceder al servicio SaaS de CertiWeb.  
+2. **Propiedad intelectual:** Todo el software, marca e interfaz son propiedad del equipo desarrollador **RepLink – CertiWeb**.  
+3. **Privacidad y datos personales:** La plataforma cumple con los principios de la *Ley N.° 29733 (Perú)* y el *Reglamento (UE) 2016/679 (GDPR)*, garantizando confidencialidad, seguridad y uso legítimo de la información.  
+4. **Responsabilidad del usuario:** El usuario se compromete a proporcionar información veraz, mantener la seguridad de sus credenciales y usar el sistema conforme a las normas aplicables.  
+5. **Limitación de responsabilidad:** CertiWeb no será responsable por pérdidas indirectas o interrupciones causadas por terceros proveedores o fallas ajenas al control del servicio.  
+6. **Suspensión del servicio:** El proveedor se reserva el derecho de suspender temporalmente el servicio para mantenimiento, previa notificación a los usuarios registrados.  
+7. **Soporte y mantenimiento:** El servicio incluye atención técnica básica a través de los canales indicados en la web.  
+8. **Jurisdicción:** Cualquier controversia derivada del uso del servicio será resuelta conforme a la legislación peruana vigente.
+
+#### d) Publicación y accesibilidad
+El acuerdo será publicado en formato legible y responsivo dentro del apartado **Terms & Conditions**, accesible desde el pie de página de todas las interfaces del sistema.  
+Además, se aplicarán criterios de **accesibilidad (WCAG 2.1 AA)** para garantizar su comprensión y legibilidad en dispositivos móviles.
+
+#### e) Cumplimiento normativo y ética digital
+**CertiWeb** adopta principios de **transparencia, responsabilidad y seguridad digital**, promoviendo la confianza del usuario final y la sostenibilidad del servicio a largo plazo.
+
+
 ##### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
 Durante el Sprint 1 se implementó el **Backend de CertiWeb** en **.NET 8** con arquitectura RESTful.  

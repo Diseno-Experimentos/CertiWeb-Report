@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# Informe Trabajo Final 📙
+
 
 <img src= Images/UPC_logo_transparente.png
 style="display: block; 
@@ -182,6 +182,7 @@ static string[] Integrantes() {
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
+- 
 
 ## Student Outcome ABET–EAC-Student Outcome 4 (RepLink – CertiWeb)
 

@@ -31,6 +31,7 @@ static string[] Integrantes() {
         "👩‍💻 Angulo Abud, Juan Carlos - u202317692",
         "👩‍💻 Trillo Hernandez, Anghel Melanie - u201912401",
         "👩‍💻 Zúñiga Murillo, Diego Sebastián - U202310636",
+        "👩‍💻 Montes Maza, Augusto Sebastian - U202218645",
     };
 }
 ~~~
@@ -58,6 +59,7 @@ static string[] Integrantes() {
           <li>Trillo Hernandez, Anghel Melanie - u201912401</li>
           <li>Zúñiga Murillo, Diego Sebastián - U202310636</li>
           <li>Fabrizio Javier Quiroz Zambrano – U202213406</li>
+          <li>Montes Maza, Augusto Sebastian - U202218645</li>
         </ul>
       </td>
       <td style="border: 1px solid #ddd; padding: 8px;">

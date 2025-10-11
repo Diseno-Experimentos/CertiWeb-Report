@@ -1819,6 +1819,8 @@ Repositorio con documentación actualizada: [CertiWeb-Back](https://github.com/D
 
 ##### 5.2.7. Team Collaboration Insights
 
+<img src="Images/InsightsSprint2.png"/>
+
 ##### 5.2.8. Sprint 2
 
 ### 5.2.8.1 Sprint Planning 2

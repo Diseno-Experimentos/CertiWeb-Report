@@ -1985,6 +1985,299 @@ A continuación, se proporcionan enlaces a las plataformas donde el video ha sid
 
 [About the Product](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EcRe5QWCUYlPhyd9P4OesvgBfz8M09CvQaB5hUQ7ZO49zQ?e=MdFhdT&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
+<a id="capitulo-vi-product-verification-validation"></a>
+# Capítulo VI: Product Verification and Validation
+
+
+<a id="capitulo-vi-product-verification-validation"></a>
+## 6.1. Testing Suites & Validation
+
+
+<a id="6-1-1-core-entities-unit-tests"></a>
+## 6.1.1. Core Entities Unit Tests
+
+En esta sección se desarrollaron pruebas unitarias abarcando todas nuestras entidades principales en CertiWeb, siguiendo AAA (Arrange, Act and Assert) para garantizar validaciones individuales en cada componente aislado.
+
+### Entidades testeadas
+Se realizaron pruebas en las siguientes entidades core de nuestro dominio:
+
+#### Value Objects
+- Year: Valicación de años válidos, desde el año 1900 hasta el año actual +1.
+- Price: Valicación de precios monetarios y conversiones de moneda.
+- LicencePlate: Validación de formato de placas vehiculares de 6 a 10 caracteres alfanuméricos.
+- PdfCertification: Validación de certificados codificados en Base64
+
+#### Aggregate Entities
+- Brand: Entidad marca con validaciones de nombre y propiedades
+- Car: Entidad vehículo con validaciones complejas de todos sus value objects
+- User: Entidad usuario con validaciones de datos personales y roles
+
+#### Cobertura de pruebas
+- Constructores: Validación con parámetros válidos e inválidos
+- Propiedades: Verificación de immutabilidad y comportamiento esperado
+- Validaciones: Testing exhaustivo de reglas de negocio
+- Conversiones: Pruebas de conversiones implícitas y explícitas
+- Excepciones: Validación de manejo de errores y mensajes descriptivos
+
+#### Herramientas utilizadas
+- NUnit: Framework principal de testing
+- FluentAssertions: Para assertions más legibles y expresivas
+- Moq: Para mocking de dependencias cuando es necesario
+- .NET Test SDK: Para ejecución e integración con IDE
+
+Las pruebas unitarias garantizan que cada entidad cumple con sus especificaciones funcionales, validando que no existen errores en la lógica interna y que todas las validaciones de dominio funcionan correctamente en aislamiento.
+
+<a id="6-1-2-core-integration-tests"></a>
+## 6.1.2. Core Integration Tests
+En esta sección implementamos pruebas de integracion para validar la correcta interaccion entre los diferentes módulos y componentes de CertiWeb, haciendo énfasis en la persistencia de datos y la comunidación entre capas.
+
+### Componentes integrados
+Las pruebas de integración valodan las siguientes integraciones
+
+#### Persistencia de datos
+- Entity Framework Core: Integración con base de datos en memoria
+- DbContext: Configuración y mapping de entidades
+- Repositories: Operaciones CRUD y consultas complejas
+
+#### Relación entre entidades
+- Foreign Keys: Validación de integridad referencial
+- Constraints únicos: License Plates y Reservation IDs
+- Navegación: Propiedades de navegación entre entidades relacionadas
+
+#### Casos de prueba implemetados
+
+##### Operaciones CRUD
+- Creación, lectura, actualización y eliminación de entidades
+- Persistencia de value objects complejos
+- Manejo de transacciones y rollbacks
+
+##### Consulta y filtros
+- Búsquedas por múltiples criterios
+- Joins entre entidades relacionadas
+- Paginación y ordenamiento
+
+##### Valicaciones de integridad
+- Constraints de base de datos
+- Validaciones de unicidad
+- Manejo de conflictos de concurrencia
+
+Las pruebas de integración confirman que todos los módulos interactúan correctamente, que la persistencia funciona según lo esperado, y que no existen problemas de comunicación entre las diferentes capas del sistema.
+
+
+<a id="6-1-3-core-behavior-driven-development"></a>
+## 6.1.3 Core Behaviour-Driven Development
+En esta sección se aplicaron técnicas de BDD para definir y probar el comportamiento esperado de nuestro sistema desde la perspectiva del usuario, utilizando textos en lenguage natural.
+
+### Herramientas integradas
+
+#### SpecFlow Integration:
+- Definición de features en formato Gherkin
+- Step definitions en C#
+- Integración con el framework de testing existente
+
+#### Escenarios de usuario definidos
+
+##### Feature: Gestión de Vehículos
+```
+Feature: Car Management
+  As a user
+  I want to manage vehicle information
+  So that I can track and certify vehicles
+
+Scenario: Register a new vehicle
+  Given I am an authenticated user
+  When I submit valid vehicle information
+  Then the vehicle should be registered successfully
+  And I should receive a confirmation
+
+Scenario: Search vehicles by license plate
+  Given there are vehicles in the system
+  When I search by license plate "ABC123"
+  Then I should see the matching vehicle details
+```
+
+##### Feature: Certificación de Vehículos
+```
+Feature: Vehicle Certification
+  As a user
+  I want to generate vehicle certificates
+  So that I can provide official documentation
+
+Scenario: Generate PDF certificate
+  Given I have a registered vehicle
+  When I request a certificate generation
+  Then a PDF certificate should be created
+  And it should contain all vehicle details
+```
+
+##### Step definitions implementadas
+``` cs
+[Given(@"I am an authenticated user")]
+public void GivenIAmAnAuthenticatedUser()
+{
+    // Arrange: Setup authenticated user context
+}
+
+[When(@"I submit valid vehicle information")]
+public void WhenISubmitValidVehicleInformation()
+{
+    // Act: Execute vehicle registration
+}
+
+[Then(@"the vehicle should be registered successfully")]
+public void ThenTheVehicleShouldBeRegisteredSuccessfully()
+{
+    // Assert: Verify successful registration
+}
+```
+#### Flujos de Usuario Validados
+
+##### Flujos Principales:
+- Registro y autenticación de usuarios
+- Gestión completa de vehículos (CRUD)
+- Generación y descarga de certificados
+- Búsqueda y filtrado de información
+
+##### Flujos Alternativos:
+- Manejo de errores y validaciones
+- Casos de uso edge cases
+- Recuperación de errores
+
+Con estas pruebas BDD garantizamos que el sistema cumple con los requisitos funcionales desde la perspectiva del usuario, proporcionando una documentación executable que describe exactamente cómo debe comportarse la aplicación en diferentes escenarios.
+
+<a id="6-1-4-core-system-tests"></a>
+## 6.1.4 Core System Tests
+
+En esta sección se realizaron pruebas de sistema exhaustivas para validar que la aplicación CertiWeb funciona correctamente en su totalidad, cubriendo desde las APIs REST hasta la integración completa de todos los componentes del sistema.
+
+
+### Alcance de las Pruebas de Sistema
+
+#### Testing End-to-End:
+- Validación completa de APIs REST
+- Pruebas de flujos de trabajo completos
+- Integración con base de datos real
+- Validación de middleware y pipeline HTTP
+
+#### Componentes del Sistema Validados:
+- Controllers: Endpoints de Brand, Car y User
+- Authentication: JWT y autorización
+- Database: Operaciones reales con SQL Server
+- Middleware: Logging, error handling, CORS
+- Performance: Carga y tiempo de respuesta
+
+### Infraestructura de testing
+
+``` cs
+public class SystemTestBase : IClassFixture<WebApplicationFactory<Program>>
+{
+    protected readonly HttpClient _client;
+    protected readonly WebApplicationFactory<Program> _factory;
+    
+    public SystemTestBase(WebApplicationFactory<Program> factory)
+    {
+        _factory = factory;
+        _client = factory.CreateClient();
+    }
+}
+```
+
+### Categorías de pruebas implementadas
+
+#### API System Tests
+```
+[Test]
+public async Task CreateCar_WithValidData_ShouldReturn201()
+{
+    // Arrange
+    var carRequest = CarTestDataBuilder.CreateValidCarRequest();
+    
+    // Act
+    var response = await _client.PostAsJsonAsync("/api/cars", carRequest);
+    
+    // Assert
+    response.StatusCode.Should().Be(HttpStatusCode.Created);
+}
+```
+
+#### Performance Tests:
+- Pruebas de carga con múltiples usuarios concurrentes
+- Validación de tiempos de respuesta bajo estrés
+- Pruebas de memoria y uso de recursos
+
+#### Security Tests
+- Valicación de autenticación con JWT
+- Pruebas de autorización por roles
+- Validación de HTTPS y headers de seguridad
+
+#### Resilience Tests
+``` cs
+[Test]
+public async Task Api_UnderHighLoad_ShouldMaintainPerformance()
+{
+    // Arrange
+    var tasks = new List<Task<HttpResponseMessage>>();
+    
+    // Act: Simulate 100 concurrent requests
+    for (int i = 0; i < 100; i++)
+    {
+        tasks.Add(_client.GetAsync("/api/cars"));
+    }
+    
+    var responses = await Task.WhenAll(tasks);
+    
+    // Assert
+    responses.All(r => r.IsSuccessStatusCode).Should().BeTrue();
+}
+```
+
+### Escenarios de Testing Completos
+
+#### Flujo Completo de Certificación:
+- Autenticación de usuario
+- Registro de marca de vehículo
+- Registro de vehículo completo
+- Generación de certificado PDF
+- Descarga y validación del certificado
+
+#### Pruebas de Integración Multicapa:
+- Frontend → API → Business Logic → Database
+- Validación de transformación de datos en cada capa
+- Manejo de errores propagado correctamente
+
+### Configuración de Ambiente de Pruebas
+
+#### Database Seeding
+``` cs
+public static class TestDataSeeder
+{
+    public static async Task SeedTestData(CertiWebDbContext context)
+    {
+        // Seed brands, users, and test vehicles
+        await context.Brands.AddRangeAsync(GenerateTestBrands());
+        await context.SaveChangesAsync();
+    }
+}
+```
+
+#### Test Configuration:
+- Configuración específica para testing environment
+- Base de datos temporal para cada suite de tests
+- Logs detallados para debugging
+
+### Métricas y Validaciones
+
+#### Métricas de Performance:
+- Tiempo de respuesta promedio < 200ms
+- Capacidad de 100+ usuarios concurrentes
+- Uso de memoria estable bajo carga
+
+#### Validaciones de Funcionalidad:
+- Todos los endpoints REST funcionan correctamente
+- Validaciones de datos funcionan en contexto real
+- Manejo de errores apropiado en todos los niveles
+
+Las pruebas de sistema nos ayudan a confirmar que CertiWeb funciona correctamente como aplicación completa, validando que todos los componentes integrados proporcionan la funcionalidad esperada con el rendimiento y la confiabilidad requeridos. La aplicación está lista para producción con confianza en su estabilidad y correctitud funcional.
 
 <a id="capitulo-vii-devops-practices"></a>
 # Capítulo VII: DevOps Practices

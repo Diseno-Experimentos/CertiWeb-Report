@@ -1602,47 +1602,47 @@ Finalmente, se configuro y desplegó la versión inicial del Landing Page en **G
 
 ###### 5.2.1.1. Sprint Planning 1
 
-| Criterio                       | Detalle                                                                 |
+| Criterio                       | Detalle                                                                 |
 | :----------------------------- | :---------------------------------------------------------------------- |
-| **Sprint #**                   | Sprint 1                                                               |
-| **Sprint Planning Background** |                                                                         |
-| Date                           | 02/09/2025                                                              |
-| Time                           | 9:00pm                                                                  |
-| Location                       | Reunión virtual en Google Meet                                          |
-| Prepared By                    | Fabrizio Quiroz                                                         |
-| Attendees (to planning meeting)| Angulo Abud, Juan Carlos; Trillo Hernandez, Anghel Melanie; Zúñiga Murillo, Diego Sebastián;  |
-| Sprint n - 1 Review Summary    | Se planificó el desarrollo completo de la Landing Page, Frontend, Backend y documentación inicial. |
+| **Sprint #**                   | Sprint 1                                                               |
+| **Sprint Planning Background** |                                                                         |
+| Date                           | 02/09/2025                                                              |
+| Time                           | 9:00pm                                                                  |
+| Location                       | Reunión virtual en Google Meet                                          |
+| Prepared By                    | Fabrizio Quiroz                                              _         |
+| Attendees (to planning meeting)| Angulo Abud, Juan Carlos; Trillo Hernandez, Anghel Melanie; Zúñiga Murillo, Diego Sebastián; Monte Maza, Augusto; |
+| Sprint n - 1 Review Summary    | Se planificó el desarrollo completo de la Landing Page, Frontend, Backend y documentación inicial. |
 | Sprint n - 1 Retrospective Summary | El equipo acordó trabajar en paralelo en los distintos módulos del producto para asegurar la entrega de un prototipo funcional al cierre del Sprint. |
-| **Sprint Goal & User Stories** |                                                                         |
-| Sprint 1 Goal                  | Desarrollar la primera versión implementada de la Landing Page, el Frontend Web, el Backend con API REST, una API simulada para pruebas y la base de la documentación del sistema. |
-| Sprint 1 Velocity              | 34                                                                      |
-| **Sum of Story Points**        | 34                                                                      |
+| **Sprint Goal & User Stories** |                                                                         |
+| Sprint 1 Goal                  | Desarrollar la primera versión implementada de la Landing Page, el Frontend Web, el Backend con API REST, una API simulada para pruebas y la base de la documentación del sistema. |
+| Sprint 1 Velocity              | 34                                                                      |
+| **Sum of Story Points**        | 34                                                                      |
 
 
 ###### 5.2.1.2. Aspect Leaders and Collaborators
 
 | Team Member (Last Name, First Name) | GitHub Username | UI/UX Design <br> Leader (L) / Collaborator (C) | Landing Design <br> Leader (L) / Collaborator (C) | Frontend <br> Leader (L) / Collaborator (C) | Backend <br> Leader (L) / Collaborator (C) |
 | :---------------------------------- | :-------------- | :---------------------------------------------: | :----------------------------------------------: | :-----------------------------------------: | :----------------------------------------: |
-| Quiroz Zambrano, Fabrizio Javier    | Relycloud    | C                                               | C                                                | L                                           | C                                          |
-| Angulo Abud, Juan Carlos            | Sve-nnN         | C                                               | L                                                | C                                           | C                                          |
-| Trillo Hernandez, Anghel Melanie    |  AM27TH        | L                                               | C                                                | C                                           | C                                          |
-| Zúñiga Murillo, Diego Sebastián     |  DekayDeCanela      | C                                               | C                                                | C                                           | L                                          |
-|                       |  | C                                               | C                                                | C                                           | C                                          |
+| Quiroz Zambrano, Fabrizio Javier    | Relycloud    | C                                               | C                                                | L                                           | C                                          |
+| Angulo Abud, Juan Carlos            | Sve-nnN         | C                                               | L                                                | C                                           | C                                          |
+| Trillo Hernandez, Anghel Melanie    |  AM27TH        | L                                               | C                                                | C                                           | C                                          |
+| Zúñiga Murillo, Diego Sebastián     |  DekayDeCanela      | C                                               | C                                                | C                                           | L                                          |
+| Monte Maza, Augusto                 | AugustMM        | C                                               | C                                                | C                          _                | C                                          |
 
 ###### 5.2.1.3. Sprint Backlog 1
 
-| **User Story** | **Title**                          | **Work-Item / Task** | **Title**                                | **Description**                                                                 | **Estimation (Hours)** | **Assigned To**            | **Status** |
+| **User Story** | **Title**                          | **Work-Item / Task** | **Title**                                | **Description**                                                                 | **Estimation (Hours)** | **Assigned To**            | **Status** |
 |----------------|------------------------------------|-----------------------|------------------------------------------|---------------------------------------------------------------------------------|------------------------|----------------------------|------------|
-| US01           | Landing Page informativa           | T01                  | Crear estructura base en HTML/CSS        | Implementar la página inicial con estructura básica y estilos responsivos.       | 6                      | Juan Carlos Angulo          | Done       |
-|                |                                    | T02                  | Agregar secciones de beneficios          | Incorporar secciones de propuesta de valor y beneficios diferenciadores.        | 5                      | Anghel Melanie Trillo       | Done       |
-|                |                                    | T03                  | Implementar testimonios                  | Añadir reseñas de usuarios con estructura accesible y validación visual.         | 4                      | Diego Zúñiga                | Done       |
-| US02           | Frontend web inicial               | T04                  | Configuración de Vue + Vite              | Crear proyecto base en Vue con Vite y estructura de componentes inicial.         | 6                      | Fabrizio Quiroz             | Done       |
-|                |                                    | T05                  | Implementar dashboard de usuario         | Diseñar e implementar un panel básico para mostrar estado de certificaciones.   | 5                      | Fabrizio Quiroz             | Done       |
-| US03           | Backend con API REST               | T06                  | Crear API REST en .NET                   | Implementar servicios iniciales en .NET con endpoints para autos y usuarios.     | 6                      | Diego Zúñiga                | Done       |
-|                |                                    | T07                  | Conectar a base de datos simulada        | Integrar persistencia inicial con una base de datos simulada.                   | 4                      | Diego Zúñiga                | Done       |
-| US04           | API simulada para pruebas          | T08                  | Configurar fake API en JSON Server       | Montar una fake API para pruebas rápidas de frontend.                           | 4                      |               | Done       |
-| US05           | Documentación técnica inicial      | T09                  | Redacción del informe README             | Documentar el proyecto en Markdown, incluyendo perfiles y procesos.             | 5                      | Anghel Melanie Trillo        | Done       |
-|                |                                    | T10                  | Configuración de repositorios            | Crear y vincular repos en GitHub para Landing, Frontend, Backend y Reportes.    | 4                      | Fabrizio Quiroz              | Done       |
+| US01           | Landing Page informativa           | T01                  | Crear estructura base en HTML/CSS        | Implementar la página inicial con estructura básica y estilos responsivos.       | 6                      | Juan Carlos Angulo          | Done       |
+|                |                                    | T02                  | Agregar secciones de beneficios          | Incorporar secciones de propuesta de valor y beneficios diferenciadores.        | 5                      | Anghel Melanie Trillo       | Done       |
+|                |                                    | T03                  | Implementar testimonios                  | Añadir reseñas de usuarios con estructura accesible y validación visual.         | 4                      | Diego Zúñiga                | Done       |
+| US02           | Frontend web inicial               | T04                  | Configuración de Vue + Vite              | Crear proyecto base en Vue con Vite y estructura de componentes inicial.         | 6                      | Fabrizio Quiroz             | Done       |
+|                |                                    | T05                  | Implementar dashboard de usuario         | Diseñar e implementar un panel básico para mostrar estado de certificaciones.   | 5                      | Fabrizio Quiroz             | Done       |
+| US03           | Backend con API REST               | T06                  | Crear API REST en .NET                   | Implementar servicios iniciales en .NET con endpoints para autos y usuarios.     | 6                      | Diego Zúñiga                | Done       |
+|                |                                    | T07                  | Conectar a base de datos simulada        | Integrar persistencia inicial con una base de datos simulada.                   | 4                      | Diego Zúñiga                | Done       |
+| US04           | API simulada para pruebas          | T08                  | Configurar fake API en JSON Server       | Montar una fake API para pruebas rápidas de frontend.                           | 4                      | Augusto Monte Maza          | Done       |
+| US05           | Documentación técnica inicial      | T09                  | Redacción del informe README             | Documentar el proyecto en Markdown, incluyendo perfiles y procesos.             | 5                      | Anghel Melanie Trillo        | Done       |
+|                |                                    | T10                  | Configuración de repositorios            | Crear y vincular repos en GitHub para Landing, Frontend, Backend y Reportes.    | 4                      | Fabrizio Quiroz              | Done       |
 
 ###### 5.2.1.4. Development Evidence for Sprint Review
 

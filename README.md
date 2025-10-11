@@ -1841,7 +1841,6 @@ Repositorio con documentación actualizada: [CertiWeb-Back](https://github.com/D
 | Sprint 2 Velocity                  | 19                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Sum of Story Points                | 19                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-
 ### 5.2.2.2 Sprint Backlog 2
 
 <p>El principal objetivo de este segundo sprint fue completar la implementación de las vistas principales del <strong>Frontend Web de CertiWeb</strong>, integrando las funcionalidades de autenticación, gestión de vehículos, inspecciones y certificados. Este sprint se desarrolló en paralelo mediante Trello y GitHub Projects dentro de la organización <strong>RepLink – CertiWeb</strong>.</p>

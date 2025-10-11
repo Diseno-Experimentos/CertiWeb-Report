@@ -267,6 +267,19 @@ desarrollando proyectos en conjunto con mi grupo de trabajo
 
 ---
 
+**> Augusto Sebastian Montes Maza (U202218645)**  
+<div align="center">
+  <img src="Images/AugustoMontes.png" alt="imagen Augusto Montes" width="120" align="right">
+  
+~~~txt
+Como estudiante de Ingeniería de Software de la UPC, me motiva crear soluciones tecnológicas
+que no solo sean eficientes, sino que también generen un impacto positivo. Me considero un buen
+compañero de equipo, siempre dispuesto a colaborar y a encontrar la mejor manera de superar los desafíos.
+Mi objetivo es aportar con creatividad y dedicación para que juntos alcancemos resultados excepcionales.
+~~~
+</div>
+
+---
 
 ### 1.2. Solution Profile
 

@@ -2305,11 +2305,16 @@ Las pruebas de sistema nos ayudan a confirmar que CertiWeb funciona correctament
 
 <a id="7-1-continuous-integration"></a>
 ## 7.1. Continuous Integration
+
+En nuestro proyecto, la integración continua representa un paradigma fundamental para asegurar la calidad y estabilidad del código a lo largo del ciclo de desarrollo. A través de la automatización de pruebas y validaciones, buscamos minimizar errores y facilitar la colaboración entre los miembros del equipo. Esta mitiga los riesgos de la integración, permitiendo a los equipos de desarrollo detectar errores de forma temprana y ágil. En certiweb, utilizamos un pipeline de CI usando GitHub actions, definido en el fichero de .github/workflows/ci-cd.yml. Además, usamos un segundo pipeline de CI con Jenkins, que se encarga de ejecutar pruebas unitarias y de integración cada vez que se realiza un push al repositorio, este se encuentra en el jenkinsfile en la raíz del proyecto.
+
 <a id="7-1-1-tools-and-practices"></a>
 ### 7.1.1. Tools and Practices.
 
 Para CertiWeb, utilizamos herramientas como Jenkins y GitHub Actions para implementar Integración Continua (CI). Estas herramientas permiten automatizar la integración de cambios al repositorio de código de forma continua, ejecutando pruebas automáticamente y asegurando que el código siempre esté en un estado funcional antes de ser integrado.
 Herramientas:
+
+
 - Jenkins: Utilizado para configurar pipelines de CI que se ejecutan cada vez que un desarrollador sube un cambio al repositorio. Jenkins ejecuta pruebas automáticas y valida la compilación del proyecto.
 
 
@@ -2322,91 +2327,147 @@ Prácticas de CI:
 
 - Revisión continua de código: Utilizamos Pull Requests para revisar el código antes de ser integrado a la rama principal, asegurando calidad y consistencia.
 
+La herramienta principal de integración para orquestar este proceso es GitHub actions, la cual nos permite definir flujos de trabajo directamente en el repositorio. La instrumentamos a través de triggers en el pipeline:
+
+``` yaml
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+```
+
+Esta configuración establece una estrategia de validación doble:
+
+- Validación de pull request: Cada vez que un desarrollador crea o actualiza un pull request hacia la rama main, se ejecuta el pipeline de CI. Esto permite detectar errores antes de que el código sea fusionado, asegurando que solo cambios validados ingresen a la rama principal.
+- Validación de push: Cada vez que se realiza un push directamente a la rama main, el pipeline de CI se ejecuta nuevamente. Esto garantiza que cualquier cambio en la rama principal sea validado automáticamente, manteniendo la integridad del código en todo momento.
 
 <a id="7-1-2-build-test-suite-pipeline-components"></a>
 ### 7.1.2. Build & Test Suite Pipeline Components.
 
-El pipeline de construcción y pruebas de CertiWeb se divide en varios componentes que garantizan que el código esté libre de errores antes de su integración al entorno de producción:
-1. Componente de Construcción (Build Component):
-  - El código fuente se compila y empaqueta automáticamente cada vez que se integra un nuevo cambio al repositorio.
+Nuestro pipeline se divide en dos trabajos principales: `build_and_test` y `build_and_push_docker`, cada uno con sus respectivas etapas y componentes, ejecutandose de forma secuencial.
+
+1. Componente de Construcción (Build Component) `build_and_test`:
+
+Este trabajo es el núcleo de la validación y se compone de los siguientes pasos críticos:
+
+- `Setup .NET 9.0 SDK`: Prepara el entorno de ejecución (ubuntu-latest) con el SDK de .NET 9.0, garantizando la consistencia del compilador con el `TargetFramework` (net9.0) definido en los archivos de proyecto (`CertiWeb.API.csproj`, `CertiWeb.UnitTests.csproj`, etc.).
+
+- `Restore dependencies` y `Build solution`: Se ejecutan los comandos `dotnet restore` y `dotnet build` sobre el archivo de solución `certiweb-platform.sln`. Esto asegura que todas las dependencias del proyecto se resuelvan y que la totalidad de la base de código compile exitosamente.
+
+- `Run all tests`: Este es el paso de validación más significativo. El comando `dotnet test certiweb-platform.sln` invoca la ejecución de la suite de pruebas completa, que en este proyecto abarca múltiples capas de la pirámide de testing:
+
+- - Pruebas Unitarias (`CertiWeb.UnitTests`): Validan la lógica de negocio en componentes aislados (ej. `CarTests.cs`, `PriceTests.cs`).
+
+- - Pruebas de Integración (`CertiWeb.IntegrationTests`): Verifican la correcta interacción entre componentes, especialmente la capa de persistencia (ej. `CarIntegrationTests.cs`, `UserIntegrationTests.cs`).
+
+- - Pruebas de Sistema (`CertiWeb.SystemTests`): Realizan validaciones end-to-end contra una instancia de la API, asegurando que los controladores, flujos de negocio y validaciones funcionen como un sistema cohesivo (ej. `CarsControllerSystemTests.cs`, `BusinessFlowSystemTests.cs`).
 
 
-2. Componente de Pruebas Unitarias (Unit Test Component):
-  - Se ejecutan pruebas unitariaso para asegurar que cada módulo del software funcione de manera independiente.
+2. Job: `build_and_push_docker`:
 
-3. Componente de Pruebas de Integración (Integration Test Component):
-  - Se realizan pruebas de integración para verificar que las diferentes partes del sistema interactúan correctamente.
+Este trabajo se encarga de empaquetar la aplicación en un formato desplegable
 
-4. Componente de Despliegue (Deployment Component):
-  - Después de pasar todas las pruebas, el código es desplegado automáticamente en un entorno de pruebas (staging) usando Docker y Kubernetes.
-
+- Control de flujo: El trabajo posee dos condiciones clave:
+1. `needs: build_and_test`: Asegura que este trabajo solo se ejecute si el trabajo previo de construcción y pruebas (`build_and_test`) ha finalizado exitosamente. Esto garantiza que solo código validado sea empaquetado.
+2. `if: github.event_name == 'push'`: Limita la ejecución de este trabajo únicamente a eventos de push en la rama main. Esto evita que se generen imágenes Docker para pull requests, enfocando el despliegue solo en cambios confirmados en la rama principal.
+- Construcción del artefacto: El paso `Build and push Docker Image` utiliza el `CertiWeb.API/Dockerfile` para crear la imagen del contenedor. Esta imagen etiquetada como `svennn/certiweb-api:latest` se construye y se sube al Docker Hub, haciendo que la aplicación esté lista para ser desplegada en cualquier entorno compatible con Docker.
 
 <a id="7-2-continuous-delivery"></a>
 ## 7.2. Continuous Delivery
+
+En CertiWeb, la entrega continua es la extensión lógica de nuestra estrategia de integración continua, lo que automatiza el despliegue del artefacto validado a un entorno de pre producción o staging. Este entorno actua como un espejo de producción, permitiendo asi la validación final antes de la exposición al cliente.
+
 <a id="7-2-1-tools-and-practices"></a>
 ### 7.2.1. Tools and Practices.
 
-Para CertiWeb, implementamos Entrega Continua (CD) utilizando Jenkins como herramienta clave para automatizar el proceso de despliegue. Esta herramienta permiten que cualquier cambio aprobado se despliegue automáticamente en los entornos de staging y producción sin intervención manual.
+Nuestra orquestación continúa dentro de GitHub Actions, usando el trabajo de `deploy_staging`. La tecnología de despliegue se basa en `appleboy/ssh-action` para la ejecución remota de comandos y de `docker-compose` para la gestión de servicios en el servidor de destino.
 
-<br>
 
 Herramientas:
-- Jenkins: Se configura para hacer despliegues automáticos cada vez que un cambio pasa todas las pruebas.
+- GitHub Actions: Se configura para hacer despliegues automáticos cada vez que un cambio pasa todas las pruebas.
 
 
 - Docker: Utilizamos Docker para empaquetar la aplicación en contenedores, lo que facilita el despliegue en diferentes entornos.
 
-
-- Kubernetes: Nos permite gestionar el ciclo de vida de las aplicaciones y realizar despliegues de manera escalable.
-
-
 Prácticas de CD:
-- Despliegue Automatizado: Cada vez que un cambio pasa las pruebas, se despliega automáticamente en el entorno de staging y producción.
 
+- Promoción de Artefacto: El `needs: build_and_push_docker` establece una cadena de dependencia. El despliegue a Staging solo puede ocurrir si un nuevo artefacto ha sido construido y publicado.
 
-- Despliegue Gradual: Los cambios se despliegan en etapas para asegurar que no afecten a toda la base de usuarios. Utilizamos canary releases y blue-green deployments para minimizar riesgos.
+- Gestión de Entornos de Despliegue: El uso de `environment: name: staging` es una práctica de gobernanza clave. Permite a GitHub gestionar secretos específicos del entorno (como credenciales de bases de datos) y, fundamentalmente, permite la configuración de reglas de protección, como una aprobación manual. Esta capacidad de requerir una intervención humana para aprobar el despliegue es lo que define a este proceso como Entrega Continua (automatizado hasta un punto de decisión) en lugar de Despliegue Continuo.
 
 
 <a id="7-2-2-stages-deployment-pipeline-components"></a>
 ### 7.2.2. Stages Deployment Pipeline Components.
 
-El pipeline de despliegue de CertiWeb está dividido en múltiples etapas para asegurar que cada componente se despliegue correctamente sin afectar el servicio. Estas etapas son:
-1. Desarrollo: En esta etapa, los desarrolladores realizan cambios en el código. Los cambios son verificados y probados localmente antes de ser integrados al repositorio.
+El trabajo `deploy_staging` se conecta al servidor de Staging (`secrets.STAGING_HOST`) y ejecuta un script de despliegue:
 
+1. Sincronización de Artefacto: `docker pull svennn/certiweb-api:latest` obtiene la imagen exacta construida en la CI.
 
-2. Integración Continua: Aquí se realiza la integración de todos los cambios a través del pipeline de CI, donde se ejecutan las pruebas unitarias y de integración.
+2. Inyección de Configuración: `export MYSQL_ROOT_PASSWORD=...` y `export CONNECTION_STRING=...` inyectan la configuración específica del entorno (leída desde `secrets.STAGING_DB_PASSWORD`) en la sesión de shell del runner.
 
+3. Orquestación con Docker Compose: El comando `docker-compose -f CertiWeb.API/docker-compose.yaml up -d --no-build api` utiliza el archivo docker-compose.yaml del proyecto.
 
-3. Pruebas en Staging: En esta etapa, el código es desplegado automáticamente en un entorno de staging para realizar pruebas de aceptación de usuario (UAT) y validación del sistema.
+- - El flag `--no-build` es vital, ya que refuerza el principio de artefacto inmutable, instruyendo a docker-compose que utilice la imagen descargada en lugar de intentar construir una nueva.
 
-
-4. Despliegue en Producción: Después de pasar las pruebas de staging, el código es desplegado automáticamente en el entorno de producción. Utilizamos Kubernetes para orquestar el despliegue y escalar las aplicaciones según sea necesario.
+- - El argumento `api` asegura que solo el servicio de la aplicación sea reiniciado, dejando el servicio de base de datos (mysql) intacto, lo que resulta en un despliegue más rápido y seguro.
 
 <a id="7-3-continuous-deployment"></a>
 ## 7.3. Continuous deployment
+
+Para finalizar, el despliegue continuo es la fase final y más madura del pipeline, dónde, una vez que el cambio ha sido validado en staging, se promueve al entorno de producción de forma automática, sin intervención manual.
+
+
 <a id="7-3-1-tools-and-practices"></a>
 ### 7.3.1. Tools and Practices.
 
-En CertiWeb, aplicamos Despliegue Continuo (CD) para garantizar que los cambios sean desplegados automáticamente en producción sin intervención manual. Esto asegura una entrega más rápida y frecuente de nuevas funcionalidades.
-Herramientas:
-- Docker: Para asegurar que todos los entornos de desarrollo, staging y producción sean consistentes.
+- Herramientas: El job `deploy_production` utiliza la misma pila tecnológica probada en Staging (GitHub Actions, SSH, Docker Compose).
 
-- Kubernetes: Se utiliza para gestionar el despliegue en producción, automatizando el escalado y la gestión de contenedores.
+Prácticas:
 
-Prácticas de CD:
-- Despliegue 24/7: Cada vez que un cambio es validado y aprobado, se despliega automáticamente en producción, garantizando que los usuarios siempre tengan la última versión del producto.
+- Progresión Lineal: `needs: deploy_staging` impone un flujo de despliegue estrictamente lineal (CI -> Staging -> Producción), asegurando que el código no pueda llegar al cliente final sin haber superado las validaciones previas.
+
+- Paridad de Entornos: El proceso de despliegue en Producción es funcionalmente idéntico al de Staging. Esta paridad es una práctica DevOps esencial, ya que significa que el proceso de despliegue en sí mismo fue probado en la etapa anterior, minimizando los riesgos de fallos relacionados con el despliegue.
+
+- Automatización Completa: A diferencia de Staging, la ausencia de reglas de aprobación manual en el entorno production convierte este paso en Despliegue Continuo. El sistema confía plenamente en la robustez de la suite de pruebas automatizadas y en el éxito del despliegue en Staging.
 
 <a id="7-3-2-production-deployment-pipeline-components"></a>
 ### 7.3.2. Production Deployment Pipeline Components.
 
-El pipeline de despliegue en producción se compone de varias fases críticas:
-1. Despliegue en Entorno de Staging: Después de pasar las pruebas automatizadas, el código es desplegado primero en el entorno de staging, que replica la infraestructura de producción.
+El script ejecutado por `appleboy/ssh-action` en el job `deploy_production` es casi idéntico al de Staging, con diferencias en las variables de configuración:
 
+1. Conexión Segura: Se conecta al host de producción (`secrets.PROD_HOST`).
 
-2. Validación de UAT (User Acceptance Testing): Los usuarios clave validan el funcionamiento del sistema en staging antes de que el código sea liberado a producción.
+2. Inyección de Secretos: Se utilizan los secretos de producción (`secrets.PROD_DB_PASSWORD`) para configurar la `CONNECTION_STRING` apuntando a la base de datos productiva (`certiweb_prod`). Este aislamiento de datos es crítico.
 
+3. Orquestación: Se repite el mismo comando `docker-compose ... up -d --no-build api`, demostrando la portabilidad del artefacto y del proceso de despliegue.
 
-3. Despliegue Automático a Producción: Después de la validación, el código se despliega automáticamente en producción. Utilizamos blue-green deployments para reducir el tiempo de inactividad y minimizar los riesgos.
+<a id="7-4-continous-monitoring"></a>
+### 7.4. Continuous Monitoring
+
+La monitorización continua cierra el ciclo de DevOps, proporcionando retroalimentación sobre la salud y el rendimiento de la aplicación después de que el despliegue se ha completado.
+
+#### 7.4.1 Tools and Practices.
+
+Herramientas: El pipeline integra herramientas de notificación y activación. Se utiliza dawidd6/action-send-mail@v3 para notificaciones por correo electrónico y curl para la activación de webhooks.
+
+Prácticas:
+
+- Notificación de Despliegue: Informar a los interesados (stakeholders) humanos (como el equipo de desarrollo o QA) que un cambio ha sido liberado.
+
+- Activación Proactiva de Monitoreo: En lugar de esperar a que las herramientas de monitoreo detecten un problema de forma pasiva (basado en sondeo o pull), el pipeline empuja (push) una notificación a estas herramientas, solicitando una validación de salud inmediata.
+
+#### 7.4.2. Componentes del Pipeline de Notificación
+El trabajo monitoring_and_alerts se ejecuta tras un despliegue exitoso en Producción (needs: deploy_production).
+
+El paso Send Email Notification utiliza un servidor SMTP (configurado mediante secretos) para enviar una comunicación formal a la lista de correos secrets.NOTIFY_EMAILS. Este correo confirma el éxito del despliegue e incluye un enlace directo a los dashboards de monitoreo (ej. http://grafana.certiweb.com), facilitando la revisión humana.
+
+#### 7.4.3. Componentes del Pipeline de Alertas y Monitoreo
+El paso Trigger Monitoring Check representa una práctica avanzada de observabilidad.
+
+El comando curl envía una solicitud POST a un endpoint de webhook (https://monitoring.certiweb.com/api/checks/...). Esta acción notifica a la plataforma de monitoreo externa (ej. Prometheus, Grafana, UptimeRobot) que una nueva versión de certiweb-prod acaba de ser desplegada.
+
+El sistema de monitoreo, al recibir este webhook, puede reaccionar inmediatamente ejecutando su suite de health checks (pruebas de salud) contra la nueva versión, proporcionando así una retroalimentación casi instantánea sobre el estado de la aplicación post-despliegue, en lugar de esperar al siguiente intervalo de sondeo.
 
 
 # Conclusiones

@@ -2300,6 +2300,92 @@ public static class TestDataSeeder
 
 Las pruebas de sistema nos ayudan a confirmar que CertiWeb funciona correctamente como aplicación completa, validando que todos los componentes integrados proporcionan la funcionalidad esperada con el rendimiento y la confiabilidad requeridos. La aplicación está lista para producción con confianza en su estabilidad y correctitud funcional.
 
+## 6.2. Static Testing & Verification
+
+La fase de *Static Testing & Verification* se realizó antes de ejecutar cualquier experimento dinámico del sprint.  
+En el contexto de **Diseño de Experimentos**, esta etapa corresponde al aseguramiento de la **validez estructural del sistema**, verificando que los artefactos técnicos estén correctamente definidos antes de realizar pruebas controladas.
+
+El análisis estático se centró en cuatro dimensiones principales: **estructura del código**, **calidad**, **seguridad** y **alineamiento con requerimientos**.
+
+
+### 6.2.1. Static Code Analysis
+
+El análisis estático consistió en revisar las entidades y componentes definidos en el class dictionary (User, Vehicle, Inspection, TechnicalReport, Certification, Subscription, Payment, etc.), asegurando que las relaciones y atributos cumplan con:
+
+- **Cohesión interna:** Cada entidad mantiene una única responsabilidad (por ejemplo, `TechnicalReport` solo gestiona información técnica y código de validación).
+- **Consistencia semántica:** Los nombres de atributos usan el *Ubiquitous Language* definido en la sección 2.4.
+- **Compatibilidad estructural:** Los tipos de datos son adecuados (UUID, Date, String, Money) y no generan estados inválidos.
+- **Integridad del dominio:** No existen ciclos ni dependencias innecesarias entre entidades.
+- **Correcta inicialización:** Estados como `inspectionStatus = "Pending"` se encuentran bien definidos desde la creación del objeto.
+
+Este análisis permitió identificar riesgos potenciales antes de la experimentación, evitando sesgos en las pruebas posteriores.
+
+### 6.2.1.1. Coding Standards & Code Conventions
+
+Se evaluaron los estándares aplicados en los artefactos del sprint:
+
+- Uso consistente de **camelCase** para atributos y métodos.
+- Separación clara entre carpetas de **domain**, **application**, **infrastructure** y **web**, siguiendo el enfoque de diseño por dominios.
+- Validaciones mínimas obligatorias:
+  - Placa del vehículo no vacía.
+  - Atributos obligatorios en inspecciones.
+  - Resultados de inspección solo disponibles cuando `inspectionDate` está definida.
+- Comentarios claros en métodos críticos.
+- Convenciones uniformes para nombrar endpoints REST (`/inspections`, `/reports/:id`, `/validate/:code`).
+
+Estas convenciones facilitan que los experimentos posteriores sean reproducibles y auditables.
+
+### 6.2.1.2. Code Quality & Code Security
+
+Se verificaron posibles vulnerabilidades lógicas y estructurales:
+
+- **Control de estados inválidos:**
+  - Evitar inspecciones “certificadas” sin informe técnico asociado.
+  - Evitar reportes sin código de validación.
+- **Generación segura de códigos únicos:**
+  - No hay duplicación en `validationCode`.
+- **Aislamiento del dominio frente a entradas externas:**
+  - El sistema previene datos malformados al registrar vehículos e inspecciones.
+- **Protección de datos sensibles:**
+  - Los informes no exponen correos ni información privada del usuario.
+- **Estandarización de fechas:**
+  - Las fechas se manejan en un formato uniforme para evitar inconsistencias en registros.
+
+Estas verificaciones reducen la probabilidad de amenazas que podrían afectar la validez de los experimentos dinámicos del sprint.
+
+### 6.2.2. Reviews
+
+#### Peer Review (Revisión cruzada)
+Cada integrante validó el trabajo de otro miembro revisando:
+
+- Claridad lógica.
+- Congruencia con la arquitectura.
+- Uso correcto del Ubiquitous Language.
+- Correspondencia entre definiciones y requisitos del sprint.
+
+Este proceso asegura que las decisiones tomadas antes del experimento cuenten con revisión por pares, aumentando la confiabilidad del diseño.
+
+#### UX/UI Review
+Se evaluaron pantallas y wireframes aplicando heurísticas básicas:
+
+- Visibilidad del estado del sistema (por ejemplo, estados de inspección).
+- Consistencia gráfica en tarjetas, botones y paneles.
+- Claridad en la navegación y etiquetas (“Solicitar inspección”, “Ver informe”, “Validar código”).
+- Ausencia de ambigüedad en flujos críticos (registro, inspección, informe).
+
+Estas revisiones permiten validar experimentalmente que la interfaz no introduce sesgos o fricciones que afecten los resultados del sistema.
+
+#### Requirements Review
+Se verificó la alineación entre:
+
+- Historias de usuario del sprint.
+- Backlog priorizado.
+- Criterios de aceptación.
+- User flows ideales.
+
+Este análisis garantiza que el sistema cumpla estructuralmente las condiciones necesarias antes de ejecutar experimentos sobre comportamiento (testing dinámico).
+
+
 <a id="capitulo-vii-devops-practices"></a>
 # Capítulo VII: DevOps Practices
 

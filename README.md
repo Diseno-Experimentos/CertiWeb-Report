@@ -2300,7 +2300,7 @@ public static class TestDataSeeder
 
 Las pruebas de sistema nos ayudan a confirmar que CertiWeb funciona correctamente como aplicación completa, validando que todos los componentes integrados proporcionan la funcionalidad esperada con el rendimiento y la confiabilidad requeridos. La aplicación está lista para producción con confianza en su estabilidad y correctitud funcional.
 
-## 6.2. Static Testing & Verification
+### 6.2. Static Testing & Verification
 
 La fase de *Static Testing & Verification* se realizó antes de ejecutar cualquier experimento dinámico del sprint.  
 En el contexto de **Diseño de Experimentos**, esta etapa corresponde al aseguramiento de la **validez estructural del sistema**, verificando que los artefactos técnicos estén correctamente definidos antes de realizar pruebas controladas.

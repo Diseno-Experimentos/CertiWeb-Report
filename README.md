@@ -2555,6 +2555,90 @@ El comando curl envía una solicitud POST a un endpoint de webhook (https://moni
 
 El sistema de monitoreo, al recibir este webhook, puede reaccionar inmediatamente ejecutando su suite de health checks (pruebas de salud) contra la nueva versión, proporcionando así una retroalimentación casi instantánea sobre el estado de la aplicación post-despliegue, en lugar de esperar al siguiente intervalo de sondeo.
 
+## Capítulo VIII: Experiment-Driven Development
+
+Este capítulo introduce la fase de experimentación del proyecto CertiWeb. Habiendo completado el diseño y la implementación inicial (el "As-Is"), ahora nos enfocamos en validar nuestras suposiciones de negocio más críticas.Este proceso, guiado por experimentos (Experiment-Driven Development), nos permitirá usar datos reales para tomar decisiones informadas sobre el producto y su alineación con las necesidades del mercado.
+
+### 8.1. Experiment Planning
+
+La planificación de la experimentación comienza con la definición de nuestro estado actual, la identificación de nuestras suposiciones (materia prima) y la transformación de estas en preguntas accionables que podemos probar.
+
+#### 8.1.1. As-Is Summary
+
+El estado actual ("As-Is") del proyecto CertiWeb es el de una plataforma funcional diseñada para resolver la **asimetría de información y la desconfianza** en el mercado de autos usados en Perú.
+
+* **Problema Identificado:** Los compradores desconfían del estado real de los vehículos, y los vendedores (individuales y revendedores) carecen de un mecanismo digital y confiable para demostrar la calidad de sus autos, ralentizando la venta.
+* **Solución Implementada:** CertiWeb ofrece un servicio de inspección técnica estandarizada (más de 100 puntos) que culmina en un **informe digital detallado** y un **sello de certificación verificable**.
+* **Segmentos Objetivo:**
+    1.  **Vendedores Individuales:** Buscan vender más rápido y a un mejor precio.
+    2.  **Revendedores:** Necesitan rotación rápida de inventario y generar credibilidad.
+    3.  **Compradores:** Buscan minimizar el riesgo y tomar decisiones informadas.
+* **Estado del Producto:** Se ha completado el diseño UX/UI (Capítulo IV), la arquitectura del software (Capítulo IV) y la implementación del primer sprint (Capítulo V), incluyendo el Landing Page, la aplicación web (Frontend/Backend) y la configuración inicial de despliegue. El producto está listo para ser probado con usuarios reales para validar sus hipótesis de valor fundamentales.
+
+#### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
+
+Nuestra "materia prima" para la experimentación se basa en las suposiciones (assumptions) identificadas en la sección `1.2.2.2. Lean UX Assumptions` del proyecto.
+
+**Supuestos (Assumptions):**
+
+* **Supuesto 1 (Valor para el Comprador):** Los compradores valoran un informe técnico verificable y estarían dispuestos a priorizar vehículos certificados.
+* **Supuesto 2 (Valor para el Vendedor):** Los vendedores aceptarían el costo de la certificación si les permite vender más rápido y a un mejor precio.
+* **Supuesto 3 (Impacto en Confianza):** Un sello digital de certificación en anuncios de autos usados aumentará la confianza y la tasa de contacto.
+* **Supuesto 4 (Valor para Revendedor):** Revendedores y concesionarias con alto volumen se beneficiarán de herramientas de gestión y carga masiva.
+
+**Brechas de Conocimiento (Knowledge Gaps):**
+
+* *Gap 1:* Asumimos que los vendedores pagarán (Supuesto 2), pero no sabemos *cuánto* están dispuestos a pagar (sensibilidad al precio).
+* *Gap 2:* Asumimos que un sello aumenta la confianza (Supuesto 3), pero no sabemos si es el factor *más decisivo* en comparación con un informe detallado sin sello.
+* *Gap 3:* No sabemos qué tan "rápido" debe ser el proceso de inspección para que un revendedor lo considere "eficiente" (Supuesto 4).
+
+**Reclamaciones (Claims):**
+
+* *Claim 1:* Nuestra inspección de más de 100 puntos es significativamente más valiosa para el comprador que una revisión mecánica tradicional.
+* *Claim 2:* Un vehículo con sello CertiWeb se venderá un 30% más rápido que uno que no lo tiene.
+
+#### 8.1.3. Experiment-Ready Questions
+
+Transformamos nuestras suposiciones y brechas de conocimiento en preguntas específicas que podemos responder mediante experimentos:
+
+1.  **(De Supuesto 3):** ¿La inclusión de un Sello de Certificación CertiWeb visible en un anuncio de auto usado incrementa la tasa de contacto (leads) de compradores interesados, en comparación con un anuncio idéntico sin el sello?
+2.  **(De Supuesto 2 y Gap 1):** ¿Cuál es el rango de precio (ej. S/ 50 vs. S/ 100 vs. S/ 150) que los vendedores individuales están dispuestos a pagar por la certificación, sin que la tasa de abandono supere el 20%?
+3.  **(De Supuesto 1):** ¿Los compradores que revisan un informe técnico completo de CertiWeb perciben un mayor valor en el vehículo (ej. están más dispuestos a pagar el precio solicitado) que aquellos que solo ven fotos?
+4.  **(De Supuesto 4 y Gap 3):** ¿La funcionalidad de "carga masiva" de vehículos reduce el tiempo de gestión de inventario para revendedores en al menos un 40% en comparación con el registro manual?
+
+#### 8.1.4. Question Backlog
+
+Priorizamos las preguntas anteriores basándonos en qué tan crítica es la suposición para la supervivencia del modelo de negocio.
+
+| Prioridad | Pregunta (Experiment-Ready Question) | Suposición que Valida | Justificación de Prioridad |
+| :--- | :--- | :--- | :--- |
+| **1 (Alta)** | ¿La inclusión de un Sello de Certificación... incrementa la tasa de contacto (leads) de compradores? | Supuesto 3 | Es la hipótesis de valor central. Si el sello no genera más leads, el valor para el vendedor (Supuesto 2) se debilita. |
+| **2 (Alta)** | ¿Cuál es el rango de precio... que los vendedores individuales están dispuestos a pagar? | Supuesto 2 / Gap 1 | Crítica para la viabilidad financiera. Necesitamos encontrar el equilibrio entre adopción y monetización. |
+| **3 (Media)** | ¿Los compradores que revisan un informe técnico... perciben un mayor valor en el vehículo? | Supuesto 1 | Valida la calidad percibida de nuestro producto principal (el informe). Es importante, pero secundario a generar el lead inicial. |
+| **4 (Baja)** | ¿La funcionalidad de "carga masiva"... reduce el tiempo de gestión para revendedores? | Supuesto 4 / Gap 3 | Valida una funcionalidad específica para un segmento secundario (revendedores). Primero debemos validar el modelo con vendedores individuales. |
+
+#### 8.1.5. Experiment Cards
+
+Basado en el backlog, diseñamos las siguientes tarjetas de experimento para nuestras preguntas de prioridad alta.
+
+---
+**Tarjeta de Experimento 1: Validación del Sello (A/B Test)**
+
+| Componente | Descripción |
+| :--- | :--- |
+| **Pregunta** | ¿La inclusión de un Sello de Certificación CertiWeb incrementa la tasa de contacto (leads) de compradores? |
+| **Hipótesis** | Creemos que **implementar un sello digital visible ("Certificado por CertiWeb") en los anuncios** <br> para **vendedores individuales** <br> resultará en **un incremento de al menos 20% en la tasa de clics al botón "Contactar Vendedor"**. <br> Sabremos que esto es cierto si, tras un A/B test de 14 días con 1,000 impresiones por variante, la variante con sello (B) supera estadísticamente a la variante sin sello (A). |
+| **Métrica Clave** | Tasa de Conversión (Impresiones -> Clics en Contactar). |
+---
+**Tarjeta de Experimento 2: Sensibilidad al Precio (Prueba de Cohortes)**
+
+| Componente | Descripción |
+| :--- | :--- |
+| **Pregunta** | ¿Cuál es el rango de precio que los vendedores individuales están dispuestos a pagar por la certificación? |
+| **Hipótesis** | Creemos que **ofrecer la certificación a S/ 99 (en lugar de S/ 149)** <br> para **nuevos vendedores individuales** <br> resultará en **una tasa de conversión de compra del 15% (vs. 5% esperado a S/ 149)**. <br> Sabremos que esto es cierto si, tras ofrecer los dos precios a dos cohortes de 500 usuarios cada una, la cohorte de S/ 99 genera un ingreso total superior (Ingreso = Tasa de Conversión x Precio). |
+| **Métrica Clave** | Tasa de Conversión de Pago (Visita a la página de pago -> Pago completado). |
+---
+
 
 # Conclusiones
 - **Visión y propósito claros**: Certiweb tiene una misión bien definida de ofrecer un servicio confiable de inspección técnica para autos usados, respondiendo a una necesidad real del mercado.

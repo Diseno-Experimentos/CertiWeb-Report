@@ -2385,6 +2385,320 @@ Se verificó la alineación entre:
 
 Este análisis garantiza que el sistema cumpla estructuralmente las condiciones necesarias antes de ejecutar experimentos sobre comportamiento (testing dinámico).
 
+## 6.3. Validation Interview
+Para validar la solución implementada, se realizan entrevistas a candidatos pertenecientes a los segmentos objetivo con el fin de evaluar su nivel de satisfacción y aceptación hacia el producto futuro.
+
+Para acceder al video de las entrevistas:
+
+### 6.3.1 Diseño de Entrevistas
+Se realizaron entrevistas a personas representativas de nuestros segmentos objetivo, ajustando las preguntas según las particularidades de cada segmento y sus diferentes circunstancias.
+
+##### Segmento 1: Vendedores Particulares
+
+Preguntas de Introducción:
+1. ¿Cuál es su nombre completo?
+2. ¿Cuál es su edad?
+3. ¿En qué ciudad y/o distrito reside?
+
+Preguntas de principales:
+| #  | Pregunta                                                                                                               |
+| -- | ---------------------------------------------------------------------------------------------------------------------- |
+| 1  | ¿Qué tan fácil te resultó registrarte y agendar una inspección técnica desde la plataforma?                            |
+| 2  | ¿Sientes que la explicación del servicio en la landing page fue clara y suficiente para entender el valor de Certiweb? |
+| 3  | ¿Te pareció útil recibir un informe técnico con fotos y diagnóstico luego de la inspección?                            |
+| 4  | ¿Consideras que el sello de certificación ayuda a generar más confianza en los compradores?                            |
+| 5  | ¿Fue sencillo compartir tu informe con potenciales compradores?                                                        |
+| 6  | ¿Te gustaría que el sistema permitiera publicar tu anuncio directamente en portales como OLX o Marketplace?            |
+| 7  | ¿Sientes que la plataforma te dio herramientas para vender más rápido?                                                 |
+| 8  | ¿Qué tan útil te pareció el sistema de estados (“pendiente”, “inspeccionado”, “certificado”)?                          |
+| 9  | ¿Preferirías poder contactar a Certiweb desde la misma plataforma en lugar de por correo o WhatsApp?                   |
+| 10 | ¿Te gustaría poder dejar una reseña sobre el servicio recibido después de vender tu auto?                              |
+
+
+##### Segmento 2: Revendedores
+Preguntas de Introducción:
+1. ¿Cuál es su nombre completo?
+2. ¿Cuál es su edad?
+3. ¿En qué ciudad y/o distrito reside?
+
+Preguntas de principales:
+| #  | Pregunta                                                                                              |
+| -- | ----------------------------------------------------------------------------------------------------- |
+| 1  | ¿Qué tan sencillo te pareció registrar varios autos al mismo tiempo en la plataforma?                 |
+| 2  | ¿Te resultó útil el panel de gestión para visualizar el estado de cada inspección?                    |
+| 3  | ¿Qué tan valiosas te parecieron las notificaciones sobre cambios en el estado de los vehículos?       |
+| 4  | ¿Te parece que el informe técnico es suficientemente claro y profesional para mostrar a tus clientes? |
+| 5  | ¿Preferirías tener integración directa con portales de venta desde la plataforma Certiweb?            |
+| 6  | ¿Te resulta más eficiente trabajar con esta plataforma que con talleres independientes?               |
+| 7  | ¿Te pareció claro el detalle de los planes de suscripción mensual y trimestral?                       |
+| 8  | ¿Qué tan útil te parece poder compartir los informes técnicos por WhatsApp o correo sin login?        |
+| 9  | ¿Sientes que la plataforma ahorra tiempo en tu proceso de ventas?                                     |
+| 10 | ¿Te gustaría que Certiweb ofrezca funciones adicionales como control de inventario o CRM básico?      |
+
+##### Segmento 3: Compradores
+Preguntas de Introducción:
+1. ¿Cuál es su nombre completo?
+2. ¿Cuál es su edad?
+3. ¿En qué ciudad y/o distrito reside?
+
+Preguntas de principales:
+| #  | Pregunta                                                                                                |
+| -- | ------------------------------------------------------------------------------------------------------- |
+| 1  | ¿Qué tan sencillo te pareció registrarte en la plataforma?                      |
+| 2  | ¿Te dio más confianza saber que un auto había sido inspeccionado por una entidad imparcial?             |
+| 3  | ¿Preferirías que el informe sea descargable en PDF o visualizado en la web?                             |
+| 4  | ¿Consideras útil que exista una clave de verificación para acceder al informe Certiweb?                             |
+| 5  | ¿Qué tan clara te pareció la información contenida en los informes técnicos?                            |
+| 6  | ¿Te gustaría poder comparar varios informes de autos diferentes en una misma pantalla?                  |
+| 7  | ¿Sientes que un sello visible de certificación influye en tu decisión de contacto o compra?             |
+| 8  | ¿Te parecería útil dejar una reseña sobre la experiencia con el vendedor y la condición real del auto?  |
+| 9  | ¿Te gustaría recibir alertas o notificaciones cuando un auto certificado de tu interés esté disponible? |
+| 10 | ¿Consideras que Certiweb mejora tu seguridad como comprador frente a estafas o engaños?                 |
+
+### 6.3.2 Registro de Entrevistas
+Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 9 entrevistas, distribuidas en 3 entrevistas por cada segmento. Cada entrevista será grabada en formato .mp4 y se gestionará de manera independiente debido a las diferencias en las preguntas realizadas y las respuestas proporcionadas por los entrevistados de cada segmento.
+
+##### Segmento 1: Vendedores Particulares
+
+| Entrevista 1 | Olga Hernandez |
+|------------------|----------------------|
+| Edad         | 44 años              |
+| Distrito     | La Victoria          |
+| <img src="Images/Sprint4Entre1.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=xrhHkc&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NC40OX19)            |
+| Timming      | 00:00:04 - 00:05:13           |
+<br>
+
+| Entrevista 2 | Violeta Cortez |
+|------------------|----------------------|
+| Edad         | 49 años              |
+| Distrito     | Callao          |
+| <img src="Images/Sprint4Entre2.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=HmSjG0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzE3LjcyfX0%3D)            |
+| Timming      | 00:05:17 - 00:10:33           |
+<br>
+
+| Entrevista 3 | Sindy Angela |
+|------------------|----------------------|
+| Edad         | 42 años              |
+| Distrito     | Puente Piedra          |
+| <img src="Images/Sprint4Entre3.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=EewLJi&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NjQxLjY1fX0%3D)            |
+| Timming      | 00:10:41 - 00:15:33           |
+<br>
+
+##### Segmento 2: Revendedores
+
+| Entrevista 1 | Joaquin Valdivieso |
+|------------------|----------------------|
+| Edad         | 30 años              |
+| Distrito     | Lima          |
+| <img src="Images/Sprint4Entre4.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=E3NE91&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6OTM3LjQzfX0%3D)            |
+| Timming      | 00:15:37 - 00:24:46           |
+<br>
+
+| Entrevista 2 | Jhonny Pariona |
+|------------------|----------------------|
+| Edad         | 39 años              |
+| Distrito     | Carabayllo          |
+| <img src="Images/Sprint4Entre5.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=HR8pbe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTQ5Mi4zM319)            |
+| Timming      | 00:24:52 - 00:28:52           |
+<br>
+
+| Entrevista 3 | Javier Gonzales |
+|------------------|----------------------|
+| Edad         | 42 años              |
+| Distrito     | Lima          |
+| <img src="Images/Sprint4Entre6.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=RPCOgf&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTczNS40N319)            |
+| Timming      | 00:28:55 - 00:32:55           |
+<br>
+
+##### Segmento 3: Compradores
+
+| Entrevista 1 | Jorge Santos |
+|------------------|----------------------|
+| Edad         | 21 años              |
+| Distrito     | Lima          |
+| <img src="Images/Sprint4Entre7.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=iJAyNW&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTk4MS4xNn19)            |
+| Timming      | 00:33:01 - 00:43:32           |
+<br>
+
+| Entrevista 2 | Omar Sikkos |
+|------------------|----------------------|
+| Edad         | 46 años              |
+| Distrito     | San Martin de Porres          |
+| <img src="Images/Sprint4Entre8.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=rzHVkF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MjYxNS4xNH19)            |
+| Timming      | 00:43:35 - 00:51:23           |
+<br>
+
+| Entrevista 3 | Victor Lopez |
+|------------------|----------------------|
+| Edad         | 52 años              |
+| Distrito     | San Miguel          |
+| <img src="Images/Sprint4Entre9.png" width="200"/>  |  |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=qu8cNj&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzA4Ni40Mn19)            |
+| Timming      | 00:51:26 - 00:54:49           |
+<br>
+
+
+### 6.3.3. Evaluaciones según heurísticas
+
+**SITE o APP A EVALUAR:**
+CertiWeb - Plataforma de Certificación Vehicular
+
+**TAREAS A EVALUAR:**
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+1. Registro de un usuario nuevo (vendedor particular/revendedor)
+2. Agendar una inspección técnica vehicular
+3. Visualización del panel de gestión de vehículos
+4. Descarga y visualización de informes técnicos
+5. Verificación de autenticidad de certificados
+6. Navegación por el historial de inspecciones
+7. Proceso de login y autenticación
+8. Búsqueda y filtrado de vehículos certificados
+9. Compartir informes técnicos con compradores
+10. Gestión de estados de inspección (pendiente, inspeccionado, certificado)
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+1. Integración directa con portales de venta (OLX, Marketplace)
+2. Sistema de notificaciones push en tiempo real
+3. Funcionalidades de CRM avanzado para revendedores
+4. Sistema de reseñas y calificaciones
+5. Alertas automáticas de vencimiento de certificados
+6. Funcionalidades de control de inventario
+
+**ESCALA DE SEVERIDAD:**
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|-------|-------------|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario o ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|----------|-------------------|----------------------------------|
+| 1 | No hay un control que permita regresar al dashboard durante el proceso de agendamiento | 3 | Usabilidad: Libertad y control del usuario |
+| 2 | Se repiten constantemente algunas opciones en el menú | 1 | Usabilidad: Consistencia y estándares |
+| 3 | Imágenes de informes técnicos sin atributo "alt" | 3 | Inclusive Design: Proporciona experiencias comparables |
+| 4 | Incluye un botón "Ver más" pero no existe contenido al que dirigirse | 3 | Information Architecture: Is it usable? |
+| 5 | No incluye información clara de los planes de servicio | 2 | Information Architecture: Is it findable? |
+| 6 | Falta de feedback visual durante procesos de carga | 2 | Usabilidad: Visibilidad del estado del sistema |
+| 7 | Formularios sin validación en tiempo real | 3 | Usabilidad: Prevención de errores |
+| 8 | Navegación inconsistente entre secciones | 2 | Usabilidad: Consistencia y estándares |
+| 9 | Falta de confirmación antes de acciones críticas | 3 | Usabilidad: Prevención de errores |
+| 10 | Textos de error poco descriptivos | 2 | Usabilidad: Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1: No hay un control que permita regresar al dashboard durante el proceso de agendamiento**
+Severidad: 3
+Heurística violada: Usabilidad - Libertad y control del usuario
+
+Problema:
+Al momento de ingresar nuestros datos para agendar una inspección, no podemos regresar al dashboard principal en caso así lo deseemos. Una vez el usuario pase al formulario de agendamiento, en caso de que este quiera regresar al panel principal, no hay un botón que lo envíe al inicio de la aplicación, lo cual nos obliga a completar el proceso o usar el botón "atrás" del navegador, incrementándose así la cantidad de esfuerzo del usuario.
+
+Recomendación:
+Implementar un botón "Volver al Dashboard" o "Cancelar" claramente visible en todas las etapas del proceso de agendamiento, permitiendo al usuario regresar sin perder el progreso realizado hasta el momento.
+
+**PROBLEMA #2: Se repiten constantemente algunas opciones en el menú**
+Severidad: 1
+Heurística violada: Usabilidad - Consistencia y estándares
+
+Problema:
+En el menú de navegación y en algunas secciones del dashboard, se observan opciones duplicadas o muy similares que pueden confundir al usuario sobre cuál es la función correcta a utilizar.
+
+Recomendación:
+Consolidar las opciones del menú y eliminar duplicados, manteniendo una estructura de navegación clara y consistente en toda la aplicación.
+
+**PROBLEMA #3: Imágenes de informes técnicos sin atributo "alt"**
+Severidad: 3
+Heurística violada: Inclusive Design - Proporciona experiencias comparables
+
+Problema:
+Las imágenes de los informes técnicos y certificados no incluyen texto alternativo, lo que impide que usuarios con discapacidades visuales puedan acceder a esta información crucial mediante lectores de pantalla.
+
+Recomendación:
+Implementar atributos "alt" descriptivos en todas las imágenes, especialmente en aquellas que contienen información técnica relevante para la certificación vehicular.
+
+**PROBLEMA #4: Incluye un botón "Ver más" pero no existe contenido al que dirigirse**
+Severidad: 3
+Heurística violada: Information Architecture - Is it usable?
+
+Problema:
+En la sección de detalles del vehículo, existe un botón "Ver más información" que no lleva a ningún contenido adicional o muestra un error 404, frustrando las expectativas del usuario.
+
+Recomendación:
+Eliminar botones que no tengan funcionalidad o implementar el contenido correspondiente. Asegurar que todos los enlaces y botones dirijan a contenido válido y útil.
+
+**PROBLEMA #5: No incluye información clara de los planes de servicio**
+Severidad: 2
+Heurística violada: Information Architecture - Is it findable?
+
+Problema:
+La información sobre los diferentes planes de suscripción (mensual, trimestral) para revendedores no es fácilmente accesible desde el dashboard principal, requiriendo múltiples clics para encontrarla.
+
+Recomendación:
+Incluir una sección visible de "Planes y Precios" en el menú principal y proporcionar acceso rápido a esta información desde el dashboard del usuario.
+
+**PROBLEMA #6: Falta de feedback visual durante procesos de carga**
+Severidad: 2
+Heurística violada: Usabilidad - Visibilidad del estado del sistema
+
+Problema:
+Durante la generación de informes PDF o la carga de imágenes de inspección, no se muestra ningún indicador de progreso, dejando al usuario sin saber si el sistema está procesando la solicitud.
+
+Recomendación:
+Implementar indicadores de carga (spinners, barras de progreso) y mensajes informativos durante todos los procesos que requieran tiempo de espera.
+
+**PROBLEMA #7: Formularios sin validación en tiempo real**
+Severidad: 3
+Heurística violada: Usabilidad - Prevención de errores
+
+Problema:
+Los formularios de registro y agendamiento no validan los datos en tiempo real, permitiendo que el usuario complete todo el formulario antes de mostrar errores de validación.
+
+Recomendación:
+Implementar validación en tiempo real que muestre errores inmediatamente cuando el usuario abandone un campo con datos incorrectos.
+
+**PROBLEMA #8: Navegación inconsistente entre secciones**
+Severidad: 2
+Heurística violada: Usabilidad - Consistencia y estándares
+
+Problema:
+La estructura de navegación cambia entre diferentes secciones de la aplicación, con algunos menús laterales y otros superiores, creando confusión en la experiencia del usuario.
+
+Recomendación:
+Establecer un patrón de navegación consistente en toda la aplicación y mantenerlo en todas las secciones.
+
+**PROBLEMA #9: Falta de confirmación antes de acciones críticas**
+Severidad: 3
+Heurística violada: Usabilidad - Prevención de errores
+
+Problema:
+Acciones como cancelar una inspección o eliminar un vehículo del sistema no solicitan confirmación del usuario, pudiendo resultar en pérdida accidental de datos.
+
+Recomendación:
+Implementar diálogos de confirmación para todas las acciones destructivas o irreversibles, explicando claramente las consecuencias de la acción.
+
+**PROBLEMA #10: Textos de error poco descriptivos**
+Severidad: 2
+Heurística violada: Usabilidad - Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores
+
+Problema:
+Los mensajes de error son genéricos ("Error en el sistema", "Algo salió mal") y no proporcionan información específica sobre qué causó el problema o cómo solucionarlo.
+
+Recomendación:
+Crear mensajes de error específicos y útiles que expliquen claramente qué salió mal y proporcionen pasos concretos para resolver el problema.
+
 
 <a id="capitulo-vii-devops-practices"></a>
 # Capítulo VII: DevOps Practices

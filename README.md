@@ -162,11 +162,30 @@ static string[] Integrantes() {
   - [5.3. Video About-the-Product](#53-video-about-the-product)
 
 - [Capítulo VI: Product Verification & Validation](#capitulo-vi-product-verification-validation)
-   - [6.1. Testing Suites & Validation](#6-1-testing-suites-validation)
-     - [6.1.1. Core Entities Unit Tests.](#6-1-1-core-entities-unit-tests)
-     - [6.1.2. Core Integration Tests.](#6-1-2-core-integration-tests)
-     - [6.1.3. Core Behavior-Driven Development](#6-1-3-core-behavior-driven-development)
-     - [6.1.4. Core System Tests.](#6-1-4-core-system-tests)
+    - [6.1. Testing Suites & Validation](#6-1-testing-suites-validation)
+         - [6.1.1. Core Entities Unit Tests.](#6-1-1-core-entities-unit-tests)
+         - [6.1.2. Core Integration Tests.](#6-1-2-core-integration-tests)
+         - [6.1.3. Core Behavior-Driven Development](#6-1-3-core-behavior-driven-development)
+         - [6.1.4. Core System Tests.](#6-1-4-core-system-tests)
+    - [6.2. Static Testing & Verification](#62-static-testing--verification)
+         - [6.2.1. Static Code Analysis](#621-static-code-analysis)
+              - [6.2.1.1. Coding Standard & Code Conventions](#6211-coding-standard--code-conventions)
+              - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
+         - [6.2.2. Reviews](#622-reviews)
+    - [6.3. Validation Interviews](#63-validation-interviews)
+         - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
+         - [6.3.2. Registro de Entrevistas](#632-registro-de-entrevistas)
+         - [6.3.3. Evaluaciones según Heurísticas](#633-evaluaciones-según-heurísticas)
+    - [6.4. Auditoría de Experiencias de Usuario](#64-auditoría-de-experiencias-de-usuario)
+         - [6.4.1. Auditoría Realizada](#641-auditoría-realizada)
+              - [6.4.1.1. Información del Grupo Auditado](#6411-información-del-grupo-auditado)
+              - [6.4.1.2. Cronograma de Auditoría Realizada](#6412-cronograma-de-auditoría-realizada)
+              - [6.4.1.3. Contenido de Auditoría Realizada](#6413-contenido-de-auditoría-realizada)
+         - [6.4.2. Auditoría Recibida](#642-auditoría-recibida)
+              - [6.4.2.1. Información del Grupo Auditor](#6421-información-del-grupo-auditor)
+              - [6.4.2.2. Cronograma de Auditoría Recibida](#6422-cronograma-de-auditoría-recibida)
+              - [6.4.2.3. Contenido de Auditoría Recibida](#6423-contenido-de-auditoría-recibida)
+              - [6.4.2.4. Resumen de Modificaciones para Subsanar Hallazgos](#6424-resumen-de-modificaciones-para-subsanar-hallazgos)
 
 - [Capítulo VII: DevOps Practices](#capitulo-vii-devops-practices)
      - [7.1. Continuous Integration](#7-1-continuous-integration)
@@ -2698,6 +2717,378 @@ Los mensajes de error son genéricos ("Error en el sistema", "Algo salió mal") 
 
 Recomendación:
 Crear mensajes de error específicos y útiles que expliquen claramente qué salió mal y proporcionen pasos concretos para resolver el problema.
+
+## 6.4 Auditoría de Experiencias de Usuario
+### 6.4.1 Auditoría realizada
+#### 6.4.1.1 Información del Grupo Auditado
+
+La auditoría de usabilidad fue realizada al grupo **FuelTrack – Frontend Proveedor**, responsable del desarrollo de los módulos:  
+**Bandeja, Dashboard, Seguimiento y Asignar Flota**.
+
+<div>
+  <table>
+    <tr>
+      <th><strong>Código</strong></th>
+      <th><strong>Apellidos y Nombres</strong></th>
+    </tr>
+    <tr>
+      <td>u20201C131</td>
+      <td>Maria Fernanda Fernandez Alva</td>
+    </tr>
+    <tr>
+      <td>u20191A137</td>
+      <td>Paolo Eduardo Belleza Tello</td>
+    </tr>
+    <tr>
+      <td>U20221C769</td>
+      <td>Karito Dianeth Medina Chocce</td>
+    </tr>
+    <tr>
+      <td>u202213278</td>
+      <td>Bryan Ronald Espejo Gamarra</td>
+    </tr>
+    <tr>
+      <td>u202215528</td>
+      <td>Maria Pilares Pocohuanca</td>
+    </tr>
+  </table>
+</div>
+
+---
+
+#### 6.4.1.2 Cronograma de Auditoría Realizada
+
+La auditoría se desarrolló siguiendo las fases trabajadas en el curso:  
+**Recepción → Planificación → Ejecución → Reporte**.
+
+| Fase           | Actividades                                                                                                                                           | Inicio       | Fin          | Responsable |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------|-------------|
+| Recepción      | Revisión del alcance, coordinación con equipo FuelTrack, acceso al Panel del Proveedor y módulos funcionales                                           | 12/11/2025   | 12/11/2025   | Maria Pilares Pocohuanca   |
+| Planificación  | Definición de tareas críticas (gestión de pedidos, asignación de flota, seguimiento), selección de heurísticas de Nielsen, checklist de evaluación     | 12/11/2025   | 12/11/2025   | Maria Pilares Pocohuanca   |
+| Ejecución      | Recorrido guiado del flujo: Bandeja → Dashboard → Seguimiento → Asignar flota; registro de hallazgos y toma de capturas                                | 16/11/2025  | 16/11/2025   | Maria Pilares Pocohuanca   |
+| Reporte        | Redacción del informe, clasificación por severidad, elaboración de recomendaciones, revisión y consolidación final                                      | 16/11/2025   | 16/11/2025   | Maria Pilares Pocohuanca   |
+
+---
+
+#### 6.4.1.3 Contenido de Auditoría Realizada
+
+### TAREAS A EVALUAR
+
+El alcance consideró los flujos principales del proveedor dentro del sistema FuelTrack:
+
+---
+
+### **1. Gestión de pedidos (Bandeja)**  
+El usuario visualiza los pedidos pendientes, sus datos relevantes y su estado actual.  
+La funcionalidad permite filtrar y revisar rápidamente los pedidos.  
+**Referencias visuales:** 
+<img src="Images/auditFueltrack1.png" width="200"/>
+<img src="Images/auditFueltrack2.png" width="200"/>
+
+---
+
+### **2. Dashboard informativo**  
+El usuario revisa métricas resumidas sobre pedidos, unidades asignadas y progreso operativo.  
+La interfaz presenta tarjetas y gráficos, aunque se identificaron problemas de contexto.  
+**Referencia visual:** 
+<img src="Images/auditFueltrack3.png" width="200"/>
+
+---
+
+### **3. Seguimiento de asignaciones**  
+El usuario monitorea pedidos en curso, conductores asignados y estados.  
+La tabla muestra la información esencial, aunque requiere mejoras de jerarquía visual.  
+**Referencia visual:**
+<img src="Images/auditFueltrack4.png" width="200"/>
+
+---
+
+### **4. Asignar flota (flujo principal evaluado)**  
+Incluye selección de un pedido pendiente, selección de camión disponible, ingreso de conductor y ETA.  
+Es el módulo más crítico y donde se detectaron la mayoría de problemas.  
+**Referencia visual:** 
+<img src="Images/auditFueltrack5.png" width="200"/>
+<img src="Images/auditFueltrack6.png" width="200"/>
+
+---
+
+---
+
+## ESCALA DE SEVERIDAD
+
+Para clasificar los hallazgos se utilizó la siguiente escala:
+
+| Nivel | Descripción                                                                                                                                      |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1     | Problema superficial: aparece muy raramente y el usuario lo supera con facilidad. Se corrige solo si hay tiempo disponible.                     |
+| 2     | Problema menor: ocurre con algo más de frecuencia o genera cierta fricción, pero no bloquea el flujo. Recomendable corregirlo con prioridad baja.|
+| 3     | Problema mayor: se presenta con frecuencia o afecta tareas relevantes, dificultando que el usuario logre su objetivo de forma fluida.           |
+| 4     | Problema muy grave: impide completar tareas críticas o genera errores importantes. Debe corregirse antes de un despliegue formal.              |
+
+---
+
+## TABLA RESUMEN DE HALLAZGOS
+
+| #  | Problema                                                                                                      | Severidad | Heurística / Principio violado                   |
+|----|--------------------------------------------------------------------------------------------------------------|-----------|--------------------------------------------------|
+| 1  | Falta de retroalimentación cuando no hay pedidos pendientes                                                  | 4         | Visibilidad del estado del sistema               |
+| 2  | Botones “Asignar” y “Limpiar” con estilos demasiado similares                                                | 3         | Prevención de errores                            |
+| 3  | Separación del flujo entre columnas “Pedido” y “Camión disponible” interrumpe la secuencia lógica            | 2         | Consistencia y estándares                        |
+| 4  | Campo de conductor sin formato sugerido                                                                       | 2         | Ayuda y documentación                            |
+| 5  | Tabla de “Asignaciones actuales” poco integrada al contexto del flujo principal                               | 2         | Correspondencia entre sistema y mundo real       |
+| 6  | Estados sin diferenciación visual (etiquetas planas)                                                          | 3         | Reconocimiento en lugar de memoria               |
+| 7  | Tipografía inconsistente entre pantallas                                                                      | 1         | Estética y diseño minimalista                    |
+| 8  | Gráficos del Dashboard sin leyendas ni explicación de período                                                 | 2         | Visibilidad del estado del sistema               |
+| 9  | Filtros poco visibles en la Bandeja de pedidos                                                                | 2         | Control y libertad del usuario                   |
+
+---
+
+## DESCRIPCIÓN DE PROBLEMAS (DETALLE)
+
+### **PROBLEMA 1 – Falta de retroalimentación cuando no hay pedidos pendientes**  
+**Severidad:** 4  
+**Heurística violada:** Visibilidad del estado del sistema  
+
+**Descripción:**  
+En el módulo *Asignar Flota*, aunque el sistema muestra “0 pendientes”, el campo de selección de pedidos se mantiene activo, sin un mensaje que explique que no hay datos disponibles.
+
+**Impacto:**  
+- Confunde al usuario sobre si existe un error.  
+- Induce a intentar acciones que no tienen resultado.  
+
+**Recomendación:**  
+- Deshabilitar selector.  
+- Mostrar mensaje “No hay pedidos pendientes”.
+
+---
+
+### **PROBLEMA 2 – Similitud visual entre botones “Asignar” y “Limpiar”**  
+**Severidad:** 3  
+**Heurística violada:** Prevención de errores  
+
+**Descripción:**  
+Ambos botones tienen color similar y tamaño comparable, lo que genera riesgo de clics accidentales.
+
+**Recomendación:**  
+- “Limpiar” debería ser gris o texto simple.  
+- “Asignar” conservar estilo primario.
+
+---
+
+### **PROBLEMA 3 – Flujo dividido entre columnas**  
+**Severidad:** 2  
+**Heurística violada:** Consistencia y estándares  
+
+La selección de pedido y camión está en columnas separadas creando un flujo no secuencial.
+
+---
+
+### **PROBLEMA 4 – Formato desconocido para conductor (nombre + DNI)**  
+**Severidad:** 2  
+**Heurística violada:** Ayuda y documentación  
+
+Agregar placeholder:  
+`Juan Pérez – 12345678`
+
+---
+
+### **PROBLEMA 5 – Tabla de asignaciones desconectada del flujo**  
+**Severidad:** 2  
+
+No es visualmente parte del proceso de asignación.
+
+---
+
+### **PROBLEMA 6 – Estados sin uso de color ni iconografía**  
+**Severidad:** 3  
+
+Dificulta identificar progreso rápidamente.
+
+---
+
+### **PROBLEMA 7 – Inconsistencias tipográficas**  
+**Severidad:** 1  
+
+Inestabilidad visual entre pantallas.
+
+---
+
+### **PROBLEMA 8 – Gráficos sin contexto claro**  
+**Severidad:** 2  
+
+No se especifican periodos o comparativas.
+
+---
+
+### **PROBLEMA 9 – Filtros poco visibles en bandeja**  
+**Severidad:** 2  
+
+Falta contraste con el entorno.
+
+---
+
+## Comentario general de la auditoría
+
+FuelTrack presenta una interfaz ordenada y moderna, con una base visual sólida.  
+Los flujos principales funcionan correctamente, pero se identifican oportunidades de mejora especialmente en:
+
+- **retroalimentación del sistema**,  
+- **representación visual de estados**,  
+- **consistencia tipográfica**,  
+- **flujo de asignación**,  
+- **prevención de errores**.
+
+Al corregir estos puntos, la plataforma mejorará significativamente su claridad, eficiencia y facilidad de uso para los proveedores.
+
+---
+
+
+### 6.4.2. Auditoría Recibida
+#### 6.4.2.1. Información del Grupo Auditado
+
+La auditoría de usabilidad fue realizada al grupo **CertiWeb – Frontend**, responsable del desarrollo de la interfaz web para la plataforma de certificación y venta de autos usados.
+
+| Miembro                              | Código     |
+|--------------------------------------|------------|
+| Angulo Abud, Juan Carlos             | u202317692   |
+| Trillo Hernandez, Anghel Melanie     | u201912401   |
+| Quiroz Zambrano, Fabrizio Javier     | u202213406   |
+| Montes Maza, Augusto Sebastian       |  U202218645  |
+| Zúñiga Murillo, Diego Sebastián      | U202310636   |
+
+---
+
+#### 6.4.2.2. Cronograma de Auditoría Realizada
+
+La auditoría se estructuró en cuatro fases: **Recepción, Planificación, Ejecución y Reporte**, siguiendo la misma lógica trabajada en el curso.
+
+| Fase        | Actividades                                                                                                   | Fecha Inicio | Fecha Fin   | Responsable     |
+|-------------|---------------------------------------------------------------------------------------------------------------|--------------|-------------|-----------------|
+| Recepción   | Coordinación con el equipo de CertiWeb, revisión inicial del alcance y acceso a la versión desplegada        | 12/11/2025   | 12/11/2025  | Trillo Hernandez, Anghel Melanie       |
+| Planificación | Definición de tareas críticas a evaluar (login, búsqueda, carga de certificaciones, historial); selección de heurísticas; elaboración de checklist | 12/11/2025   | 12/11/2025  | Trillo Hernandez, Anghel Melanie       |
+| Ejecución   | Navegación guiada por los distintos flujos (login, home, carga de certificados, historial de reservas); registro de hallazgos | 16/11/2025   | 16/11/2025  | Trillo Hernandez, Anghel Melanie      |
+| Reporte     | Redacción del informe, asignación de severidades, formulación de recomendaciones y revisión final del documento | 16/11/2025   | 16/11/2025  |    Trillo Hernandez, Anghel Melanie   |
+
+---
+
+#### 6.4.2.3. Contenido de Auditoría Realizada
+
+##### TAREAS A EVALUAR
+
+El alcance de esta evaluación consideró los flujos principales del usuario dentro de CertiWeb:
+
+1. **Inicio de sesión (Login)**  
+   - El usuario accede al formulario de autenticación, ingresa correo y contraseña y presiona el botón de acceso.  
+   - En las pruebas realizadas, el **inicio de sesión funcionó correctamente**, permitiendo acceder a la plataforma sin errores aparentes.  
+   - Referencia visual:
+   - <img src="Images/auditCertiweb1.jpg" width="200"/>
+
+2. **Página de inicio y búsqueda de autos certificados**  
+   - El usuario selecciona una **marca** y, opcionalmente, un **modelo** para filtrar autos, y luego ejecuta la búsqueda desde la sección “Find your perfect car”.  
+   - Se identificó un problema: **los modelos no se muestran en el campo “Model”**, aun cuando la marca se ha seleccionado (ver detalle en Problema #1).  
+   - Referencia visual:
+   - <img src="Images/auditCertiweb2.jpg" width="200"/>
+
+3. **Agregar certificaciones / carga de vehículo**  
+   - El usuario sube la foto del vehículo y completa los datos del formulario (marca, modelo, placa, precio, correo del dueño, etc.).  
+   - La funcionalidad **opera correctamente**: se aceptan archivos de imagen y el certificado se muestra de forma adecuada tras completar la información.  
+   - Referencia visual:
+   - <img src="Images/auditCertiweb3.jpg" width="200"/>
+
+4. **Historial de reservas (Reservation History)**  
+   - El usuario revisa las reservas generadas, observando datos como nombre del usuario, vehículo reservado, fecha, hora, precio y estado.  
+   - La información se presenta en una tarjeta clara y legible, lo que facilita el seguimiento de las reservas realizadas.  
+   - Referencia visual:
+   - <img src="Images/auditCertiweb4.jpg" width="200"/>
+
+---
+
+##### ESCALA DE SEVERIDAD
+
+Para clasificar los hallazgos se utilizó la siguiente escala:
+
+| Nivel | Descripción                                                                                                                                      |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1     | Problema superficial: aparece muy raramente y el usuario lo supera con facilidad. Se corrige solo si hay tiempo disponible.                     |
+| 2     | Problema menor: ocurre con algo más de frecuencia o genera cierta fricción, pero no bloquea el flujo. Recomendable corregirlo con prioridad baja.|
+| 3     | Problema mayor: se presenta con frecuencia o afecta tareas relevantes, dificultando que el usuario logre su objetivo de forma fluida.           |
+| 4     | Problema muy grave: impide completar tareas críticas o genera errores importantes. Debe corregirse antes de un despliegue formal.              |
+
+---
+
+##### TABLA RESUMEN
+
+| #  | Problema                                                                                       | Escala de severidad | Heurística / Principio violado           |
+|----|-----------------------------------------------------------------------------------------------|----------------------|------------------------------------------|
+| 1  | No se muestran los modelos en el filtro “Model” después de seleccionar una marca en la Home   | 3                    | Flexibilidad y eficiencia de uso         |
+
+---
+
+##### DESCRIPCIÓN DE PROBLEMAS
+
+---
+
+**PROBLEMA #1: No se muestran los modelos en el filtro “Model” tras seleccionar una marca**
+
+- **Severidad:** 3  
+- **Heurística violada:** Flexibilidad y eficiencia de uso  
+
+**Problema:**  
+En la sección de búsqueda de autos certificados (Home), el usuario puede seleccionar una **marca** desde el campo “Brand”; sin embargo, al intentar seleccionar un **modelo** en el campo “Model”, la lista de modelos no se despliega ni se cargan opciones asociadas a la marca elegida.  
+Esto provoca que el usuario solo pueda filtrar por marca, perdiendo la posibilidad de refinar la búsqueda por modelo específico. El problema se observó en el escenario de prueba mostrado en **Img 2**.
+
+**Impacto en la experiencia de usuario:**  
+- Reduce la eficiencia de la búsqueda, ya que el usuario obtiene resultados más amplios y menos precisos.  
+- Puede generar confusión o la percepción de que el sistema está incompleto o presenta errores de datos.  
+- Obliga al usuario a revisar manualmente más resultados de los necesarios para encontrar el auto que busca.
+
+**Recomendación:**  
+- Verificar la lógica que carga los modelos en función de la marca seleccionada (por ejemplo, la llamada al backend o la fuente de datos local).  
+- Asegurar que, al elegir una marca, el componente “Model” se actualice dinámicamente mostrando únicamente los modelos disponibles para esa marca.  
+- En caso de que una marca no tenga modelos registrados, mostrar un mensaje claro al usuario (por ejemplo, “No hay modelos disponibles para esta marca” en lugar de dejar el campo vacío), manteniendo la consistencia del comportamiento.
+
+---
+
+##### Comentario general de la auditoría
+
+En términos generales, los flujos de **inicio de sesión**, **carga de certificaciones** y **visualización del historial de reservas** muestran un buen nivel de usabilidad: las interfaces son claras, la organización de los campos es coherente y la información se presenta de forma entendible para el usuario final (ver Img 1, Img 3 e Img 4).  
+El principal punto de mejora identificado se concentra en la **búsqueda en la página de inicio**, donde corregir el problema del filtro de modelos permitirá aprovechar mejor el diseño actual y ofrecer una experiencia más eficiente y alineada con los objetivos de CertiWeb.
+
+#### 6.4.2.4. Resumen de Modificaciones para Subsanar Hallazgos
+
+La auditoría realizada al módulo **CertiWeb – Frontend** muestra que los flujos principales del sistema (inicio de sesión, carga de certificaciones e historial de reservas) funcionan correctamente y presentan una buena experiencia de usuario. Sin embargo, se identificó un hallazgo crítico relacionado con el proceso de búsqueda en la página de inicio, el cual debe ser subsanado para asegurar una navegación eficiente y sin fricciones.
+
+### Hallazgo Principal a Corregir
+
+### 1. El campo “Model” no carga modelos tras seleccionar una marca (Severidad 3)
+
+Este problema afecta directamente la eficiencia y precisión de la búsqueda. El usuario no puede seleccionar un modelo asociado a la marca elegida, lo que provoca búsquedas amplias, pérdida de tiempo y percepciones de inconsistencia en el sistema.
+
+### Acciones Recomendadas
+
+1. **Revisar la lógica de filtrado dependiente (Brand → Model):**
+   - Validar que la selección de una marca active correctamente la carga de modelos.
+   - Verificar que las llamadas al backend o al origen local de datos se estén ejecutando correctamente.
+
+2. **Actualizar dinámicamente el campo “Model”:**
+   - Refrescar la lista inmediatamente tras seleccionar una marca.
+   - Mostrar únicamente los modelos disponibles para esa marca.
+
+3. **Manejo de escenarios sin datos:**
+   - Si una marca no tiene modelos disponibles, mostrar un mensaje como:
+     - *“No hay modelos disponibles para esta marca.”*
+   - Evitar dejar el campo vacío o sin respuesta visual.
+
+4. **Agregar retroalimentación visual durante la carga:**
+   - Implementar un indicador de carga (loading) en el campo “Model”.
+   - Evitar que el usuario perciba que el campo está inactivo o presenta fallos.
+
+### Beneficios Esperados
+
+- Búsquedas más precisas y rápidas.
+- Reducción de confusión y carga cognitiva para el usuario.
+- Mayor coherencia entre marca y modelo dentro del flujo.
+- Percepción más profesional y confiable del sistema.
 
 
 <a id="capitulo-vii-devops-practices"></a>

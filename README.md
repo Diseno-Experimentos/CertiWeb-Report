@@ -3342,6 +3342,125 @@ Basado en el backlog, diseñamos las siguientes tarjetas de experimento para nue
 | **Pregunta** | ¿Cuál es el rango de precio que los vendedores individuales están dispuestos a pagar por la certificación? |
 | **Hipótesis** | Creemos que **ofrecer la certificación a S/ 99 (en lugar de S/ 149)** <br> para **nuevos vendedores individuales** <br> resultará en **una tasa de conversión de compra del 15% (vs. 5% esperado a S/ 149)**. <br> Sabremos que esto es cierto si, tras ofrecer los dos precios a dos cohortes de 500 usuarios cada una, la cohorte de S/ 99 genera un ingreso total superior (Ingreso = Tasa de Conversión x Precio). |
 | **Métrica Clave** | Tasa de Conversión de Pago (Visita a la página de pago -> Pago completado). |
+
+
+### 8.2. Experiment Design
+
+El diseño del experimento se centrará en la Pregunta Prioritaria 1: **"¿La inclusión de un Sello de Certificación CertiWeb incrementa la tasa de contacto (leads) de compradores?"** (Tarjeta de Experimento 1).
+
+#### 8.2.1. Hypotheses
+
+Formulamos nuestras hipótesis para una prueba de superioridad de una cola:
+
+* **Hipótesis Nula ($H_0$):** La presencia de un sello de certificación de CertiWeb en un anuncio de vehículo **no produce ningún efecto** o un efecto negativo en la tasa de conversión de contacto, en comparación con un anuncio sin sello.
+    * $CVR_{\text{sello}} \leq CVR_{\text{control}}$
+
+* **Hipótesis Alternativa ($H_1$):** La presencia de un sello de certificación de CertiWeb en un anuncio de vehículo **causa un incremento estadísticamente significativo** en la tasa de conversión de contacto (leads).
+    * $CVR_{\text{sello}} > CVR_{\text{control}}$
+
+* **Hipótesis de Negocio:** Creemos que el sello generará un incremento (lift) de al menos el **20%** en la tasa de contacto.
+
+#### 8.2.2. Domain Business Metrics
+
+* **Métrica Primaria (Accionable):** Tasa de Conversión de Contacto (Lead Conversion Rate). Esta es la métrica de éxito del experimento.
+* **Métrica Secundaria (Diagnóstico):** Tasa de Clics (CTR) sobre el propio sello. (Para medir si los usuarios intentan interactuar con él para verificarlo).
+* **Métrica de Contraguardia (Guardrail):** Tasa de Abandono de la Página (Bounce Rate). (Para asegurar que el sello no introduce confusión o distracción que haga que los usuarios abandonen la página).
+
+#### 8.2.3. Measures
+
+* **Medida de la Métrica Primaria:**
+    * **Tasa de Conversión de Contacto (CVR):**
+        * **Numerador:** (Número total de clics en el botón "Contactar Vendedor").
+        * **Denominador:** (Número total de impresiones únicas del anuncio).
+    * **Unidad de Análisis:** El usuario (comprador).
+
+* **Recolección de Datos:** Se rastrearán los eventos de impresión de página y clics en el botón de contacto, segmentados por la variante asignada.
+
+#### 8.2.4. Conditions
+
+Se definirán dos condiciones (variantes) para el experimento:
+
+* **Condición A: Grupo de Control**
+    * Los compradores asignados a este grupo verán los anuncios de vehículos certificados de forma estándar: con sus fotos, precio y descripción, pero **sin ningún sello** o mención visual prominente de CertiWeb.
+
+* **Condición B: Grupo de Variante (Tratamiento)**
+    * Los compradores asignados a este grupo verán los mismos anuncios, pero con el **sello digital "Certificado por CertiWeb"** superpuesto en la imagen principal y/o en una sección destacada del anuncio.
+
+#### 8.2.5. Scale Calculations and Decisions
+
+Para determinar el tamaño de la muestra necesario (escala), establecemos los siguientes parámetros:
+
+* **Tasa de Conversión Base (Baseline CVR):** Basado en el Supuesto 1 y la industria, estimamos un CVR de **5.0%** para el grupo de control.
+* **Efecto Mínimo Detectable (MDE):** Queremos detectar un *lift* del 20% (nuestra hipótesis de negocio).
+    * $5.0\% \times 1.20 = 6.0\%$. El MDE absoluto es **1.0%**.
+* **Significancia Estadística (α):** 95% (o $p$-value < 0.05).
+* **Potencia Estadística (1-β):** 80%.
+
+> **Cálculo:** Con estos parámetros, el tamaño de muestra requerido es de aproximadamente **14,750 impresiones por variante**.
+
+* **Decisión de Escala:** Para asegurar resultados robustos, se redondeará la escala a **15,000 impresiones por variante (30,000 impresiones en total)**. El experimento se ejecutará durante 14 días o hasta alcanzar la escala requerida, lo que ocurra después.
+
+#### 8.2.6. Methods Selection
+
+* **Método:** Se utilizará un **Test A/B** (Experimento Controlado Aleatorizado).
+* **Asignación de Sujetos:** La aleatorización se realizará a nivel de **usuario (comprador)**, no de sesión. Se asignará una cookie o un valor en `localStorage` (`variant_group: 'A'` o `'B'`) para garantizar que un mismo usuario vea la misma condición (Control o Variante) de manera consistente durante todo el experimento. La división del tráfico será 50/50.
+
+#### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+
+* **Objetivo de Análisis:** Determinar si la diferencia entre $CVR_{\text{Variante}}$ y $CVR_{\text{Control}}$ es estadísticamente significativa.
+* **KPIs:**
+    * $CVR_{\text{A}}$ (Control)
+    * $CVR_{\text{B}}$ (Variante)
+* **Métricas de Soporte:**
+    * `Impressions_A`, `Impressions_B`
+    * `Contact_Clicks_A`, `Contact_Clicks_B`
+* **Análisis Estadístico:** Se utilizará un **Test Z de 2 proporciones** para comparar $CVR_{\text{A}}$ y $CVR_{\text{B}}$. Se calculará el $p$-value y el intervalo de confianza de la diferencia. El experimento será exitoso si $p < 0.05$ y el $lift$ observado es positivo y cercano (o superior) al 20%.
+
+#### 8.2.8. Web and Mobile Tracking Plan
+
+Se implementarán los siguientes eventos de telemetría en el Frontend:
+
+1.  **Evento: `adImpression`**
+    * **Disparador:** Cuando un anuncio de vehículo es cargado y visible en la pantalla del usuario.
+    * **Propiedades:** `{ "ad_id": "string", "variant": "A | B" }`
+
+2.  **Evento: `contactClick`**
+    * **Disparador:** Cuando el usuario hace clic en cualquier botón de contacto (ej. "Contactar Vendedor", "Ver Teléfono", "Enviar Mensaje").
+    * **Propiedades:** `{ "ad_id": "string", "variant": "A | B", "contact_method": "whatsapp | phone | message" }`
+
+### 8.3. Experimentation
+
+La ejecución de los experimentos priorizados requiere la implementación de nuevas funcionalidades (User Stories) en el producto. A continuación, se detalla el backlog ("To-Be") necesario para habilitar estas pruebas.
+
+#### 8.3.1. To-Be User Stories
+
+El siguiente conjunto de historias de usuario habilita los experimentos prioritarios (Validación de Sello, Sensibilidad al Precio y Valor del Informe).
+
+| Epic/Story ID | Título | Descripción | Criterios de Aceptación |
+| :--- | :--- | :--- | :--- |
+| **EXP-01** | (Sello) Asignación de Variante de Experimento | Como Product Manager, quiero que el sistema asigne aleatoriamente a los compradores a un grupo (A o B) para poder ejecutar el A/B test del Sello. | **Escenario 1: Asignación de nuevo usuario**<br> **Dado** un nuevo comprador sin asignación de grupo,<br> **Cuando** visita una página de anuncio,<br> **Entonces** se le asigna un `variant_group` ('A' o 'B') con una probabilidad 50/50.<br> **Y** esta asignación se almacena de forma persistente (ej. `localStorage`).<br><br>**Escenario 2: Usuario existente**<br> **Dado** un comprador que ya tiene un `variant_group` asignado,<br> **Cuando** regresa al sitio,<br> **Entonces** el sistema debe leer y respetar su asignación previa. |
+| **EXP-02** | (Sello) Renderizado Condicional del Sello | Como desarrollador Frontend, quiero que el componente del anuncio muestre u oculte el sello de CertiWeb basándose en el `variant_group` del usuario. | **Escenario 1: Grupo Control**<br> **Dado** un usuario en el grupo 'A' (Control),<br> **Cuando** ve un anuncio de un auto certificado,<br> **Entonces** NO debe ver el Sello de CertiWeb.<br><br>**Escenario 2: Grupo Variante**<br> **Dado** un usuario en el grupo 'B' (Variante),<br> **Cuando** ve un anuncio de un auto certificado,<br> **Entonces** SÍ debe ver el Sello de CertiWeb. |
+| **EXP-03** | (Sello) Seguimiento de Eventos de Experimento | Como Analista de Datos, necesito que el frontend envíe eventos de `adImpression` y `contactClick` con la propiedad `variant` para poder analizar los resultados. | **Escenario 1: Impresión de Anuncio**<br> **Dado** un usuario asignado a una variante (ej. 'B'),<br> **Cuando** se dispara el evento `adImpression`,<br> **Entonces** el evento debe incluir la propiedad `{"variant": "B"}`.<br><br>**Escenario 2: Clic en Contacto**<br> **Dado** un usuario asignado a una variante (ej. 'A'),<br> **Cuando** se dispara el evento `contactClick`,<br> **Entonces** el evento debe incluir la propiedad `{"variant": "A"}`. |
+| **EXP-04** | (Precio) Asignación de Cohorte de Precios | Como Product Manager, quiero que a los nuevos vendedores individuales se les asigne aleatoriamente una cohorte de precios (ej. S/ 99 vs S/ 149) para probar la sensibilidad al precio. | **Dado** un vendedor individual que visita la página de pago por primera vez,<br> **Cuando** se carga la página,<br> **Entonces** se le asigna aleatoriamente una cohorte de precio ('P99' o 'P149').<br> **Y** esta asignación se almacena en su sesión. |
+| **EXP-05** | (Precio) Renderizado Condicional de Precios | Como desarrollador, quiero que la página de pago muestre el precio que corresponde a la cohorte asignada al vendedor. | **Dado** un vendedor asignado a la cohorte 'P99',<br> **Cuando** ve la página de pago,<br> **Entonces** el precio mostrado debe ser "S/ 99.00".<br><br>**Dado** un vendedor asignado a la cohorte 'P149',<br> **Cuando** ve la página de pago,<br> **Entonces** el precio mostrado debe ser "S/ 149.00". |
+| **EXP-06** | (Precio) Seguimiento de Conversión de Pago | Como Analista, necesito rastrear los eventos de pago completado, incluyendo la cohorte de precio asignada. | **Dado** un vendedor en la cohorte 'P99',<br> **Cuando** completa exitosamente el pago,<br> **Entonces** se debe disparar un evento `paymentSuccess` con las propiedades `{"price_cohort": "P99", "amount": 99.00}`. |
+| **EXP-07** | (Informe) Grupo de Control para Valor del Informe | Como PM, quiero que un subgrupo de compradores (Grupo C) vea los anuncios certificados pero **sin** un enlace visible al informe técnico completo, solo el sello. | **Dado** un usuario asignado al `variant_group` 'C' (Control de Informe),<br> **Cuando** ve un anuncio certificado,<br> **Entonces** debe ver el Sello de CertiWeb.<br> **Pero** NO debe ver el botón/enlace "Ver Informe Técnico Completo". |
+| **EXP-08** | (Informe) Seguimiento de Valor Percibido | Como Analista, quiero medir si los compradores que ven el informe (Grupo B) están más dispuestos a pagar el precio solicitado. | **(Se requiere un método de encuesta posterior)**<br> **Dado** un usuario que hizo clic en "Contactar Vendedor",<br> **Cuando** se le muestra una encuesta (ej. "¿Qué tan dispuesto estás a pagar el precio solicitado?"),<br> **Entonces** su respuesta debe ser registrada junto a su `variant_group` ('B' vs 'C'). |
+
+#### 8.3.2. To-Be Product Backlog
+
+El backlog de producto se actualiza para incluir las historias de usuario del experimento. Estas se priorizan para el próximo Sprint de Experimentación.
+
+| Prioridad | User Story ID | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
+| :--- | :--- | :--- | :--- | :--- |
+| **1 (Alta)** | EXP-01 | (Sello) Asignación de Variante de Experimento | Como PM, quiero que el sistema asigne aleatoriamente a los compradores a un grupo (A o B)... | 3 |
+| **2 (Alta)** | EXP-02 | (Sello) Renderizado Condicional del Sello | Como Dev, quiero que el componente del anuncio muestre/oculte el sello... | 2 |
+| **3 (Alta)** | EXP-03 | (Sello) Seguimiento de Eventos de Experimento | Como Analista, necesito que el frontend envíe eventos de `adImpression` y `contactClick`... | 3 |
+| **4 (Alta)** | EXP-04 | (Precio) Asignación de Cohorte de Precios | Como PM, quiero que a los nuevos vendedores individuales se les asigne aleatoriamente una cohorte de precios... | 3 |
+| **5 (Alta)** | EXP-05 | (Precio) Renderizado Condicional de Precios | Como Dev, quiero que la página de pago muestre el precio que corresponde a la cohorte... | 2 |
+| **6 (Alta)** | EXP-06 | (Precio) Seguimiento de Conversión de Pago | Como Analista, necesito rastrear los eventos de pago completado, incluyendo la cohorte... | 3 |
+| **7 (Media)** | EXP-07 | (Informe) Grupo de Control para Valor del Informe | Como PM, quiero que un subgrupo de compradores (Grupo C) vea los anuncios certificados pero sin un enlace... | 2 |
+| **8 (Media)** | EXP-08 | (Informe) Seguimiento de Valor Percibido | Como Analista, quiero medir si los compradores que ven el informe (Grupo B) están más dispuestos... | 5 |
 ---
 
 

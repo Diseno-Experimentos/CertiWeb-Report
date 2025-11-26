@@ -1328,7 +1328,7 @@ buyer -> certiwebSystem "Searches and views certified listings, contacts seller 
 
 ### 4.7. Software Object-Oriented Design
 #### 4.7.1. Class Diagrams
-<img alt="Diagrama de clases" src="Images/class-diagram.png" />
+<img alt="Diagrama de clases" src="Images/diagrama de clase_2.png" />
 
 #### 4.7.2. Class Dictionary
 

@@ -2361,7 +2361,7 @@ test('Debe mostrar error visual cuando el email no es válido', async () => {
 
 ### 6.2. Static Testing & Verification
 
-```markdown
+
 #### Evidencia de Ejecución de Herramientas de Análisis
 
 Para asegurar que el código cumple con los estándares descritos y no presenta vulnerabilidades básicas, se integraron herramientas de análisis estático en el pipeline de desarrollo. A continuación se presentan los reportes de ejecución:

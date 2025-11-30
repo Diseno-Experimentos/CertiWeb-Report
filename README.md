@@ -2633,7 +2633,33 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 <br>
 
 ##### Insights
+A partir del análisis de las entrevistas realizadas a los clientes, se han identificado los siguientes insights globales más relevantes:
 
+1. Necesidad de **confianza** en el servicio
+Los clientes valoran altamente la transparencia, la claridad en la información y la seguridad en todos los procesos. La confianza es un factor decisivo para elegir y mantenerse con un proveedor.
+
+2. Búsqueda de **simplicidad y rapidez**
+Los usuarios esperan procesos fáciles, tiempos de respuesta cortos y una experiencia sin fricciones. Cuanto más simple sea el flujo, mayor satisfacción y conversión.
+
+3. Importancia de la **comunicación clara y proactiva**
+Los clientes expresan que la comunicación debe ser constante, resolver dudas rápidamente y anticiparse a problemas. La falta de comunicación reduce su percepción de profesionalismo.
+
+4. Deseo de **acompañamiento personalizado**
+Tanto empresas como personas naturales esperan un trato cercano, asesoría y orientación. Valoran sentir que hay "alguien detrás" ayudándolos, no solo un sistema automatizado.
+
+5. Valoración de **automatización sin perder el toque humano**
+Los clientes aceptan bots, formularios y flujos automatizados, siempre que complementen —y no sustituyan completamente— el soporte humano cuando lo necesitan.
+
+6. Necesidad de **integración fluida con herramientas existentes**
+Especialmente en el caso de empresas, se requiere compatibilidad con sistemas como HubSpot, CRMs, WhatsApp y plataformas internas. La integración debe ser estable y confiable.
+
+7. Dolor por **procesos manuales actuales**
+Muchos clientes expresan frustración con pasos repetitivos, recopilar datos manualmente, depender de terceros o tener poca visibilidad del estado de su solicitud.
+8. Fuerte interés en **opciones y personalización**
+Los usuarios quieren elegir entre alternativas (por ejemplo: persona o empresa, opción A/B/C, tipo de servicio, horarios, etc.). La personalización incrementa la percepción de valor.
+
+**Conclusión Global**
+Los insights reflejan que los clientes buscan una combinación entre **automatización inteligente, comunicación clara y soporte humano confiable**. Reducir fricción, integrar herramientas y reforzar la transparencia serán claves para mejorar la experiencia del usuario.
 
 
 <a id="6-3-3-evaluaciones-segun-heuristicas"></a>
@@ -3667,6 +3693,6 @@ En este video, el equipo de desarrollo de CertiWeb se presenta y comparte su exp
 
 - Video Entrevistas de Validación: [Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=sJVgZe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-- Video About the Product: [Video]()
+- Video About the Product: [Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCzYqIEYZjySIrIPH2UXodcAf8utusEwMMfDuB-5pUyYzE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=TadYNs)
 
 - Video About the Team: [Video]()

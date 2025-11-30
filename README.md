@@ -2472,7 +2472,7 @@ Se verificó la alineación entre:
 
 Este análisis garantiza que el sistema cumpla estructuralmente las condiciones necesarias antes de ejecutar experimentos sobre comportamiento (testing dinámico).
 
-## 6.3. Validation Interview
+## 6.3. Validation Interviews
 Para validar la solución implementada, se realizan entrevistas a candidatos pertenecientes a los segmentos objetivo con el fin de evaluar su nivel de satisfacción y aceptación hacia el producto futuro.
 
 Para acceder al video de las entrevistas:
@@ -2552,7 +2552,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 44 años              |
 | Distrito     | La Victoria          |
 | <img src="Images/Sprint4Entre1.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=xrhHkc&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NC40OX19)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=sJVgZe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)            |
 | Timming      | 00:00:04 - 00:05:13           |
 <br>
 
@@ -2561,7 +2561,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 49 años              |
 | Distrito     | Callao          |
 | <img src="Images/Sprint4Entre2.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=HmSjG0&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzE3LjcyfX0%3D)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=sJVgZe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)            |
 | Timming      | 00:05:17 - 00:10:33           |
 <br>
 
@@ -2570,7 +2570,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 42 años              |
 | Distrito     | Puente Piedra          |
 | <img src="Images/Sprint4Entre3.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=EewLJi&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6NjQxLjY1fX0%3D)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=sJVgZe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)            |
 | Timming      | 00:10:41 - 00:15:33           |
 <br>
 
@@ -2581,7 +2581,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 30 años              |
 | Distrito     | Lima          |
 | <img src="Images/Sprint4Entre4.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=E3NE91&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6OTM3LjQzfX0%3D)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=sJVgZe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)            |
 | Timming      | 00:15:37 - 00:24:46           |
 <br>
 
@@ -2590,7 +2590,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 39 años              |
 | Distrito     | Carabayllo          |
 | <img src="Images/Sprint4Entre5.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwBD_R4lmpnJPGCmByRE9L_mA?e=HR8pbe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTQ5Mi4zM319)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=sJVgZe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)            |
 | Timming      | 00:24:52 - 00:28:52           |
 <br>
 
@@ -2599,7 +2599,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 42 años              |
 | Distrito     | Lima          |
 | <img src="Images/Sprint4Entre6.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=RPCOgf&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTczNS40N319)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=nsG1Bi&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTczNC4wMn19)            |
 | Timming      | 00:28:55 - 00:32:55           |
 <br>
 
@@ -2610,7 +2610,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 21 años              |
 | Distrito     | Lima          |
 | <img src="Images/Sprint4Entre7.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=iJAyNW&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTk4MS4xNn19)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=7H2fqB&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MTk4My41MX19)            |
 | Timming      | 00:33:01 - 00:43:32           |
 <br>
 
@@ -2619,7 +2619,7 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 46 años              |
 | Distrito     | San Martin de Porres          |
 | <img src="Images/Sprint4Entre8.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=rzHVkF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MjYxNS4xNH19)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=1TCI5n&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)            |
 | Timming      | 00:43:35 - 00:51:23           |
 <br>
 
@@ -2628,9 +2628,12 @@ Para poder realizar el registro de entrevistas, se llevarán a cabo un total de 
 | Edad         | 52 años              |
 | Distrito     | San Miguel          |
 | <img src="Images/Sprint4Entre9.png" width="200"/>  |  |
-| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213358_upc_edu_pe/EZU0yIJfmwlMuuW68sPZiXwB19moUr1G6Kd901z_HEmlOg?e=qu8cNj&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzA4Ni40Mn19)            |
+| URL de la grabación | [Link](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=YbhbIq&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7InN0YXJ0VGltZUluU2Vjb25kcyI6MzA2MS42N319)            |
 | Timming      | 00:51:26 - 00:54:49           |
 <br>
+
+##### Insights
+
 
 
 <a id="6-3-3-evaluaciones-segun-heuristicas"></a>
@@ -3660,7 +3663,9 @@ En este video, el equipo de desarrollo de CertiWeb se presenta y comparte su exp
 
 - Video TB1: [Video]()
 
-- Video Entrevistas de Validación: [Video]()
+- Video flujo de navegacion: [Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQBG_GpSLn8PTKWQYsaWM5o7AYXh5s3w8PnYYEIzlHG12Wo?e=PMnpva)
+
+- Video Entrevistas de Validación: [Video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201912401_upc_edu_pe/IQCB75Tn4gIBRrlxGCFk3CdVAQC1EMw198ZOuImDTXveWTc?e=sJVgZe&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 - Video About the Product: [Video]()
 

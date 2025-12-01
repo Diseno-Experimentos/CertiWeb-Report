@@ -3514,79 +3514,101 @@ Priorizamos las preguntas anteriores basándonos en qué tan crítica es la supo
 | **3 (Media)** | ¿Los compradores que revisan un informe técnico... perciben un mayor valor en el vehículo? | Supuesto 1 | Valida la calidad percibida de nuestro producto principal (el informe). Es importante, pero secundario a generar el lead inicial. |
 | **4 (Baja)** | ¿La funcionalidad de "carga masiva"... reduce el tiempo de gestión para revendedores? | Supuesto 4 / Gap 3 | Valida una funcionalidad específica para un segmento secundario (revendedores). Primero debemos validar el modelo con vendedores individuales. |
 
-#### 8.1.5. Experiment Cards
+## 8.1.5. Experiment Cards
 
-Basado en el backlog, diseñamos las siguientes tarjetas de experimento para nuestras preguntas de prioridad alta.
+La siguiente tabla presenta las Tarjetas de Experimento priorizadas, derivadas de las preguntas críticas en nuestro backlog. Estos experimentos han sido seleccionados estratégicamente por su impacto potencial en la mitigación de la incertidumbre del usuario y el incremento en la conversión de leads.
+
+| Experiment ID | **EXP-01: Validador de Precio Inteligente (Smart Pricing)** |
+| :--- | :--- |
+| **Riesgo Abordado** | Los usuarios sufren de "ansiedad de precio" y parálisis en la toma de decisiones debido a la falta de experiencia técnica para valorar el vehículo. |
+| **Hipótesis** | Contextualizar el precio mediante un "Puntaje de Calidad" técnico incrementará la conversión de vista-a-lead en un 15%. |
+| **Métrica de Éxito** | Tasa de Conversión de Leads (CVR). |
+
+| Experiment ID | **EXP-02: Insignia de Confianza KYC del Vendedor** |
+| :--- | :--- |
+| **Riesgo Abordado** | La asimetría de información respecto a la identidad real del vendedor genera miedo a estafas y reduce la disposición a contactar. |
+| **Hipótesis** | Mostrar una insignia de "Verificado Biométricamente" incrementará la tasa de solicitud de contacto única en un 12%. |
+| **Métrica de Éxito** | Tasa de Solicitud de Contacto Única (UCRR). |
+
+| Experiment ID | **EXP-03: Activo de Garantía Desbloqueable** |
+| :--- | :--- |
+| **Riesgo Abordado** | Aversión al riesgo residual por parte del comprador respecto a fallas mecánicas futuras, a pesar de la buena condición actual certificada. |
+| **Hipótesis** | Enmarcar la garantía como un "beneficio exclusivo desbloqueado" por puntajes técnicos altos incrementará las acciones de alta intención en un 18%. |
+| **Métrica de Éxito** | Tasa de Acción de Alta Intención (HIAR). |
 
 ---
-**Tarjeta de Experimento 1: Validación del Sello (A/B Test)**
 
-| Componente | Descripción |
-| :--- | :--- |
-| **Pregunta** | ¿La inclusión de un Sello de Certificación CertiWeb incrementa la tasa de contacto (leads) de compradores? |
-| **Hipótesis** | Creemos que **implementar un sello digital visible ("Certificado por CertiWeb") en los anuncios** <br> para **vendedores individuales** <br> resultará en **un incremento de al menos 20% en la tasa de clics al botón "Contactar Vendedor"**. <br> Sabremos que esto es cierto si, tras un A/B test de 14 días con 1,000 impresiones por variante, la variante con sello (B) supera estadísticamente a la variante sin sello (A). |
-| **Métrica Clave** | Tasa de Conversión (Impresiones -> Clics en Contactar). |
----
-**Tarjeta de Experimento 2: Sensibilidad al Precio (Prueba de Cohortes)**
+## 8.2. Experiment Design
 
-| Componente | Descripción |
-| :--- | :--- |
-| **Pregunta** | ¿Cuál es el rango de precio que los vendedores individuales están dispuestos a pagar por la certificación? |
-| **Hipótesis** | Creemos que **ofrecer la certificación a S/ 99 (en lugar de S/ 149)** <br> para **nuevos vendedores individuales** <br> resultará en **una tasa de conversión de compra del 15% (vs. 5% esperado a S/ 149)**. <br> Sabremos que esto es cierto si, tras ofrecer los dos precios a dos cohortes de 500 usuarios cada una, la cohorte de S/ 99 genera un ingreso total superior (Ingreso = Tasa de Conversión x Precio). |
-| **Métrica Clave** | Tasa de Conversión de Pago (Visita a la página de pago -> Pago completado). |
+This section details the design of the prioritized experiments, defining the hypotheses, metrics, measures, and conditions required for execution.
 
+### 8.2.2. Domain Business Metrics
+To ensure the experiments are measurable and aligned with business goals, we define the following core metrics:
 
-### 8.2. Experiment Design
+* **Lead Conversion Rate (CVR):** The percentage of unique users who view a listing and click the primary contact button.
+    $$CVR = \frac{\text{Total Unique Contact Clicks}}{\text{Total Unique Listing Views}} \times 100$$
 
-El diseño del experimento se centrará en la Pregunta Prioritaria 1: **"¿La inclusión de un Sello de Certificación CertiWeb incrementa la tasa de contacto (leads) de compradores?"** (Tarjeta de Experimento 1).
+* **Unique Contact Request Rate (UCRR):** The percentage of users who successfully submit a contact form after viewing seller details.
+    $$UCRR = \frac{\text{Unique Form Submissions}}{\text{Unique PDP Sessions}} \times 100$$
 
-#### 8.2.1. Hypotheses
+* **High-Intent Action Rate (HIAR):** The percentage of users interacting with bottom-of-funnel features (Financing, Warranty, Technical Report).
+    $$HIAR = \frac{\text{Total Financing or Warranty Clicks}}{\text{Total Sessions}} \times 100$$
 
 ### Experiment 1: Integración de Valoración Algorítmica de Precio (Smart Pricing)
 
-**Question:**
-Is it true that contextually validating the vehicle's price against market data based on its specific technical condition reduces buyer decision paralysis?
+#### 8.2.1. Hypotheses
+**Question:** Is it true that contextually validating the vehicle's price against market data based on its specific technical condition reduces buyer decision paralysis?
+**Belief:** Buyers often experience "price anxiety," lacking the technical expertise to judge if a higher price is justified by better mechanical condition. Given that our certification provides objective data points, comparing the asking price against a "Market Average" for similar certified conditions will create a value anchor; therefore, we should display a dynamic "Price Quality Score" to justify the investment to the user.
+**Hypothesis:** Implementing a dynamic "Price Quality" indicator (e.g., 'Great Deal', 'Fair Price') rooted in the certification score will increase the *Lead Conversion Rate (CVR)* by at least 15%.
+**Null Hypothesis:** Implementing the dynamic "Price Quality" indicator will not be responsible for the CVR increasing by 15%; any observed lift is attributable to random variance.
 
-**Belief:**
-Buyers often experience "price anxiety," lacking the technical expertise to judge if a higher price is justified by better mechanical condition. Given that our certification provides objective data points, comparing the asking price against a "Market Average" for similar certified conditions will create a value anchor; therefore, we should display a dynamic "Price Quality Score" to justify the investment to the user.
+#### 8.2.3. Measures
+* **Signal:** Click event on the primary "Contact Seller" button (Floating Action Button on Mobile / Sticky Sidebar on Desktop).
+* **Metric:** Lead Conversion Rate (CVR).
+* **Criteria:** We expect a relative lift of $\ge 15\%$ with a statistical significance level ($\alpha$) of 0.05.
 
-**Hypothesis:**
-Implementing a dynamic "Price Quality" indicator (e.g., 'Great Deal', 'Fair Price') rooted in the certification score will increase the conversion rate from *Listing View* to *Lead Generation* by at least 15%.
-
-**Null hypothesis:**
-Implementing the dynamic "Price Quality" indicator will not be responsible for the conversion rate increasing by 15%; any observed lift is attributable to random variance or external market factors.
+#### 8.2.4. Conditions
+* **Control Condition (A):** The vehicle listing displays the price in standard font size and color, with no additional labels or market comparison data.
+* **Experimental Condition (B):** The vehicle listing displays a color-coded badge (Green/Yellow) stating the price quality (e.g., "Great Deal - Certified Value") placed immediately next to the price tag.
 
 ---
 
 ### Experiment 2: Validación de Identidad del Vendedor (KYC Integration)
 
-**Question:**
-Is it true that exposing the level of identity verification (KYC) of the seller directly on the Product Detail Page (PDP) mitigates trust friction and increases contact rates?
+#### 8.2.1. Hypotheses
+**Question:** Is it true that exposing the level of identity verification (KYC) of the seller directly on the Product Detail Page (PDP) mitigates trust friction and increases contact rates?
+**Belief:** The used car market suffers from information asymmetry regarding the seller's intent (fear of scams). Given that CertiWeb performs identity checks, explicitly displaying a "Biometrically Verified Seller" badge acts as a trust signal that reduces the perceived social risk of the transaction; therefore, this transparency should statistically increase the willingness to share personal contact details.
+**Hypothesis:** Displaying a "Biometrically Verified Identity" badge adjacent to the primary Call-to-Action (CTA) will increase the *Unique Contact Request Rate (UCRR)* by at least 12%.
+**Null Hypothesis:** Displaying a "Biometrically Verified Identity" badge adjacent to the primary CTA will not be responsible for the UCRR increasing by 12%.
 
-**Belief:**
-The used car market suffers from information asymmetry regarding the seller's intent (fear of scams). Given that CertiWeb performs identity checks, explicitly displaying a "Biometrically Verified Seller" badge acts as a trust signal that reduces the perceived social risk of the transaction; therefore, this transparency should statistically increase the willingness to share personal contact details.
+#### 8.2.3. Measures
+* **Signal:** Successful HTTP 200 OK response from the "Send Message" form submission endpoint.
+* **Metric:** Unique Contact Request Rate (UCRR).
+* **Criteria:** We expect a relative lift of $\ge 12\%$ with a statistical power ($1 - \beta$) of 80%.
 
-**Hypothesis:**
-Displaying a "Biometrically Verified Identity" badge adjacent to the primary Call-to-Action (CTA) will increase the unique *Contact Request Rate* by at least 12%.
-
-**Null hypothesis:**
-Displaying a "Biometrically Verified Identity" badge adjacent to the primary CTA will not be responsible for the Contact Request Rate increasing by 12%.
+#### 8.2.4. Conditions
+* **Control Condition (A):** The seller profile section shows a generic avatar and the seller's first name only.
+* **Experimental Condition (B):** The seller profile section includes a blue checkmark icon and the text "Identity Verified by Reniec/Biometrics" tooltip, visible before the user clicks the contact button.
 
 ---
 
 ### Experiment 3: Elegibilidad de Garantía Extendida Basada en Certificado
 
-**Question:**
-Is it true that converting the technical certificate into an "unlockable" asset for extended warranty coverage increases the purchase intent?
+#### 8.2.1. Hypotheses
+**Question:** Is it true that converting the technical certificate into an "unlockable" asset for extended warranty coverage increases the purchase intent?
+**Belief:** While a certificate proves *current* condition, it does not guarantee *future* performance, leaving a gap for risk-averse buyers. Given that our technical inspection is rigorous enough to underwrite insurance, presenting the warranty not just as an add-on, but as an "exclusive benefit unlocked by this car's high score," shifts the user's mental model from risk mitigation to value acquisition.
+**Hypothesis:** Featuring a conditional "Warranty Unlocked: Eligible for 12-Months Coverage" banner for vehicles with high inspection scores will increase the *High-Intent Action Rate (HIAR)* by at least 18%.
+**Null Hypothesis:** Featuring a conditional "Warranty Unlocked" banner will not be responsible for the HIAR increasing by 18%.
 
-**Belief:**
-While a certificate proves *current* condition, it does not guarantee *future* performance, leaving a gap for risk-averse buyers. Given that our technical inspection is rigorous enough to underwrite insurance, presenting the warranty not just as an add-on, but as an "exclusive benefit unlocked by this car's high score," shifts the user's mental model from risk mitigation to value acquisition.
+#### 8.2.3. Measures
+* **Signal:** Click events on "View Warranty Options" or "Apply for Financing" buttons.
+* **Metric:** High-Intent Action Rate (HIAR).
+* **Criteria:** A lift of $\ge 18\%$ in HIAR for vehicles with a technical score $>85/100$.
 
-**Hypothesis:**
-Featuring a conditional "Warranty Unlocked: Eligible for 12-Months Coverage" banner for vehicles with high inspection scores will increase the *High-Intent Lead Conversion* (users requesting financing or inspection details) by at least 18%.
-
-**Null hypothesis:**
-Featuring a conditional "Warranty Unlocked" banner will not be responsible for the High-Intent Lead Conversion increasing by 18%.
+#### 8.2.4. Conditions
+* **Control Condition (A):** Listings display the technical score (e.g., "90/100") but do not explicitly link this score to warranty eligibility in the initial viewport.
+* **Experimental Condition (B):** Listings with a score $>85$ display a prominent "Unlockable Reward" banner above the fold: "High Score Unlocked: You are eligible for 12-Month Extended Coverage on this vehicle."
+---
 
 Integración del Sello de Certificación
 

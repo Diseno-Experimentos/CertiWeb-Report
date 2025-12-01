@@ -1751,6 +1751,13 @@ Sección Perfil de Usuario:
 Repositorio del Frontend: [CertiWeb-Front](https://github.com/Diseno-Experimentos/CertiWeb-Front)
 
 ##### 5.2.4. Implemented Native-Mobile Application Evidence
+
+<img src="Images/Wmobile1.png"/>
+
+<img src="Images/Wmobile2.png"/>
+
+<img src="Images/Wmobile3.png"/>
+
 ##### 5.2.4.1 Acuerdo de Servicio - SaaS (SaaS Agreement)
 El **Acuerdo de Servicio SaaS** define los derechos, responsabilidades y limitaciones aplicables a todos los usuarios de la plataforma **CertiWeb**, garantizando transparencia, protección de datos personales y uso ético del servicio. Este documento forma parte de la política de gobernanza tecnológica del proyecto y será publicado de forma visible en la sección **“Términos y Condiciones”** del sitio web oficial.
 

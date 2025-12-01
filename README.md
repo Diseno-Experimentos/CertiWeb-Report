@@ -3542,15 +3542,51 @@ El diseño del experimento se centrará en la Pregunta Prioritaria 1: **"¿La in
 
 #### 8.2.1. Hypotheses
 
-Formulamos nuestras hipótesis para una prueba de superioridad de una cola:
+### Experiment 1: Integración de Valoración Algorítmica de Precio (Smart Pricing)
 
-* **Hipótesis Nula ($H_0$):** La presencia de un sello de certificación de CertiWeb en un anuncio de vehículo **no produce ningún efecto** o un efecto negativo en la tasa de conversión de contacto, en comparación con un anuncio sin sello.
-    * $CVR_{\text{sello}} \leq CVR_{\text{control}}$
+**Question:**
+Is it true that contextually validating the vehicle's price against market data based on its specific technical condition reduces buyer decision paralysis?
 
-* **Hipótesis Alternativa ($H_1$):** La presencia de un sello de certificación de CertiWeb en un anuncio de vehículo **causa un incremento estadísticamente significativo** en la tasa de conversión de contacto (leads).
-    * $CVR_{\text{sello}} > CVR_{\text{control}}$
+**Belief:**
+Buyers often experience "price anxiety," lacking the technical expertise to judge if a higher price is justified by better mechanical condition. Given that our certification provides objective data points, comparing the asking price against a "Market Average" for similar certified conditions will create a value anchor; therefore, we should display a dynamic "Price Quality Score" to justify the investment to the user.
 
-* **Hipótesis de Negocio:** Creemos que el sello generará un incremento (lift) de al menos el **20%** en la tasa de contacto.
+**Hypothesis:**
+Implementing a dynamic "Price Quality" indicator (e.g., 'Great Deal', 'Fair Price') rooted in the certification score will increase the conversion rate from *Listing View* to *Lead Generation* by at least 15%.
+
+**Null hypothesis:**
+Implementing the dynamic "Price Quality" indicator will not be responsible for the conversion rate increasing by 15%; any observed lift is attributable to random variance or external market factors.
+
+---
+
+### Experiment 2: Validación de Identidad del Vendedor (KYC Integration)
+
+**Question:**
+Is it true that exposing the level of identity verification (KYC) of the seller directly on the Product Detail Page (PDP) mitigates trust friction and increases contact rates?
+
+**Belief:**
+The used car market suffers from information asymmetry regarding the seller's intent (fear of scams). Given that CertiWeb performs identity checks, explicitly displaying a "Biometrically Verified Seller" badge acts as a trust signal that reduces the perceived social risk of the transaction; therefore, this transparency should statistically increase the willingness to share personal contact details.
+
+**Hypothesis:**
+Displaying a "Biometrically Verified Identity" badge adjacent to the primary Call-to-Action (CTA) will increase the unique *Contact Request Rate* by at least 12%.
+
+**Null hypothesis:**
+Displaying a "Biometrically Verified Identity" badge adjacent to the primary CTA will not be responsible for the Contact Request Rate increasing by 12%.
+
+---
+
+### Experiment 3: Elegibilidad de Garantía Extendida Basada en Certificado
+
+**Question:**
+Is it true that converting the technical certificate into an "unlockable" asset for extended warranty coverage increases the purchase intent?
+
+**Belief:**
+While a certificate proves *current* condition, it does not guarantee *future* performance, leaving a gap for risk-averse buyers. Given that our technical inspection is rigorous enough to underwrite insurance, presenting the warranty not just as an add-on, but as an "exclusive benefit unlocked by this car's high score," shifts the user's mental model from risk mitigation to value acquisition.
+
+**Hypothesis:**
+Featuring a conditional "Warranty Unlocked: Eligible for 12-Months Coverage" banner for vehicles with high inspection scores will increase the *High-Intent Lead Conversion* (users requesting financing or inspection details) by at least 18%.
+
+**Null hypothesis:**
+Featuring a conditional "Warranty Unlocked" banner will not be responsible for the High-Intent Lead Conversion increasing by 18%.
 
 Integración del Sello de Certificación
 

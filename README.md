@@ -3552,6 +3552,51 @@ Formulamos nuestras hipótesis para una prueba de superioridad de una cola:
 
 * **Hipótesis de Negocio:** Creemos que el sello generará un incremento (lift) de al menos el **20%** en la tasa de contacto.
 
+Integración del Sello de Certificación
+
+* **Question:**  
+Is it true that showing the CertiWeb certification seal on a car listing increases the buyer contact rate?
+
+* **Belief:**  
+Buyers distrust used cars because they lack verified technical evidence, so a visible certification seal would increase their confidence.
+
+* **Hypothesis:**  
+Adding the CertiWeb certification seal to vehicle listings will increase the buyer contact rate by at least 20%.
+
+* **Null hypothesis:**  
+Adding the CertiWeb certification seal to vehicle listings will not increase the buyer contact rate by 20%.
+
+
+Integración del Informe Técnico Visible
+
+* **Question:**  
+Is it true that displaying a detailed technical report increases users’ purchase intention?
+
+* **Belief:**  
+Buyers make better decisions when they have access to clear technical information with real photos and vehicle condition details.
+
+* **Hypothesis:**  
+Displaying the detailed technical report next to the vehicle listing will increase purchase intention by at least 15%.
+
+* **Null hypothesis:**  
+Displaying the detailed technical report will not increase purchase intention by 15%.
+
+Integración de la Validación por Código o Enlace
+
+* **Question:**  
+Is it true that allowing public certificate validation through a code or link increases buyer trust?
+
+* **Belief:**  
+If buyers can independently verify the authenticity of a certificate, they will feel more confident during the buying process.
+
+* **Hypothesis:**  
+Allowing public certificate validation through a code or link will increase the buyer contact rate by at least 10%.
+
+* **Null hypothesis:**  
+Allowing public certificate validation through a code or link will not increase the buyer contact rate by 10%.
+
+
+
 #### 8.2.2. Domain Business Metrics
 
 * **Métrica Primaria (Accionable):** Tasa de Conversión de Contacto (Lead Conversion Rate). Esta es la métrica de éxito del experimento.
